@@ -3,7 +3,7 @@ import random
 from matplotlib import pyplot as plt
 import copy
 
-class SingleLayerPerceptron:
+class SinglePerceptron:
 
     '''
     arguments:
@@ -96,7 +96,7 @@ data = pd.read_csv('Data/problemAND.csv', header=None, names=['x1','x2','expecte
 for i in range(len(data['expected'])):
     if data['expected'][i] == 0:
         data['expected'][i] = -1
-myLayer = SingleLayerPerceptron(1,data)
+myLayer = SinglePerceptron(1,data)
 myLayer.train()
 myLayer.predict()
 
