@@ -41,7 +41,7 @@ class SinglePerceptron:
     def updateWeights(self, expected, output, inputs):
         for i in range(len(self.weights)):
             self.weights[i] = self.weights[i] + self.learning_rate*expected*inputs[i]
-        # self.learning_rate /= 2
+        self.learning_rate *= 0.9
 
     '''
     A function to visualize the data and the line obtained from a perceptron and its weights.
@@ -82,10 +82,10 @@ class SinglePerceptron:
             print(output,expected)
 
 # input
-data = pd.read_csv('Data/problemAND.csv', header=None, names=['x1','x2','expected'])
+data = pd.read_csv('Data/problemXOR.csv', header=None, names=['x1','x2','expected'])
 for i in range(len(data['expected'])):
     if data['expected'][i] == 0:
         data['expected'][i] = -1
-myLayer = SinglePerceptron(data)
-myLayer.train()
-myLayer.predict()
+model = SinglePerceptron(data)
+model.train()
+model.predict()
