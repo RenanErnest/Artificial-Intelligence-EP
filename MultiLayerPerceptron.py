@@ -27,7 +27,7 @@ class TwoLayerMLP:
         self.hidden_amount = hidden_amount
 
         # initializing weights with random values
-        # Entry amount minus one(because of the expected value in the last column) random weights.
+        # Entry amount minus one(because of the target value in the last column) random weights.
         # so we'll have all the weights including the bias's weight from every input node to every hidden node
         # the rows represent each destination node and the columns represent each input
         # matriz de pesos da camada de entrada para a camada escondida
@@ -71,9 +71,9 @@ class TwoLayerMLP:
 
     '''
         arguments:
-        case_input - represents the inputs for each case, so this is only an array whose each element is an input
+        case_inputs - represents the inputs for each case, so this is only an array whose each element is an input
     '''
-    def feed_foward(self, case_input):
+    def feedfoward(self, case_inputs):
         # generating the hidden outputs
         # the bias is already inserted in the hidden outputs on initializing
         hiddenOutputs = [1]
@@ -83,17 +83,19 @@ class TwoLayerMLP:
         for hidden_perceptron_weights in self.weightsInputToHidden:
             # linear combination of each input with each weight corresponding to that input for this perceptron
             summ = 0
-            for input_index in range(len(case_input)):
-                summ += case_input[input_index] * hidden_perceptron_weights[input_index]
+            for input_index in range(len(case_inputs)):
+                summ += case_inputs[input_index] * hidden_perceptron_weights[input_index]
             # appending the return of the sigmoid function with this summatory for our hidden outputs
             # at the end of this iteration we'll have an array containg the output of each perceptron of the hidden layer
             hiddenOutputs.append(self.sigmoid(summ))
 
         # at this point we'll do kind of the same thing but from the hidden layer to the output layer
+        # we are assuming that the output layer contains only one node so we need only one input for that node
         summ = 0
         for hidden_output_index in range(len(hiddenOutputs)):
             summ += hiddenOutputs[hidden_output_index]*self.weightsHiddenToOutput[hidden_output_index]
 
+        # applying the step function on our linear combination
         final_output = self.sigmoid(summ)
 
         return final_output
@@ -102,31 +104,17 @@ class TwoLayerMLP:
 
     def train(self):
         for _ in range(self.epoch):
-            hidden_outputs = [0] * self.hidden_amount
-            hidden_outputs.append(1)
-            for inputs in self.inputs.values: # for each case
-                expected = inputs[-1]
+            for case_inputs in self.inputs.values: # for each case
 
-                # Feedfoward
-                # from input to hidden
-                for k in range(self.hidden_amount):
-                    hidden_outputs[k] = self.perceptron(k,inputs)
-                
-                # from hidden to output
-                final_summ = 0
-                for i in range(len(self.weightsHiddenToOutput)-1):
-                    final_summ += hidden_outputs[i] * self.weightsHiddenToOutput[i]
-                # final_summ += 1 * self.weightsHiddenToOutput[-1] # adding bias
-                
-                # step function
-                final_output = 0
-                if final_summ > 0:
-                    final_output = 1
-                else:
-                    final_output = -1
+                # the target value for each case is in the last column
+                target = case_inputs[-1]
+                # passing all the inputs without the target value to the feedfoward algorithm
+                predicted = 1 if self.feedfoward(case_inputs[:-1]) > 0 else -1
+                # predicted = self.feedfoward(case_inputs[:-1])
+
 
                 # Backpropagation
-                final_error = expected - final_output
+                final_error = target - predicted
                 if final_error != 0:
                     # calculating the errors of each perceptron in the hidden layer
                     hidden_errors = []
@@ -142,13 +130,13 @@ class TwoLayerMLP:
                         # for each neuron in the hidden layer
                         for j in range(len(hidden_outputs)):
                             error += hidden_errors[j] * self.weightsInputToHidden[k][j]
-                        errors.append(error * self.sigmoid_derivative(inputs[k]))
+                        errors.append(error * self.sigmoid_derivative(case_inputs[k]))
                 
                     # Updating weights considering learning rate and error back propagation
                     # updating weights of the input layer
                     for i in range(self.hidden_amount):
                         for j in range(len(self.weightsHiddenToOutput)):
-                            self.weightsInputToHidden[i][j] += self.learning_rate*errors[i]*inputs[i]
+                            self.weightsInputToHidden[i][j] += self.learning_rate*errors[i]*case_inputs[i]
                     # updating weights of the hidden layer
                     for j in range(len(self.weightsHiddenToOutput)):
                         self.weightsHiddenToOutput[j] += self.learning_rate*hidden_errors[j]*hidden_outputs[j]
@@ -168,14 +156,14 @@ class TwoLayerMLP:
             for i in range(len(self.weightsHiddenToOutput)):
                 final_summ += hidden_outputs[i] * self.weightsHiddenToOutput[i]
             
-            final_output = self.sigmoid(final_summ)
+            predicted = self.sigmoid(final_summ)
             answer = 0
-            if final_output > 0:
+            if predicted > 0:
                 answer = 1
             else:
                 answer = -1
 
-            print(inputs[-1],answer,'sigmoid return:',final_output)
+            print(inputs[-1],answer,'sigmoid return:',predicted)
 
                     
 
@@ -187,10 +175,10 @@ class TwoLayerMLP:
 
 
 
-data = pd.read_csv('Data/problemXOR.csv', header=None, names=['x1','x2','expected'])
-for i in range(len(data['expected'])):
-    if data['expected'][i] == 0:
-        data['expected'][i] = -1
+data = pd.read_csv('Data/problemXOR.csv', header=None, names=['x1','x2','target'])
+for i in range(len(data['target'])):
+    if data['target'][i] == 0:
+        data['target'][i] = -1
 
 model = TwoLayerMLP(2,data,10,1)
 model.train()
