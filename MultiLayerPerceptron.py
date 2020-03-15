@@ -98,7 +98,7 @@ class TwoLayerMLP:
         # applying the step function on our linear combination
         final_output = self.sigmoid(summ)
 
-        return final_output
+        return final_output, hiddenOutputs
 
 
 
@@ -109,9 +109,11 @@ class TwoLayerMLP:
                 # the target value for each case is in the last column
                 target = case_inputs[-1]
                 # passing all the inputs without the target value to the feedfoward algorithm
-                predicted = 1 if self.feedfoward(case_inputs[:-1]) > 0 else -1
-                # predicted = self.feedfoward(case_inputs[:-1])
+                # and capturing the predicted value and the outputs of the hidden layer including already the bias
+                predicted, hiddenOutputs = self.feedfoward(case_inputs[:-1])
 
+                # turning the predicted value to binary only for tests with the XOR case
+                predicted = 1 if predicted > 0 else -1
 
                 # Backpropagation
                 final_error = target - predicted
@@ -119,8 +121,8 @@ class TwoLayerMLP:
                     # calculating the errors of each perceptron in the hidden layer
                     hidden_errors = []
                 
-                    for i in range(len(hidden_outputs)):
-                        hidden_errors.append(self.weightsHiddenToOutput[i] * final_error * self.sigmoid_derivative(hidden_outputs[i]))
+                    for i in range(len(hiddenOutputs)):
+                        hidden_errors.append(self.weightsHiddenToOutput[i] * final_error * self.sigmoid_derivative(hiddenOutputs[i]))
                     
                     # calculating the errors of each input weights
                     errors = []
@@ -128,7 +130,7 @@ class TwoLayerMLP:
                     for k in range(self.hidden_amount):
                         error = 0
                         # for each neuron in the hidden layer
-                        for j in range(len(hidden_outputs)):
+                        for j in range(len(hiddenOutputs)):
                             error += hidden_errors[j] * self.weightsInputToHidden[k][j]
                         errors.append(error * self.sigmoid_derivative(case_inputs[k]))
                 
@@ -139,31 +141,18 @@ class TwoLayerMLP:
                             self.weightsInputToHidden[i][j] += self.learning_rate*errors[i]*case_inputs[i]
                     # updating weights of the hidden layer
                     for j in range(len(self.weightsHiddenToOutput)):
-                        self.weightsHiddenToOutput[j] += self.learning_rate*hidden_errors[j]*hidden_outputs[j]
+                        self.weightsHiddenToOutput[j] += self.learning_rate*hidden_errors[j]*hiddenOutputs[j]
                     
                     
     def predict(self):
-        hidden_outputs = [0] * self.hidden_amount
-        for inputs in self.inputs.values:
-            # Feedfoward
-            for k in range(self.hidden_amount):
-                hidden_outputs[k] = self.perceptron(k,inputs)
+        for case_inputs in self.inputs.values:
+            # passing all the inputs without the target value to the feedfoward algorithm
+            # and capturing the predicted value and the outputs of the hidden layer including already the bias
+            predicted, hiddenOutputs = self.feedfoward(case_inputs[:-1])
 
-            # adicionando o bias nas entradas para a camada de saida
-            hidden_outputs.append(1)
-            
-            final_summ = 0
-            for i in range(len(self.weightsHiddenToOutput)):
-                final_summ += hidden_outputs[i] * self.weightsHiddenToOutput[i]
-            
-            predicted = self.sigmoid(final_summ)
-            answer = 0
-            if predicted > 0:
-                answer = 1
-            else:
-                answer = -1
-
-            print(inputs[-1],answer,'sigmoid return:',predicted)
+            # turning the predicted value to binary only for tests with the XOR case
+            binary_predicted = 1 if predicted > 0 else -1
+            print('target:',case_inputs[-1],'predicted answer:',binary_predicted,'predicted value:',predicted)
 
                     
 
