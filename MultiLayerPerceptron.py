@@ -103,23 +103,23 @@ class TwoLayerMLP:
 
     def backpropagation(self, case_inputs, hiddenOutputs, output, error):
         hidden_errors = [0] * (self.hidden_amount+1) # including bias
-        for i in range(len(hiddenOutputs)):
-            hidden_errors[i] = error * self.weightsHiddenToOutput[i]
+        for i in range(len(hidden_errors)):
+            hidden_errors[i] = self.weightsHiddenToOutput[i] * error
 
-        gradient_hidden = output * (1 - output) * error * self.learning_rate
-
-        input_gradient = [0] * len(hidden_errors)
-        for i in range(len(case_inputs)):
-            input_gradient[i] = self.sigmoid_derivative(case_inputs[i]) * hidden_errors[i] * self.learning_rate
+        gradient = output*(1 - output) * error * self.learning_rate
 
         # changing the weights from hidden to output
         for i in range(len(self.weightsHiddenToOutput)):
-            self.weightsHiddenToOutput[i] += gradient_hidden * hiddenOutputs[i]
+            self.weightsHiddenToOutput[i] += gradient * hiddenOutputs[i]
+
+        hidden_gradient = [0] * len(hidden_errors)
+        for i in range(len(hiddenOutputs)):
+            hidden_gradient[i] = hiddenOutputs[i]*(1 - hiddenOutputs[i]) * hidden_errors[i] * self.learning_rate
 
         # changing the weights from input to hidden
         for i in range(len(self.weightsInputToHidden)):
             for j in range(len(self.weightsInputToHidden[i])):
-                self.weightsInputToHidden[i][j] += input_gradient[i] *  case_inputs[j]
+                self.weightsInputToHidden[i][j] += hidden_gradient[i] * case_inputs[j]
 
 
     def train(self):
@@ -132,32 +132,25 @@ class TwoLayerMLP:
                 # and capturing the predicted value and the outputs of the hidden layer including already the bias
                 y, hiddenOutputs = self.feedfoward(case_inputs[:-1])
 
+                print('saida final',y,'saida hidden',hiddenOutputs)
+
                 # turning the predicted value to binary only for tests with the XOR case
                 predicted = 1 if y > 0 else -1
 
                 error = target - predicted
                 if error != 0:
-                    self.backpropagation(case_inputs[:-1],hiddenOutputs, y, error)
+                    self.backpropagation(case_inputs[:-1],hiddenOutputs, predicted, error)
 
                     
     def predict(self):
         for case_inputs in self.inputs.values:
             # passing all the inputs without the target value to the feedfoward algorithm
             # and capturing the predicted value and the outputs of the hidden layer including already the bias
-            predicted, hiddenOutputs = self.feedfoward(case_inputs[:-1])
+            y, hiddenOutputs = self.feedfoward(case_inputs[:-1])
 
             # turning the predicted value to binary only for tests with the XOR case
-            binary_predicted = 1 if predicted > 0 else -1
-            print('target:',case_inputs[-1],'predicted answer:',binary_predicted,'predicted value:',predicted)
-
-                    
-
-                
-        
-
-
-
-
+            binary_predicted = 1 if y > 0 else -1
+            print('target:',case_inputs[-1],'predicted answer:',binary_predicted,'output value:',y)
 
 
 data = pd.read_csv('Data/problemXOR.csv', header=None, names=['x1','x2','target'])
@@ -165,6 +158,6 @@ for i in range(len(data['target'])):
     if data['target'][i] == 0:
         data['target'][i] = -1
 
-model = TwoLayerMLP(2,data,1000,0.2)
+model = TwoLayerMLP(2,data,100,0.5)
 model.train()
 model.predict()
