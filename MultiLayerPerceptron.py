@@ -114,11 +114,15 @@ class TwoLayerMLP:
 
         hidden_gradient = [0] * len(hidden_errors)
         for i in range(len(hiddenOutputs)):
-            hidden_gradient[i] = hiddenOutputs[i]*(1 - hiddenOutputs[i]) * hidden_errors[i] * self.learning_rate
+            hidden_gradient[i] = self.sigmoid_derivative(hiddenOutputs[i]) * hidden_errors[i] * self.learning_rate
+
+        print(hidden_gradient)
 
         # changing the weights from input to hidden
         for i in range(len(self.weightsInputToHidden)):
             for j in range(len(self.weightsInputToHidden[i])):
+                delta = hidden_gradient[i] * case_inputs[j]
+                print(hidden_gradient[i],'*',case_inputs[j],'=',delta)
                 self.weightsInputToHidden[i][j] += hidden_gradient[i] * case_inputs[j]
 
 
@@ -132,7 +136,8 @@ class TwoLayerMLP:
                 # and capturing the predicted value and the outputs of the hidden layer including already the bias
                 y, hiddenOutputs = self.feedfoward(case_inputs[:-1])
 
-                print('saida final',y,'saida hidden',hiddenOutputs)
+                print(self.weightsInputToHidden)
+                #print('saida final',y,'saida hidden',hiddenOutputs)
 
                 # turning the predicted value to binary only for tests with the XOR case
                 predicted = 1 if y > 0 else -1
