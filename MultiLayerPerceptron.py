@@ -101,6 +101,26 @@ class TwoLayerMLP:
         return final_output, hiddenOutputs
 
 
+    def backpropagation(self, case_inputs, hiddenOutputs, output, error):
+        hidden_errors = [0] * (self.hidden_amount+1) # including bias
+        for i in range(len(hiddenOutputs)):
+            hidden_errors[i] = error * self.weightsHiddenToOutput[i]
+
+        gradient_hidden = output * (1 - output) * error * self.learning_rate
+
+        input_gradient = [0] * len(hidden_errors)
+        for i in range(len(case_inputs)):
+            input_gradient[i] = self.sigmoid_derivative(case_inputs[i]) * hidden_errors[i] * self.learning_rate
+
+        # changing the weights from hidden to output
+        for i in range(len(self.weightsHiddenToOutput)):
+            self.weightsHiddenToOutput[i] += gradient_hidden * hiddenOutputs[i]
+
+        # changing the weights from input to hidden
+        for i in range(len(self.weightsInputToHidden)):
+            for j in range(len(self.weightsInputToHidden[i])):
+                self.weightsInputToHidden[i][j] += input_gradient[i] *  case_inputs[j]
+
 
     def train(self):
         for _ in range(self.epoch):
@@ -110,39 +130,15 @@ class TwoLayerMLP:
                 target = case_inputs[-1]
                 # passing all the inputs without the target value to the feedfoward algorithm
                 # and capturing the predicted value and the outputs of the hidden layer including already the bias
-                predicted, hiddenOutputs = self.feedfoward(case_inputs[:-1])
+                y, hiddenOutputs = self.feedfoward(case_inputs[:-1])
 
                 # turning the predicted value to binary only for tests with the XOR case
-                predicted = 1 if predicted > 0 else -1
+                predicted = 1 if y > 0 else -1
 
-                # Backpropagation
-                final_error = target - predicted
-                if final_error != 0:
-                    # calculating the errors of each perceptron in the hidden layer
-                    hidden_errors = []
-                
-                    for i in range(len(hiddenOutputs)):
-                        hidden_errors.append(self.weightsHiddenToOutput[i] * final_error * self.sigmoid_derivative(hiddenOutputs[i]))
-                    
-                    # calculating the errors of each input weights
-                    errors = []
-                    # for each neuron in the input layer
-                    for k in range(self.hidden_amount):
-                        error = 0
-                        # for each neuron in the hidden layer
-                        for j in range(len(hiddenOutputs)):
-                            error += hidden_errors[j] * self.weightsInputToHidden[k][j]
-                        errors.append(error * self.sigmoid_derivative(case_inputs[k]))
-                
-                    # Updating weights considering learning rate and error back propagation
-                    # updating weights of the input layer
-                    for i in range(self.hidden_amount):
-                        for j in range(len(self.weightsHiddenToOutput)):
-                            self.weightsInputToHidden[i][j] += self.learning_rate*errors[i]*case_inputs[i]
-                    # updating weights of the hidden layer
-                    for j in range(len(self.weightsHiddenToOutput)):
-                        self.weightsHiddenToOutput[j] += self.learning_rate*hidden_errors[j]*hiddenOutputs[j]
-                    
+                error = target - predicted
+                if error != 0:
+                    self.backpropagation(case_inputs[:-1],hiddenOutputs, y, error)
+
                     
     def predict(self):
         for case_inputs in self.inputs.values:
@@ -169,6 +165,6 @@ for i in range(len(data['target'])):
     if data['target'][i] == 0:
         data['target'][i] = -1
 
-model = TwoLayerMLP(2,data,10,1)
+model = TwoLayerMLP(2,data,1000,0.2)
 model.train()
 model.predict()
