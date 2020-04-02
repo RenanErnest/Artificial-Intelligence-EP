@@ -154,23 +154,31 @@ class MLP:
 def _xor():
     mlp = MLP(2,4,1)
     create_weights_file("XOR_Pesos_Iniciais", mlp)
-    _arquivos("XOR", )
+    _arquivos("XOR", mlp)
     data = mlp.openFile('Data/problemXOR.csv')
     output = mlp.train(data,1000,0.5,"XOR")
     create_weights_file("XOR_Pesos_Finais", mlp)
 
 def _or():
     mlp = MLP(2,4,1)
+    create_weights_file("OR_Pesos_Iniciais", mlp)
+    _arquivos("OR", mlp)
     data = mlp.openFile('Data/problemOR.csv')
     output = mlp.train(data,100,0.5)
+    create_weights_file("OR_Pesos_Finais", mlp)
 
 def _and():
     mlp = MLP(2,4,1)
+    create_weights_file("AND_Pesos_Iniciais", mlp)
+    _arquivos("AND", mlp)
     data = mlp.openFile('Data/problemAND.csv') 
     output = mlp.train(data,100,0.5) 
+    create_weights_file("AND_Pesos_Finais", mlp)
 
 def _caracteres():
     mlp = MLP(63,20,7)
+    create_weights_file("Char_Pesos_Iniciais", mlp)
+    _arquivos("Char", mlp)
     data = mlp.openFile('Data/caracteres-limpo.csv') 
     letter_codes = np.array([[1,0,0,0,0,0,0],
                     [0,1,0,0,0,0,0],
@@ -198,6 +206,7 @@ def _caracteres():
     data = data.drop(data.columns[-1],axis=1)
     data['new'] = list(letter_codes)
     output = mlp.train(data,100,0.5)
+    create_weights_file("Char_Pesos_Finais", mlp)
     letters = ['A','B','C','D','E','J','K']
     for outputValues in output:
         for i in range(len(outputValues)):
