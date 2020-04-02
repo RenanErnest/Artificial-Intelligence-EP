@@ -4,10 +4,11 @@ import pandas as pd
 ''' A 2-layer MLP '''
 class MLP:
 
-    def __init__(self,inputNumber,hiddenNumber,outputNumber):
+    def __init__(self,inputNumber,hiddenNumber,outputNumber, output_file_name):
         self.inputNumber = inputNumber
         self.hiddenNumber = hiddenNumber
         self.outputNumber = outputNumber
+        self.output_file_name = output_file_name
 
         ''' weights '''
         # a inputNumber+1(bias) x hiddenNumber matrix with random values. It already includes the bias weights
@@ -35,7 +36,7 @@ class MLP:
             summ = 0
             for j in range(len(inputValues)): # each inputNeuron
                 summ += inputValues[j]*self.weightsInputToHidden[i][j] # linear combination of all the inputValues with their respective weight to a hidden perceptron i
-            hiddenValues[i] = self.sigmoid(summ) # applying the step function to the summatory
+            hiddenValues[i] = self.sigmoid(summ) # applying the step function to the summation
 
         # adding the bias as a hiddenValue to facilitate the calculus
         # this is a development preference, the weights already contain the bias's weights, then, the bias comes as an input
@@ -48,8 +49,7 @@ class MLP:
             summ = 0
             for j in range(len(hiddenValues)): # each hiddenNeuron
                 summ += hiddenValues[j]*self.weightsHiddenToOutput[i][j] # linear combination of all the hiddenValues with their respective weight to an output perceptron i
-            outputValues[i] = self.sigmoid(summ) # applying the step function to the summatory
-
+            outputValues[i] = self.sigmoid(summ) # applying the step function to the summation 
         return outputValues,hiddenValues,inputValues
     
     def backpropagation(self,targetValues,inputValues,learningRate):
@@ -58,34 +58,47 @@ class MLP:
         # so outputValues are the values of the output neurons, hidden values are the values of the hidden neurons, and so on
         (outputValues,hiddenValues,inputValues) = self.feedfoward(inputValues)
 
-        # setup a matrix for calculate the output errors, and calculating it
+        # setting a matrix for calculate the output errors, and calculating it
         outputErrors = np.zeros((self.outputNumber))
         # for each neuron at the output layer we calculate the difference of the target value and the output neuron value
         # also we multiply that difference with the derivative of the step function applied to the respective output neuron value
         for i in range(self.outputNumber):
             outputErrors[i] = (targetValues[i]-outputValues[i]) * self.sigmoid_derivative(outputValues[i])
+            create_error_iteration(self.output_file_name, "\nOutput "+ i +":" + targetValues[i]-outputValues[i], self.actual_epoch) #error iteration counter
 
-        # get the delta (change) from the hidden-layer to output-layer, considering the error of the output layer calculated above
+        # getting the delta (change) of the weights from the hidden-layer through output-layer, considering the errors of the output layer calculated above
         deltasHiddenToOutput = np.zeros((self.outputNumber,self.hiddenNumber+1))
         for i in range(self.outputNumber):
             for j in range(self.hiddenNumber+1):
+                # for each weight that are connected to a output neuron i we store the change for that weight in a deltas array
+                # this change is calculated by the product of the learning rate, the error of the neuron i, and the value that following that weight "caused" the error
                 deltasHiddenToOutput[i][j] = learningRate*outputErrors[i]*hiddenValues[j]
 
-        # setup a matrix for calculate the hidden errors, and calculate it using the errors get by the output layer
+        # setting a matrix for calculate the hidden errors, and calculating it using the errors got by the output layer
+        # here we have to be cautelous, the errors are only for the neurons, not the bias, but our weights matrix have the bias's weights
+        # so we have to ignore the bias's weights in this step of backpropagating the error to previous nodes
+        # this is why we iterate from index 1 through hiddenNumber+1
         hiddenErrors = np.zeros((self.hiddenNumber))
         for i in range(1,self.hiddenNumber+1):
             summ = 0
+            # calculating the linear combination of all the output layer neuron errors with the respective weight that leads to that error
+            # for example an error of a hidden neuron i will be the summation of the product of all the errors of output neurons with the weight that connect the hidden neuron i with these neurons
             for j in range(self.outputNumber):
-                summ += outputErrors[j]*self.weightsHiddenToOutput[j][i] 
+                summ += outputErrors[j]*self.weightsHiddenToOutput[j][i]
+            # because of a neural network is a bunch of nested functions, the derivative in order to find the minimum error implies in several chain rules
+            # so every error propagated has a value that is multiplied with the derivative of the step function applied to the value of the node that receives the error
             hiddenErrors[i-1] = self.sigmoid_derivative(hiddenValues[i])*summ 
 
-        # setup a matrix for calculate the input to hidden layer errors, using each hidden-layer neuron error 
+        # getting the delta (change) of the weights from the input-layer through the hidden-layer, considering the errors of the hidden layer calculated above
         deltasInputToHidden = np.zeros((self.hiddenNumber,self.inputNumber+1))
         for i in range(self.hiddenNumber):
             for j in range(self.inputNumber+1):
+                # for each weight from the input layer that are connected to a hidden neuron i we store the change for that weight a the deltas array
+                # this change is calculated by the product of the learning rate, the error of the neuron i, and the value that following that weight "caused" the error
                 deltasInputToHidden[i][j] = learningRate*hiddenErrors[i]*inputValues[j]
-
+                
         # updating the weights
+        # only and finally, adding the deltas(changes) to the current weights
         for i in range(len(self.weightsHiddenToOutput)):
             for j in range(len(self.weightsHiddenToOutput[i])):
                 self.weightsHiddenToOutput[i][j] += deltasHiddenToOutput[i][j]
@@ -98,41 +111,68 @@ class MLP:
         '''
             trainSet: a pandas dataframe with the values for training
         '''
-        # data treatment
+        # data treatment, creating a numpy array for only the inputs, and another for only the targets
         inputs = data.drop(data.columns[-1],axis=1).values
         targets = data.drop(data.columns[:-1],axis=1).values
-        
-        #for each epoch 
+        self.actual_epoch = 0
+
         for epoch in range(epochs):
+            # for each epoch we iterate over all the input and targets of a specific case and send it to the backpropagation function, whose call the feedfoward function
             for inputValues,targetValues in zip(inputs,targets):
-                if type(targetValues[0]) == type(np.array((2))): # data treatment
+                # this condition is a data treatment for targets with more than one value, for example targets that are arrays
+                if type(targetValues[0]) == type(np.array((2))):
                     targetValues = targetValues[0]
+                    
                 self.backpropagation(targetValues,inputValues,learningRate)
-                learningRate *= learningRateMultiplierPerEpoch
+                learningRate *= learningRateMultiplierPerEpoch # updating the learning rate according to the multiplier, if the multiplier is 1, we can assume that our learning rate is static
+                self.actual_epoch = self.actual_epoch + 1
         
+        # at the end it returns the a prediction of the inputs that were used to train the model
+        # what is expected is that the predictions match with the target values of each input case
         return self.predict(inputs)
        
 
     def predict(self,inputs):
         output = []
         for inputValues in inputs:
-            #get the values of output neurons provided by feed foward method, as hidden and original input
+            # calling feed foward for each input case and receiving the output for each case, that is printed and stored in the output list
             (outputValues,hiddenValues,inputValues) = self.feedfoward(inputValues)
             print(outputValues)
             output.append(outputValues)
+        # at the end we return all the outputs of our model in a list
         return output
 
     def openFile(self, filePath):
         '''
             filePath: an entire file path including the extension. For example: "Data/problemOR.csv"
         '''
+        # just a function to open a csv inside our mlp class, just not to charge the user of knowing about pandas library
         data = pd.read_csv(filePath, header = None)
         return data
 
-'''letters'''
-mlp = MLP(63,20,7)
-data = mlp.openFile('Data/caracteres-limpo.csv')
-letter_codes = np.array([[1,0,0,0,0,0,0],
+
+def _xor():
+    mlp = MLP(2,4,1)
+    create_weights_file("XOR_Pesos_Iniciais", mlp)
+    _arquivos("XOR", )
+    data = mlp.openFile('Data/problemXOR.csv')
+    output = mlp.train(data,1000,0.5,"XOR")
+    create_weights_file("XOR_Pesos_Finais", mlp)
+
+def _or():
+    mlp = MLP(2,4,1)
+    data = mlp.openFile('Data/problemOR.csv')
+    output = mlp.train(data,100,0.5)
+
+def _and():
+    mlp = MLP(2,4,1)
+    data = mlp.openFile('Data/problemAND.csv') 
+    output = mlp.train(data,100,0.5) 
+
+def _caracteres():
+    mlp = MLP(63,20,7)
+    data = mlp.openFile('Data/caracteres-limpo.csv') 
+    letter_codes = np.array([[1,0,0,0,0,0,0],
                     [0,1,0,0,0,0,0],
                     [0,0,1,0,0,0,0],
                     [0,0,0,1,0,0,0],
@@ -155,35 +195,54 @@ letter_codes = np.array([[1,0,0,0,0,0,0],
                     [0,0,0,0,0,0,1],
                     ])
 
-data = data.drop(data.columns[-1],axis=1)
-data['new'] = list(letter_codes)
-output = mlp.train(data,100,0.5)
-letters = ['A','B','C','D','E','J','K']
-for outputValues in output:
-    for i in range(len(outputValues)):
-        if round(outputValues[i]) == 1:
-            print(letters[i])
-            break
+    data = data.drop(data.columns[-1],axis=1)
+    data['new'] = list(letter_codes)
+    output = mlp.train(data,100,0.5)
+    letters = ['A','B','C','D','E','J','K']
+    for outputValues in output:
+        for i in range(len(outputValues)):
+            if round(outputValues[i]) == 1:
+                print(letters[i])
+                break
 
-print()
+    #ruido
+    data = mlp.openFile('Data/caracteres-ruido.csv')
+    data = data.drop(data.columns[-1],axis=1)
+    data['new'] = list(letter_codes)
+    # data treatment
+    inputs = data.drop(data.columns[-1],axis=1).values
+    output = mlp.predict(inputs)
+    for outputValues in output:
+        for i in range(len(outputValues)):
+            if round(outputValues[i]) == 1:
+                print(letters[i])
+                break
 
-#ruido
-data = mlp.openFile('Data/caracteres-ruido.csv')
-data = data.drop(data.columns[-1],axis=1)
-data['new'] = list(letter_codes)
-# data treatment
-inputs = data.drop(data.columns[-1],axis=1).values
-output = mlp.predict(inputs)
-for outputValues in output:
-    for i in range(len(outputValues)):
-        if round(outputValues[i]) == 1:
-            print(letters[i])
-            break
+def create_weights_file(nome_do_arquivo,MLP):
+    #Um arquivo contendo os pesos da rede.
+    pesos = open(nome_do_arquivo + '.txt', 'w')
+    pesos.write("Input-layer to hidden-layer weights:" + MLP.weightsInputToHidden+
+    "\nHidden-layer to output-layer weights:" + MLP.weightsHiddenToOutput)
+    pesos.close()
 
-# '''XOR'''
-# mlp = MLP(2,4,1)
-# data = mlp.openFile('Data/problemXOR.csv')
-# output = mlp.train(data,1000,0.5)
+def create_error_iteration(nome_do_arquivo, error, iteration):
+    #Um arquivo contendo o erro cometido pela rede neural em cada iteração do treinamento. 
+    f=open(nome_do_arquivo + "_error_by_iteration.txt", "a+")
+    f.write("\nIteration:" + iteration + " Error:" + error) 
+    f.close()
 
+def _arquivos(nome_do_arquivo, MLP):
+    #Um arquivo contendo os parâmetros da arquitetura da rede neural e parâmetros de inicialização
+    parametros = open(nome_do_arquivo + '_Parametros.txt', 'w')
+    parametros.write("Arquitetura da rede neural:\nInputs:" + MLP.inputNumber 
+    + "\nHidden neurons:" + MLP.hiddenNumber 
+    + "\nOutput neurons:" + MLP.outputNumber)
+    parametros.close()  
+
+    #Um arquivo contendo as saídas produzidas pela rede neural para cada um dos dados de teste
+    output = open(nome_do_arquivo + '_Saida.txt', 'w')
+    output.write("Input-layer to hidden-layer weights:" + MLP.weightsInputToHidden+
+    "\nHidden-layer to output-layer weights:" + MLP.weightsHiddenToOutput)
+    output.close()
 
 
