@@ -64,7 +64,7 @@ class MLP:
         # also we multiply that difference with the derivative of the step function applied to the respective output neuron value
         for i in range(self.outputNumber):
             outputErrors[i] = (targetValues[i]-outputValues[i]) * self.sigmoid_derivative(outputValues[i])
-            create_error_iteration(self.output_file_name, "\nOutput "+ i +":" + targetValues[i]-outputValues[i], self.actual_epoch) #error iteration counter
+            create_error_iteration(self.output_file_name, i, outputErrors[i], self.actual_epoch, targetValues[i]) #error iteration counter
 
         # getting the delta (change) of the weights from the hidden-layer through output-layer, considering the errors of the output layer calculated above
         deltasHiddenToOutput = np.zeros((self.outputNumber,self.hiddenNumber+1))
@@ -112,6 +112,7 @@ class MLP:
             trainSet: a pandas dataframe with the values for training
         '''
         # data treatment, creating a numpy array for only the inputs, and another for only the targets
+        data = trainSet
         inputs = data.drop(data.columns[-1],axis=1).values
         targets = data.drop(data.columns[:-1],axis=1).values
         self.actual_epoch = 0
@@ -152,33 +153,36 @@ class MLP:
 
 
 def _xor():
-    mlp = MLP(2,4,1)
+    mlp = MLP(2,4,1,"XOR")
     create_weights_file("XOR_Pesos_Iniciais", mlp)
-    _arquivos("XOR", mlp)
+    _arquivos(mlp)
     data = mlp.openFile('Data/problemXOR.csv')
-    output = mlp.train(data,1000,0.5,"XOR")
+    output = mlp.train(data,1000,0.5)
     create_weights_file("XOR_Pesos_Finais", mlp)
+    p_ouputs(mlp.output_file_name, output)
 
 def _or():
-    mlp = MLP(2,4,1)
+    mlp = MLP(2,4,1, "OR")
     create_weights_file("OR_Pesos_Iniciais", mlp)
-    _arquivos("OR", mlp)
+    _arquivos(mlp)
     data = mlp.openFile('Data/problemOR.csv')
     output = mlp.train(data,100,0.5)
     create_weights_file("OR_Pesos_Finais", mlp)
+    p_ouputs(mlp.output_file_name, output)
 
 def _and():
-    mlp = MLP(2,4,1)
+    mlp = MLP(2,4,1,"AND")
     create_weights_file("AND_Pesos_Iniciais", mlp)
-    _arquivos("AND", mlp)
+    _arquivos(mlp)
     data = mlp.openFile('Data/problemAND.csv') 
     output = mlp.train(data,100,0.5) 
     create_weights_file("AND_Pesos_Finais", mlp)
+    p_ouputs(mlp.output_file_name, output)
 
 def _caracteres():
-    mlp = MLP(63,20,7)
+    mlp = MLP(63,20,7,"CHAR")
     create_weights_file("Char_Pesos_Iniciais", mlp)
-    _arquivos("Char", mlp)
+    _arquivos(mlp)
     data = mlp.openFile('Data/caracteres-limpo.csv') 
     letter_codes = np.array([[1,0,0,0,0,0,0],
                     [0,1,0,0,0,0,0],
@@ -226,32 +230,30 @@ def _caracteres():
             if round(outputValues[i]) == 1:
                 print(letters[i])
                 break
+    p_ouputs(mlp.output_file_name, output)
+
+def p_ouputs(nome_do_arquivo, output):
+	#Um arquivo contendo as saídas produzidas pela rede neural para cada um dos dados de teste
+	np.savetxt(nome_do_arquivo + '_Saida.csv', output)
 
 def create_weights_file(nome_do_arquivo,MLP):
-    #Um arquivo contendo os pesos da rede.
-    pesos = open(nome_do_arquivo + '.txt', 'w')
-    pesos.write("Input-layer to hidden-layer weights:" + MLP.weightsInputToHidden+
-    "\nHidden-layer to output-layer weights:" + MLP.weightsHiddenToOutput)
-    pesos.close()
+	#Um arquivo contendo os pesos da rede.
+	np.savetxt(nome_do_arquivo + '_HiddenToOutput.csv', MLP.weightsHiddenToOutput)
+	np.savetxt(nome_do_arquivo + '_InputToHidden.csv', MLP.weightsInputToHidden)
 
-def create_error_iteration(nome_do_arquivo, error, iteration):
+def create_error_iteration(nome_do_arquivo, output ,error, iteration, input):
     #Um arquivo contendo o erro cometido pela rede neural em cada iteração do treinamento. 
     f=open(nome_do_arquivo + "_error_by_iteration.txt", "a+")
-    f.write("\nIteration:" + iteration + " Error:" + error) 
+    f.write("Iteration:" + str(iteration) + " Output_Neuron:" + str(output) + " Target Value:" + str(input) +" Error:" + str(error) + "\n") 
     f.close()
 
-def _arquivos(nome_do_arquivo, MLP):
+def _arquivos(mlp):
     #Um arquivo contendo os parâmetros da arquitetura da rede neural e parâmetros de inicialização
+    nome_do_arquivo = mlp.output_file_name
     parametros = open(nome_do_arquivo + '_Parametros.txt', 'w')
-    parametros.write("Arquitetura da rede neural:\nInputs:" + MLP.inputNumber 
-    + "\nHidden neurons:" + MLP.hiddenNumber 
-    + "\nOutput neurons:" + MLP.outputNumber)
+    parametros.write("Arquitetura da rede neural:\nInputs:" + str(mlp.inputNumber) 
+    + "\nHidden neurons:" + str(mlp.hiddenNumber)
+    + "\nOutput neurons:" + str(mlp.outputNumber))
     parametros.close()  
 
-    #Um arquivo contendo as saídas produzidas pela rede neural para cada um dos dados de teste
-    output = open(nome_do_arquivo + '_Saida.txt', 'w')
-    output.write("Input-layer to hidden-layer weights:" + MLP.weightsInputToHidden+
-    "\nHidden-layer to output-layer weights:" + MLP.weightsHiddenToOutput)
-    output.close()
-
-
+_caracteres()
