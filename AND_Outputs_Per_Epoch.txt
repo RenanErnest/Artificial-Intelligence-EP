@@ -1,0 +1,1200 @@
+Epoch: 1
+Input: [ 1 -1 -1]
+Output: [0.19020254]
+Epoch: 1
+Input: [ 1 -1  1]
+Output: [0.24176486]
+Epoch: 1
+Input: [ 1  1 -1]
+Output: [0.22198819]
+Epoch: 1
+Input: [1 1 1]
+Output: [0.31713623]
+Epoch: 2
+Input: [ 1 -1 -1]
+Output: [0.19064623]
+Epoch: 2
+Input: [ 1 -1  1]
+Output: [0.24936049]
+Epoch: 2
+Input: [ 1  1 -1]
+Output: [0.22720257]
+Epoch: 2
+Input: [1 1 1]
+Output: [0.33471566]
+Epoch: 3
+Input: [ 1 -1 -1]
+Output: [0.1896475]
+Epoch: 3
+Input: [ 1 -1  1]
+Output: [0.25571622]
+Epoch: 3
+Input: [ 1  1 -1]
+Output: [0.23146351]
+Epoch: 3
+Input: [1 1 1]
+Output: [0.35197882]
+Epoch: 4
+Input: [ 1 -1 -1]
+Output: [0.18739316]
+Epoch: 4
+Input: [ 1 -1  1]
+Output: [0.26092631]
+Epoch: 4
+Input: [ 1  1 -1]
+Output: [0.2348726]
+Epoch: 4
+Input: [1 1 1]
+Output: [0.36896685]
+Epoch: 5
+Input: [ 1 -1 -1]
+Output: [0.18407446]
+Epoch: 5
+Input: [ 1 -1  1]
+Output: [0.26508999]
+Epoch: 5
+Input: [ 1  1 -1]
+Output: [0.23752732]
+Epoch: 5
+Input: [1 1 1]
+Output: [0.38571254]
+Epoch: 6
+Input: [ 1 -1 -1]
+Output: [0.17987415]
+Epoch: 6
+Input: [ 1 -1  1]
+Output: [0.2683004]
+Epoch: 6
+Input: [ 1  1 -1]
+Output: [0.23951386]
+Epoch: 6
+Input: [1 1 1]
+Output: [0.40223282]
+Epoch: 7
+Input: [ 1 -1 -1]
+Output: [0.17496038]
+Epoch: 7
+Input: [ 1 -1  1]
+Output: [0.27063989]
+Epoch: 7
+Input: [ 1  1 -1]
+Output: [0.24090474]
+Epoch: 7
+Input: [1 1 1]
+Output: [0.41852648]
+Epoch: 8
+Input: [ 1 -1 -1]
+Output: [0.169485]
+Epoch: 8
+Input: [ 1 -1  1]
+Output: [0.2721797]
+Epoch: 8
+Input: [ 1  1 -1]
+Output: [0.24175951]
+Epoch: 8
+Input: [1 1 1]
+Output: [0.43457578]
+Epoch: 9
+Input: [ 1 -1 -1]
+Output: [0.16358413]
+Epoch: 9
+Input: [ 1 -1  1]
+Output: [0.27298204]
+Epoch: 9
+Input: [ 1  1 -1]
+Output: [0.24212701]
+Epoch: 9
+Input: [1 1 1]
+Output: [0.45035017]
+Epoch: 10
+Input: [ 1 -1 -1]
+Output: [0.15737938]
+Epoch: 10
+Input: [ 1 -1  1]
+Output: [0.27310306]
+Epoch: 10
+Input: [ 1  1 -1]
+Output: [0.24204825]
+Epoch: 10
+Input: [1 1 1]
+Output: [0.46581125]
+Epoch: 11
+Input: [ 1 -1 -1]
+Output: [0.15097907]
+Epoch: 11
+Input: [ 1 -1  1]
+Output: [0.27259579]
+Epoch: 11
+Input: [ 1  1 -1]
+Output: [0.24155909]
+Epoch: 11
+Input: [1 1 1]
+Output: [0.48091764]
+Epoch: 12
+Input: [ 1 -1 -1]
+Output: [0.14447901]
+Epoch: 12
+Input: [ 1 -1  1]
+Output: [0.2715124]
+Epoch: 12
+Input: [ 1  1 -1]
+Output: [0.24069249]
+Epoch: 12
+Input: [1 1 1]
+Output: [0.49562932]
+Epoch: 13
+Input: [ 1 -1 -1]
+Output: [0.13796296]
+Epoch: 13
+Input: [ 1 -1  1]
+Output: [0.26990555]
+Epoch: 13
+Input: [ 1  1 -1]
+Output: [0.23948003]
+Epoch: 13
+Input: [1 1 1]
+Output: [0.5099109]
+Epoch: 14
+Input: [ 1 -1 -1]
+Output: [0.13150285]
+Epoch: 14
+Input: [ 1 -1  1]
+Output: [0.26782888]
+Epoch: 14
+Input: [ 1  1 -1]
+Output: [0.23795281]
+Epoch: 14
+Input: [1 1 1]
+Output: [0.52373375]
+Epoch: 15
+Input: [ 1 -1 -1]
+Output: [0.12515902]
+Epoch: 15
+Input: [ 1 -1  1]
+Output: [0.26533682]
+Epoch: 15
+Input: [ 1  1 -1]
+Output: [0.23614187]
+Epoch: 15
+Input: [1 1 1]
+Output: [0.53707709]
+Epoch: 16
+Input: [ 1 -1 -1]
+Output: [0.1189806]
+Epoch: 16
+Input: [ 1 -1  1]
+Output: [0.26248391]
+Epoch: 16
+Input: [ 1  1 -1]
+Output: [0.23407813]
+Epoch: 16
+Input: [1 1 1]
+Output: [0.54992815]
+Epoch: 17
+Input: [ 1 -1 -1]
+Output: [0.11300616]
+Epoch: 17
+Input: [ 1 -1  1]
+Output: [0.2593238]
+Epoch: 17
+Input: [ 1  1 -1]
+Output: [0.23179217]
+Epoch: 17
+Input: [1 1 1]
+Output: [0.5622816]
+Epoch: 18
+Input: [ 1 -1 -1]
+Output: [0.10726446]
+Epoch: 18
+Input: [ 1 -1  1]
+Output: [0.25590831]
+Epoch: 18
+Input: [ 1  1 -1]
+Output: [0.2293138]
+Epoch: 18
+Input: [1 1 1]
+Output: [0.57413871]
+Epoch: 19
+Input: [ 1 -1 -1]
+Output: [0.10177553]
+Epoch: 19
+Input: [ 1 -1  1]
+Output: [0.25228646]
+Epoch: 19
+Input: [ 1  1 -1]
+Output: [0.22667173]
+Epoch: 19
+Input: [1 1 1]
+Output: [0.58550615]
+Epoch: 20
+Input: [ 1 -1 -1]
+Output: [0.09655178]
+Epoch: 20
+Input: [ 1 -1  1]
+Output: [0.24850377]
+Epoch: 20
+Input: [ 1  1 -1]
+Output: [0.22389315]
+Epoch: 20
+Input: [1 1 1]
+Output: [0.59639486]
+Epoch: 21
+Input: [ 1 -1 -1]
+Output: [0.0915992]
+Epoch: 21
+Input: [ 1 -1  1]
+Output: [0.24460174]
+Epoch: 21
+Input: [ 1  1 -1]
+Output: [0.22100352]
+Epoch: 21
+Input: [1 1 1]
+Output: [0.60681897]
+Epoch: 22
+Input: [ 1 -1 -1]
+Output: [0.08691849]
+Epoch: 22
+Input: [ 1 -1  1]
+Output: [0.24061755]
+Epoch: 22
+Input: [ 1  1 -1]
+Output: [0.2180263]
+Epoch: 22
+Input: [1 1 1]
+Output: [0.61679479]
+Epoch: 23
+Input: [ 1 -1 -1]
+Output: [0.08250615]
+Epoch: 23
+Input: [ 1 -1  1]
+Output: [0.23658398]
+Epoch: 23
+Input: [ 1  1 -1]
+Output: [0.21498291]
+Epoch: 23
+Input: [1 1 1]
+Output: [0.62634005]
+Epoch: 24
+Input: [ 1 -1 -1]
+Output: [0.07835545]
+Epoch: 24
+Input: [ 1 -1  1]
+Output: [0.23252949]
+Epoch: 24
+Input: [ 1  1 -1]
+Output: [0.21189266]
+Epoch: 24
+Input: [1 1 1]
+Output: [0.63547326]
+Epoch: 25
+Input: [ 1 -1 -1]
+Output: [0.07445729]
+Epoch: 25
+Input: [ 1 -1  1]
+Output: [0.22847839]
+Epoch: 25
+Input: [ 1  1 -1]
+Output: [0.20877278]
+Epoch: 25
+Input: [1 1 1]
+Output: [0.64421318]
+Epoch: 26
+Input: [ 1 -1 -1]
+Output: [0.07080089]
+Epoch: 26
+Input: [ 1 -1  1]
+Output: [0.22445119]
+Epoch: 26
+Input: [ 1  1 -1]
+Output: [0.20563854]
+Epoch: 26
+Input: [1 1 1]
+Output: [0.65257849]
+Epoch: 27
+Input: [ 1 -1 -1]
+Output: [0.06737442]
+Epoch: 27
+Input: [ 1 -1  1]
+Output: [0.22046488]
+Epoch: 27
+Input: [ 1  1 -1]
+Output: [0.20250329]
+Epoch: 27
+Input: [1 1 1]
+Output: [0.6605875]
+Epoch: 28
+Input: [ 1 -1 -1]
+Output: [0.06416541]
+Epoch: 28
+Input: [ 1 -1  1]
+Output: [0.21653331]
+Epoch: 28
+Input: [ 1  1 -1]
+Output: [0.19937863]
+Epoch: 28
+Input: [1 1 1]
+Output: [0.66825798]
+Epoch: 29
+Input: [ 1 -1 -1]
+Output: [0.06116119]
+Epoch: 29
+Input: [ 1 -1  1]
+Output: [0.2126676]
+Epoch: 29
+Input: [ 1  1 -1]
+Output: [0.19627455]
+Epoch: 29
+Input: [1 1 1]
+Output: [0.67560705]
+Epoch: 30
+Input: [ 1 -1 -1]
+Output: [0.05834912]
+Epoch: 30
+Input: [ 1 -1  1]
+Output: [0.20887643]
+Epoch: 30
+Input: [ 1  1 -1]
+Output: [0.19319956]
+Epoch: 30
+Input: [1 1 1]
+Output: [0.68265109]
+Epoch: 31
+Input: [ 1 -1 -1]
+Output: [0.05571682]
+Epoch: 31
+Input: [ 1 -1  1]
+Output: [0.20516642]
+Epoch: 31
+Input: [ 1  1 -1]
+Output: [0.19016082]
+Epoch: 31
+Input: [1 1 1]
+Output: [0.68940573]
+Epoch: 32
+Input: [ 1 -1 -1]
+Output: [0.05325235]
+Epoch: 32
+Input: [ 1 -1  1]
+Output: [0.20154245]
+Epoch: 32
+Input: [ 1  1 -1]
+Output: [0.18716432]
+Epoch: 32
+Input: [1 1 1]
+Output: [0.69588581]
+Epoch: 33
+Input: [ 1 -1 -1]
+Output: [0.05094426]
+Epoch: 33
+Input: [ 1 -1  1]
+Output: [0.19800787]
+Epoch: 33
+Input: [ 1  1 -1]
+Output: [0.18421496]
+Epoch: 33
+Input: [1 1 1]
+Output: [0.70210541]
+Epoch: 34
+Input: [ 1 -1 -1]
+Output: [0.04878168]
+Epoch: 34
+Input: [ 1 -1  1]
+Output: [0.19456482]
+Epoch: 34
+Input: [ 1  1 -1]
+Output: [0.18131671]
+Epoch: 34
+Input: [1 1 1]
+Output: [0.70807785]
+Epoch: 35
+Input: [ 1 -1 -1]
+Output: [0.04675436]
+Epoch: 35
+Input: [ 1 -1  1]
+Output: [0.1912144]
+Epoch: 35
+Input: [ 1  1 -1]
+Output: [0.17847271]
+Epoch: 35
+Input: [1 1 1]
+Output: [0.71381572]
+Epoch: 36
+Input: [ 1 -1 -1]
+Output: [0.0448527]
+Epoch: 36
+Input: [ 1 -1  1]
+Output: [0.18795686]
+Epoch: 36
+Input: [ 1  1 -1]
+Output: [0.17568538]
+Epoch: 36
+Input: [1 1 1]
+Output: [0.71933092]
+Epoch: 37
+Input: [ 1 -1 -1]
+Output: [0.0430677]
+Epoch: 37
+Input: [ 1 -1  1]
+Output: [0.18479179]
+Epoch: 37
+Input: [ 1  1 -1]
+Output: [0.17295648]
+Epoch: 37
+Input: [1 1 1]
+Output: [0.72463468]
+Epoch: 38
+Input: [ 1 -1 -1]
+Output: [0.041391]
+Epoch: 38
+Input: [ 1 -1  1]
+Output: [0.18171821]
+Epoch: 38
+Input: [ 1  1 -1]
+Output: [0.17028727]
+Epoch: 38
+Input: [1 1 1]
+Output: [0.72973761]
+Epoch: 39
+Input: [ 1 -1 -1]
+Output: [0.03981481]
+Epoch: 39
+Input: [ 1 -1  1]
+Output: [0.17873471]
+Epoch: 39
+Input: [ 1  1 -1]
+Output: [0.16767849]
+Epoch: 39
+Input: [1 1 1]
+Output: [0.7346497]
+Epoch: 40
+Input: [ 1 -1 -1]
+Output: [0.03833194]
+Epoch: 40
+Input: [ 1 -1  1]
+Output: [0.17583954]
+Epoch: 40
+Input: [ 1  1 -1]
+Output: [0.16513052]
+Epoch: 40
+Input: [1 1 1]
+Output: [0.73938039]
+Epoch: 41
+Input: [ 1 -1 -1]
+Output: [0.0369357]
+Epoch: 41
+Input: [ 1 -1  1]
+Output: [0.17303071]
+Epoch: 41
+Input: [ 1  1 -1]
+Output: [0.16264337]
+Epoch: 41
+Input: [1 1 1]
+Output: [0.74393858]
+Epoch: 42
+Input: [ 1 -1 -1]
+Output: [0.03561993]
+Epoch: 42
+Input: [ 1 -1  1]
+Output: [0.17030603]
+Epoch: 42
+Input: [ 1  1 -1]
+Output: [0.16021676]
+Epoch: 42
+Input: [1 1 1]
+Output: [0.74833267]
+Epoch: 43
+Input: [ 1 -1 -1]
+Output: [0.03437893]
+Epoch: 43
+Input: [ 1 -1  1]
+Output: [0.16766318]
+Epoch: 43
+Input: [ 1  1 -1]
+Output: [0.1578502]
+Epoch: 43
+Input: [1 1 1]
+Output: [0.75257058]
+Epoch: 44
+Input: [ 1 -1 -1]
+Output: [0.03320743]
+Epoch: 44
+Input: [ 1 -1  1]
+Output: [0.16509973]
+Epoch: 44
+Input: [ 1  1 -1]
+Output: [0.15554296]
+Epoch: 44
+Input: [1 1 1]
+Output: [0.7566598]
+Epoch: 45
+Input: [ 1 -1 -1]
+Output: [0.0321006]
+Epoch: 45
+Input: [ 1 -1  1]
+Output: [0.16261323]
+Epoch: 45
+Input: [ 1  1 -1]
+Output: [0.15329417]
+Epoch: 45
+Input: [1 1 1]
+Output: [0.76060739]
+Epoch: 46
+Input: [ 1 -1 -1]
+Output: [0.03105395]
+Epoch: 46
+Input: [ 1 -1  1]
+Output: [0.16020118]
+Epoch: 46
+Input: [ 1  1 -1]
+Output: [0.15110282]
+Epoch: 46
+Input: [1 1 1]
+Output: [0.76442001]
+Epoch: 47
+Input: [ 1 -1 -1]
+Output: [0.03006335]
+Epoch: 47
+Input: [ 1 -1  1]
+Output: [0.15786109]
+Epoch: 47
+Input: [ 1  1 -1]
+Output: [0.14896778]
+Epoch: 47
+Input: [1 1 1]
+Output: [0.76810397]
+Epoch: 48
+Input: [ 1 -1 -1]
+Output: [0.02912499]
+Epoch: 48
+Input: [ 1 -1  1]
+Output: [0.15559051]
+Epoch: 48
+Input: [ 1  1 -1]
+Output: [0.14688786]
+Epoch: 48
+Input: [1 1 1]
+Output: [0.7716652]
+Epoch: 49
+Input: [ 1 -1 -1]
+Output: [0.02823536]
+Epoch: 49
+Input: [ 1 -1  1]
+Output: [0.15338698]
+Epoch: 49
+Input: [ 1  1 -1]
+Output: [0.14486179]
+Epoch: 49
+Input: [1 1 1]
+Output: [0.77510934]
+Epoch: 50
+Input: [ 1 -1 -1]
+Output: [0.02739122]
+Epoch: 50
+Input: [ 1 -1  1]
+Output: [0.15124814]
+Epoch: 50
+Input: [ 1  1 -1]
+Output: [0.14288826]
+Epoch: 50
+Input: [1 1 1]
+Output: [0.77844169]
+Epoch: 51
+Input: [ 1 -1 -1]
+Output: [0.02658958]
+Epoch: 51
+Input: [ 1 -1  1]
+Output: [0.14917164]
+Epoch: 51
+Input: [ 1  1 -1]
+Output: [0.14096592]
+Epoch: 51
+Input: [1 1 1]
+Output: [0.78166729]
+Epoch: 52
+Input: [ 1 -1 -1]
+Output: [0.02582766]
+Epoch: 52
+Input: [ 1 -1  1]
+Output: [0.14715523]
+Epoch: 52
+Input: [ 1  1 -1]
+Output: [0.1390934]
+Epoch: 52
+Input: [1 1 1]
+Output: [0.78479088]
+Epoch: 53
+Input: [ 1 -1 -1]
+Output: [0.02510291]
+Epoch: 53
+Input: [ 1 -1  1]
+Output: [0.14519668]
+Epoch: 53
+Input: [ 1  1 -1]
+Output: [0.13726935]
+Epoch: 53
+Input: [1 1 1]
+Output: [0.78781697]
+Epoch: 54
+Input: [ 1 -1 -1]
+Output: [0.02441297]
+Epoch: 54
+Input: [ 1 -1  1]
+Output: [0.14329389]
+Epoch: 54
+Input: [ 1  1 -1]
+Output: [0.13549238]
+Epoch: 54
+Input: [1 1 1]
+Output: [0.79074982]
+Epoch: 55
+Input: [ 1 -1 -1]
+Output: [0.02375565]
+Epoch: 55
+Input: [ 1 -1  1]
+Output: [0.14144478]
+Epoch: 55
+Input: [ 1  1 -1]
+Output: [0.13376114]
+Epoch: 55
+Input: [1 1 1]
+Output: [0.79359345]
+Epoch: 56
+Input: [ 1 -1 -1]
+Output: [0.02312892]
+Epoch: 56
+Input: [ 1 -1  1]
+Output: [0.13964736]
+Epoch: 56
+Input: [ 1  1 -1]
+Output: [0.13207426]
+Epoch: 56
+Input: [1 1 1]
+Output: [0.79635169]
+Epoch: 57
+Input: [ 1 -1 -1]
+Output: [0.02253092]
+Epoch: 57
+Input: [ 1 -1  1]
+Output: [0.13789973]
+Epoch: 57
+Input: [ 1  1 -1]
+Output: [0.13043043]
+Epoch: 57
+Input: [1 1 1]
+Output: [0.79902816]
+Epoch: 58
+Input: [ 1 -1 -1]
+Output: [0.02195989]
+Epoch: 58
+Input: [ 1 -1  1]
+Output: [0.13620004]
+Epoch: 58
+Input: [ 1  1 -1]
+Output: [0.12882831]
+Epoch: 58
+Input: [1 1 1]
+Output: [0.80162629]
+Epoch: 59
+Input: [ 1 -1 -1]
+Output: [0.02141424]
+Epoch: 59
+Input: [ 1 -1  1]
+Output: [0.13454652]
+Epoch: 59
+Input: [ 1  1 -1]
+Output: [0.12726664]
+Epoch: 59
+Input: [1 1 1]
+Output: [0.80414933]
+Epoch: 60
+Input: [ 1 -1 -1]
+Output: [0.02089245]
+Epoch: 60
+Input: [ 1 -1  1]
+Output: [0.13293747]
+Epoch: 60
+Input: [ 1  1 -1]
+Output: [0.12574416]
+Epoch: 60
+Input: [1 1 1]
+Output: [0.80660038]
+Epoch: 61
+Input: [ 1 -1 -1]
+Output: [0.02039314]
+Epoch: 61
+Input: [ 1 -1  1]
+Output: [0.13137125]
+Epoch: 61
+Input: [ 1  1 -1]
+Output: [0.12425963]
+Epoch: 61
+Input: [1 1 1]
+Output: [0.80898237]
+Epoch: 62
+Input: [ 1 -1 -1]
+Output: [0.01991502]
+Epoch: 62
+Input: [ 1 -1  1]
+Output: [0.1298463]
+Epoch: 62
+Input: [ 1  1 -1]
+Output: [0.12281187]
+Epoch: 62
+Input: [1 1 1]
+Output: [0.81129808]
+Epoch: 63
+Input: [ 1 -1 -1]
+Output: [0.01945687]
+Epoch: 63
+Input: [ 1 -1  1]
+Output: [0.12836111]
+Epoch: 63
+Input: [ 1  1 -1]
+Output: [0.12139971]
+Epoch: 63
+Input: [1 1 1]
+Output: [0.81355016]
+Epoch: 64
+Input: [ 1 -1 -1]
+Output: [0.01901758]
+Epoch: 64
+Input: [ 1 -1  1]
+Output: [0.12691425]
+Epoch: 64
+Input: [ 1  1 -1]
+Output: [0.12002203]
+Epoch: 64
+Input: [1 1 1]
+Output: [0.81574111]
+Epoch: 65
+Input: [ 1 -1 -1]
+Output: [0.0185961]
+Epoch: 65
+Input: [ 1 -1  1]
+Output: [0.12550433]
+Epoch: 65
+Input: [ 1  1 -1]
+Output: [0.11867772]
+Epoch: 65
+Input: [1 1 1]
+Output: [0.81787334]
+Epoch: 66
+Input: [ 1 -1 -1]
+Output: [0.01819146]
+Epoch: 66
+Input: [ 1 -1  1]
+Output: [0.12413004]
+Epoch: 66
+Input: [ 1  1 -1]
+Output: [0.11736573]
+Epoch: 66
+Input: [1 1 1]
+Output: [0.81994911]
+Epoch: 67
+Input: [ 1 -1 -1]
+Output: [0.01780275]
+Epoch: 67
+Input: [ 1 -1  1]
+Output: [0.1227901]
+Epoch: 67
+Input: [ 1  1 -1]
+Output: [0.11608502]
+Epoch: 67
+Input: [1 1 1]
+Output: [0.82197059]
+Epoch: 68
+Input: [ 1 -1 -1]
+Output: [0.01742911]
+Epoch: 68
+Input: [ 1 -1  1]
+Output: [0.1214833]
+Epoch: 68
+Input: [ 1  1 -1]
+Output: [0.11483461]
+Epoch: 68
+Input: [1 1 1]
+Output: [0.82393984]
+Epoch: 69
+Input: [ 1 -1 -1]
+Output: [0.01706976]
+Epoch: 69
+Input: [ 1 -1  1]
+Output: [0.12020848]
+Epoch: 69
+Input: [ 1  1 -1]
+Output: [0.11361353]
+Epoch: 69
+Input: [1 1 1]
+Output: [0.82585881]
+Epoch: 70
+Input: [ 1 -1 -1]
+Output: [0.01672395]
+Epoch: 70
+Input: [ 1 -1  1]
+Output: [0.11896452]
+Epoch: 70
+Input: [ 1  1 -1]
+Output: [0.11242085]
+Epoch: 70
+Input: [1 1 1]
+Output: [0.82772938]
+Epoch: 71
+Input: [ 1 -1 -1]
+Output: [0.01639098]
+Epoch: 71
+Input: [ 1 -1  1]
+Output: [0.11775036]
+Epoch: 71
+Input: [ 1  1 -1]
+Output: [0.11125568]
+Epoch: 71
+Input: [1 1 1]
+Output: [0.82955332]
+Epoch: 72
+Input: [ 1 -1 -1]
+Output: [0.0160702]
+Epoch: 72
+Input: [ 1 -1  1]
+Output: [0.11656497]
+Epoch: 72
+Input: [ 1  1 -1]
+Output: [0.11011714]
+Epoch: 72
+Input: [1 1 1]
+Output: [0.83133234]
+Epoch: 73
+Input: [ 1 -1 -1]
+Output: [0.015761]
+Epoch: 73
+Input: [ 1 -1  1]
+Output: [0.11540737]
+Epoch: 73
+Input: [ 1  1 -1]
+Output: [0.10900441]
+Epoch: 73
+Input: [1 1 1]
+Output: [0.83306805]
+Epoch: 74
+Input: [ 1 -1 -1]
+Output: [0.01546281]
+Epoch: 74
+Input: [ 1 -1  1]
+Output: [0.11427662]
+Epoch: 74
+Input: [ 1  1 -1]
+Output: [0.10791667]
+Epoch: 74
+Input: [1 1 1]
+Output: [0.834762]
+Epoch: 75
+Input: [ 1 -1 -1]
+Output: [0.01517509]
+Epoch: 75
+Input: [ 1 -1  1]
+Output: [0.11317183]
+Epoch: 75
+Input: [ 1  1 -1]
+Output: [0.10685314]
+Epoch: 75
+Input: [1 1 1]
+Output: [0.83641567]
+Epoch: 76
+Input: [ 1 -1 -1]
+Output: [0.01489733]
+Epoch: 76
+Input: [ 1 -1  1]
+Output: [0.11209212]
+Epoch: 76
+Input: [ 1  1 -1]
+Output: [0.10581307]
+Epoch: 76
+Input: [1 1 1]
+Output: [0.83803046]
+Epoch: 77
+Input: [ 1 -1 -1]
+Output: [0.01462906]
+Epoch: 77
+Input: [ 1 -1  1]
+Output: [0.11103668]
+Epoch: 77
+Input: [ 1  1 -1]
+Output: [0.10479575]
+Epoch: 77
+Input: [1 1 1]
+Output: [0.83960772]
+Epoch: 78
+Input: [ 1 -1 -1]
+Output: [0.01436983]
+Epoch: 78
+Input: [ 1 -1  1]
+Output: [0.11000471]
+Epoch: 78
+Input: [ 1  1 -1]
+Output: [0.10380046]
+Epoch: 78
+Input: [1 1 1]
+Output: [0.84114875]
+Epoch: 79
+Input: [ 1 -1 -1]
+Output: [0.01411922]
+Epoch: 79
+Input: [ 1 -1  1]
+Output: [0.10899544]
+Epoch: 79
+Input: [ 1  1 -1]
+Output: [0.10282654]
+Epoch: 79
+Input: [1 1 1]
+Output: [0.84265476]
+Epoch: 80
+Input: [ 1 -1 -1]
+Output: [0.01387684]
+Epoch: 80
+Input: [ 1 -1  1]
+Output: [0.10800814]
+Epoch: 80
+Input: [ 1  1 -1]
+Output: [0.10187335]
+Epoch: 80
+Input: [1 1 1]
+Output: [0.84412693]
+Epoch: 81
+Input: [ 1 -1 -1]
+Output: [0.0136423]
+Epoch: 81
+Input: [ 1 -1  1]
+Output: [0.10704212]
+Epoch: 81
+Input: [ 1  1 -1]
+Output: [0.10094024]
+Epoch: 81
+Input: [1 1 1]
+Output: [0.8455664]
+Epoch: 82
+Input: [ 1 -1 -1]
+Output: [0.01341525]
+Epoch: 82
+Input: [ 1 -1  1]
+Output: [0.1060967]
+Epoch: 82
+Input: [ 1  1 -1]
+Output: [0.10002662]
+Epoch: 82
+Input: [1 1 1]
+Output: [0.84697424]
+Epoch: 83
+Input: [ 1 -1 -1]
+Output: [0.01319537]
+Epoch: 83
+Input: [ 1 -1  1]
+Output: [0.10517124]
+Epoch: 83
+Input: [ 1  1 -1]
+Output: [0.09913191]
+Epoch: 83
+Input: [1 1 1]
+Output: [0.84835148]
+Epoch: 84
+Input: [ 1 -1 -1]
+Output: [0.01298233]
+Epoch: 84
+Input: [ 1 -1  1]
+Output: [0.10426511]
+Epoch: 84
+Input: [ 1  1 -1]
+Output: [0.09825555]
+Epoch: 84
+Input: [1 1 1]
+Output: [0.84969912]
+Epoch: 85
+Input: [ 1 -1 -1]
+Output: [0.01277585]
+Epoch: 85
+Input: [ 1 -1  1]
+Output: [0.10337771]
+Epoch: 85
+Input: [ 1  1 -1]
+Output: [0.09739699]
+Epoch: 85
+Input: [1 1 1]
+Output: [0.8510181]
+Epoch: 86
+Input: [ 1 -1 -1]
+Output: [0.01257563]
+Epoch: 86
+Input: [ 1 -1  1]
+Output: [0.10250849]
+Epoch: 86
+Input: [ 1  1 -1]
+Output: [0.09655572]
+Epoch: 86
+Input: [1 1 1]
+Output: [0.85230933]
+Epoch: 87
+Input: [ 1 -1 -1]
+Output: [0.01238142]
+Epoch: 87
+Input: [ 1 -1  1]
+Output: [0.10165687]
+Epoch: 87
+Input: [ 1  1 -1]
+Output: [0.09573123]
+Epoch: 87
+Input: [1 1 1]
+Output: [0.85357368]
+Epoch: 88
+Input: [ 1 -1 -1]
+Output: [0.01219296]
+Epoch: 88
+Input: [ 1 -1  1]
+Output: [0.10082234]
+Epoch: 88
+Input: [ 1  1 -1]
+Output: [0.09492304]
+Epoch: 88
+Input: [1 1 1]
+Output: [0.85481198]
+Epoch: 89
+Input: [ 1 -1 -1]
+Output: [0.01201001]
+Epoch: 89
+Input: [ 1 -1  1]
+Output: [0.10000439]
+Epoch: 89
+Input: [ 1  1 -1]
+Output: [0.09413068]
+Epoch: 89
+Input: [1 1 1]
+Output: [0.85602506]
+Epoch: 90
+Input: [ 1 -1 -1]
+Output: [0.01183234]
+Epoch: 90
+Input: [ 1 -1  1]
+Output: [0.09920252]
+Epoch: 90
+Input: [ 1  1 -1]
+Output: [0.0933537]
+Epoch: 90
+Input: [1 1 1]
+Output: [0.85721366]
+Epoch: 91
+Input: [ 1 -1 -1]
+Output: [0.01165975]
+Epoch: 91
+Input: [ 1 -1  1]
+Output: [0.09841627]
+Epoch: 91
+Input: [ 1  1 -1]
+Output: [0.09259166]
+Epoch: 91
+Input: [1 1 1]
+Output: [0.85837853]
+Epoch: 92
+Input: [ 1 -1 -1]
+Output: [0.01149203]
+Epoch: 92
+Input: [ 1 -1  1]
+Output: [0.09764517]
+Epoch: 92
+Input: [ 1  1 -1]
+Output: [0.09184415]
+Epoch: 92
+Input: [1 1 1]
+Output: [0.85952039]
+Epoch: 93
+Input: [ 1 -1 -1]
+Output: [0.01132898]
+Epoch: 93
+Input: [ 1 -1  1]
+Output: [0.0968888]
+Epoch: 93
+Input: [ 1  1 -1]
+Output: [0.09111075]
+Epoch: 93
+Input: [1 1 1]
+Output: [0.86063992]
+Epoch: 94
+Input: [ 1 -1 -1]
+Output: [0.01117042]
+Epoch: 94
+Input: [ 1 -1  1]
+Output: [0.09614674]
+Epoch: 94
+Input: [ 1  1 -1]
+Output: [0.09039109]
+Epoch: 94
+Input: [1 1 1]
+Output: [0.86173777]
+Epoch: 95
+Input: [ 1 -1 -1]
+Output: [0.01101618]
+Epoch: 95
+Input: [ 1 -1  1]
+Output: [0.09541857]
+Epoch: 95
+Input: [ 1  1 -1]
+Output: [0.08968478]
+Epoch: 95
+Input: [1 1 1]
+Output: [0.86281458]
+Epoch: 96
+Input: [ 1 -1 -1]
+Output: [0.01086609]
+Epoch: 96
+Input: [ 1 -1  1]
+Output: [0.09470391]
+Epoch: 96
+Input: [ 1  1 -1]
+Output: [0.08899145]
+Epoch: 96
+Input: [1 1 1]
+Output: [0.86387096]
+Epoch: 97
+Input: [ 1 -1 -1]
+Output: [0.01071999]
+Epoch: 97
+Input: [ 1 -1  1]
+Output: [0.09400238]
+Epoch: 97
+Input: [ 1  1 -1]
+Output: [0.08831075]
+Epoch: 97
+Input: [1 1 1]
+Output: [0.86490748]
+Epoch: 98
+Input: [ 1 -1 -1]
+Output: [0.01057774]
+Epoch: 98
+Input: [ 1 -1  1]
+Output: [0.09331362]
+Epoch: 98
+Input: [ 1  1 -1]
+Output: [0.08764236]
+Epoch: 98
+Input: [1 1 1]
+Output: [0.86592472]
+Epoch: 99
+Input: [ 1 -1 -1]
+Output: [0.01043918]
+Epoch: 99
+Input: [ 1 -1  1]
+Output: [0.09263728]
+Epoch: 99
+Input: [ 1  1 -1]
+Output: [0.08698592]
+Epoch: 99
+Input: [1 1 1]
+Output: [0.86692322]
+Epoch: 100
+Input: [ 1 -1 -1]
+Output: [0.01030419]
+Epoch: 100
+Input: [ 1 -1  1]
+Output: [0.09197302]
+Epoch: 100
+Input: [ 1  1 -1]
+Output: [0.08634114]
+Epoch: 100
+Input: [1 1 1]
+Output: [0.86790349]

@@ -1,0 +1,1200 @@
+Epoch: 1
+Input: [ 1 -1 -1]
+Error: [-0.02929605]
+Epoch: 1
+Input: [ 1 -1  1]
+Error: [-0.04431903]
+Epoch: 1
+Input: [ 1  1 -1]
+Error: [-0.03833946]
+Epoch: 1
+Input: [1 1 1]
+Error: [0.14788155]
+Epoch: 2
+Input: [ 1 -1 -1]
+Error: [-0.02941676]
+Epoch: 2
+Input: [ 1 -1  1]
+Error: [-0.04667526]
+Epoch: 2
+Input: [ 1  1 -1]
+Error: [-0.03989258]
+Epoch: 2
+Input: [1 1 1]
+Error: [0.14814624]
+Epoch: 3
+Input: [ 1 -1 -1]
+Error: [-0.02914528]
+Epoch: 3
+Input: [ 1 -1  1]
+Error: [-0.0486693]
+Epoch: 3
+Input: [ 1  1 -1]
+Error: [-0.04117462]
+Epoch: 3
+Input: [1 1 1]
+Error: [0.14780698]
+Epoch: 4
+Input: [ 1 -1 -1]
+Error: [-0.02853566]
+Epoch: 4
+Input: [ 1 -1  1]
+Error: [-0.05031801]
+Epoch: 4
+Input: [ 1  1 -1]
+Error: [-0.04220836]
+Epoch: 4
+Input: [1 1 1]
+Error: [0.14692365]
+Epoch: 5
+Input: [ 1 -1 -1]
+Error: [-0.02764634]
+Epoch: 5
+Input: [ 1 -1  1]
+Error: [-0.05164411]
+Epoch: 5
+Input: [ 1  1 -1]
+Error: [-0.04301812]
+Epoch: 5
+Input: [1 1 1]
+Error: [0.14554827]
+Epoch: 6
+Input: [ 1 -1 -1]
+Error: [-0.02653493]
+Epoch: 6
+Input: [ 1 -1  1]
+Error: [-0.05267147]
+Epoch: 6
+Input: [ 1  1 -1]
+Error: [-0.04362672]
+Epoch: 6
+Input: [1 1 1]
+Error: [0.14372808]
+Epoch: 7
+Input: [ 1 -1 -1]
+Error: [-0.0252554]
+Epoch: 7
+Input: [ 1 -1  1]
+Error: [-0.05342267]
+Epoch: 7
+Input: [ 1  1 -1]
+Error: [-0.04405417]
+Epoch: 7
+Input: [1 1 1]
+Error: [0.1415086]
+Epoch: 8
+Input: [ 1 -1 -1]
+Error: [-0.02385668]
+Epoch: 8
+Input: [ 1 -1  1]
+Error: [-0.05391823]
+Epoch: 8
+Input: [ 1  1 -1]
+Error: [-0.04431738]
+Epoch: 8
+Input: [1 1 1]
+Error: [0.13893585]
+Epoch: 9
+Input: [ 1 -1 -1]
+Error: [-0.02238229]
+Epoch: 9
+Input: [ 1 -1  1]
+Error: [-0.05417679]
+Epoch: 9
+Input: [ 1  1 -1]
+Error: [-0.04443068]
+Epoch: 9
+Input: [1 1 1]
+Error: [0.13605751]
+Epoch: 10
+Input: [ 1 -1 -1]
+Error: [-0.02087025]
+Epoch: 10
+Input: [ 1 -1  1]
+Error: [-0.05421581]
+Epoch: 10
+Input: [ 1  1 -1]
+Error: [-0.04440639]
+Epoch: 10
+Input: [1 1 1]
+Error: [0.13292279]
+Epoch: 11
+Input: [ 1 -1 -1]
+Error: [-0.01935316]
+Epoch: 11
+Input: [ 1 -1  1]
+Error: [-0.05405229]
+Epoch: 11
+Input: [ 1  1 -1]
+Error: [-0.04425563]
+Epoch: 11
+Input: [1 1 1]
+Error: [0.12958157]
+Epoch: 12
+Input: [ 1 -1 -1]
+Error: [-0.0178583]
+Epoch: 12
+Input: [ 1 -1  1]
+Error: [-0.05370337]
+Epoch: 12
+Input: [ 1  1 -1]
+Error: [-0.04398887]
+Epoch: 12
+Input: [1 1 1]
+Error: [0.12608303]
+Epoch: 13
+Input: [ 1 -1 -1]
+Error: [-0.01640782]
+Epoch: 13
+Input: [ 1 -1  1]
+Error: [-0.05318665]
+Epoch: 13
+Input: [ 1  1 -1]
+Error: [-0.04361634]
+Epoch: 13
+Input: [1 1 1]
+Error: [0.12247414]
+Epoch: 14
+Input: [ 1 -1 -1]
+Error: [-0.01501892]
+Epoch: 14
+Input: [ 1 -1  1]
+Error: [-0.05252032]
+Epoch: 14
+Input: [ 1  1 -1]
+Error: [-0.04314829]
+Epoch: 14
+Input: [1 1 1]
+Error: [0.11879829]
+Epoch: 15
+Input: [ 1 -1 -1]
+Error: [-0.01370419]
+Epoch: 15
+Input: [ 1 -1  1]
+Error: [-0.05172295]
+Epoch: 15
+Input: [ 1  1 -1]
+Error: [-0.04259501]
+Epoch: 15
+Input: [1 1 1]
+Error: [0.11509434]
+Epoch: 16
+Input: [ 1 -1 -1]
+Error: [-0.01247205]
+Epoch: 16
+Input: [ 1 -1  1]
+Error: [-0.05081324]
+Epoch: 16
+Input: [ 1  1 -1]
+Error: [-0.04196683]
+Epoch: 16
+Input: [1 1 1]
+Error: [0.11139602]
+Epoch: 17
+Input: [ 1 -1 -1]
+Error: [-0.01132726]
+Epoch: 17
+Input: [ 1 -1  1]
+Error: [-0.04980961]
+Epoch: 17
+Input: [ 1  1 -1]
+Error: [-0.04127397]
+Epoch: 17
+Input: [1 1 1]
+Error: [0.10773169]
+Epoch: 18
+Input: [ 1 -1 -1]
+Error: [-0.01027152]
+Epoch: 18
+Input: [ 1 -1  1]
+Error: [-0.04872987]
+Epoch: 18
+Input: [ 1  1 -1]
+Error: [-0.04052639]
+Epoch: 18
+Input: [1 1 1]
+Error: [0.10412456]
+Epoch: 19
+Input: [ 1 -1 -1]
+Error: [-0.00930404]
+Epoch: 19
+Input: [ 1 -1  1]
+Error: [-0.04759081]
+Epoch: 19
+Input: [ 1  1 -1]
+Error: [-0.03973366]
+Epoch: 19
+Input: [1 1 1]
+Error: [0.10059297]
+Epoch: 20
+Input: [ 1 -1 -1]
+Error: [-0.00842217]
+Epoch: 20
+Input: [ 1 -1  1]
+Error: [-0.04640799]
+Epoch: 20
+Input: [ 1  1 -1]
+Error: [-0.0389048]
+Epoch: 20
+Input: [1 1 1]
+Error: [0.097151]
+Epoch: 21
+Input: [ 1 -1 -1]
+Error: [-0.00762186]
+Epoch: 21
+Input: [ 1 -1  1]
+Error: [-0.04519549]
+Epoch: 21
+Input: [ 1  1 -1]
+Error: [-0.03804818]
+Epoch: 21
+Input: [1 1 1]
+Error: [0.09380895]
+Epoch: 22
+Input: [ 1 -1 -1]
+Error: [-0.00689817]
+Epoch: 22
+Input: [ 1 -1  1]
+Error: [-0.04396582]
+Epoch: 22
+Input: [ 1  1 -1]
+Error: [-0.03717149]
+Epoch: 22
+Input: [1 1 1]
+Error: [0.09057399]
+Epoch: 23
+Input: [ 1 -1 -1]
+Error: [-0.00624562]
+Epoch: 23
+Input: [ 1 -1  1]
+Error: [-0.04272991]
+Epoch: 23
+Input: [ 1  1 -1]
+Error: [-0.03628165]
+Epoch: 23
+Input: [1 1 1]
+Error: [0.0874507]
+Epoch: 24
+Input: [ 1 -1 -1]
+Error: [-0.00565851]
+Epoch: 24
+Input: [ 1 -1  1]
+Error: [-0.0414971]
+Epoch: 24
+Input: [ 1  1 -1]
+Error: [-0.03538484]
+Epoch: 24
+Input: [1 1 1]
+Error: [0.08444152]
+Epoch: 25
+Input: [ 1 -1 -1]
+Error: [-0.0051311]
+Epoch: 25
+Input: [ 1 -1  1]
+Error: [-0.04027526]
+Epoch: 25
+Input: [ 1  1 -1]
+Error: [-0.03448649]
+Epoch: 25
+Input: [1 1 1]
+Error: [0.08154725]
+Epoch: 26
+Input: [ 1 -1 -1]
+Error: [-0.00465786]
+Epoch: 26
+Input: [ 1 -1  1]
+Error: [-0.03907086]
+Epoch: 26
+Input: [ 1  1 -1]
+Error: [-0.03359133]
+Epoch: 26
+Input: [1 1 1]
+Error: [0.07876734]
+Epoch: 27
+Input: [ 1 -1 -1]
+Error: [-0.00423348]
+Epoch: 27
+Input: [ 1 -1  1]
+Error: [-0.03788912]
+Epoch: 27
+Input: [ 1  1 -1]
+Error: [-0.03270341]
+Epoch: 27
+Input: [1 1 1]
+Error: [0.07610024]
+Epoch: 28
+Input: [ 1 -1 -1]
+Error: [-0.00385302]
+Epoch: 28
+Input: [ 1 -1  1]
+Error: [-0.03673415]
+Epoch: 28
+Input: [ 1  1 -1]
+Error: [-0.03182617]
+Epoch: 28
+Input: [1 1 1]
+Error: [0.07354364]
+Epoch: 29
+Input: [ 1 -1 -1]
+Error: [-0.00351191]
+Epoch: 29
+Input: [ 1 -1  1]
+Error: [-0.03560908]
+Epoch: 29
+Input: [ 1  1 -1]
+Error: [-0.03096248]
+Epoch: 29
+Input: [1 1 1]
+Error: [0.07109466]
+Epoch: 30
+Input: [ 1 -1 -1]
+Error: [-0.00320596]
+Epoch: 30
+Input: [ 1 -1  1]
+Error: [-0.03451622]
+Epoch: 30
+Input: [ 1  1 -1]
+Error: [-0.03011469]
+Epoch: 30
+Input: [1 1 1]
+Error: [0.06875002]
+Epoch: 31
+Input: [ 1 -1 -1]
+Error: [-0.0029314]
+Epoch: 31
+Input: [ 1 -1  1]
+Error: [-0.03345714]
+Epoch: 31
+Input: [ 1  1 -1]
+Error: [-0.02928471]
+Epoch: 31
+Input: [1 1 1]
+Error: [0.06650614]
+Epoch: 32
+Input: [ 1 -1 -1]
+Error: [-0.0026848]
+Epoch: 32
+Input: [ 1 -1  1]
+Error: [-0.03243283]
+Epoch: 32
+Input: [ 1  1 -1]
+Error: [-0.02847403]
+Epoch: 32
+Input: [1 1 1]
+Error: [0.0643593]
+Epoch: 33
+Input: [ 1 -1 -1]
+Error: [-0.0024631]
+Epoch: 33
+Input: [ 1 -1  1]
+Error: [-0.0314438]
+Epoch: 33
+Input: [ 1  1 -1]
+Error: [-0.02768379]
+Epoch: 33
+Input: [1 1 1]
+Error: [0.06230567]
+Epoch: 34
+Input: [ 1 -1 -1]
+Error: [-0.00226357]
+Epoch: 34
+Input: [ 1 -1  1]
+Error: [-0.03049013]
+Epoch: 34
+Input: [ 1  1 -1]
+Error: [-0.02691483]
+Epoch: 34
+Input: [1 1 1]
+Error: [0.06034136]
+Epoch: 35
+Input: [ 1 -1 -1]
+Error: [-0.00208377]
+Epoch: 35
+Input: [ 1 -1  1]
+Error: [-0.02957158]
+Epoch: 35
+Input: [ 1  1 -1]
+Error: [-0.02616771]
+Epoch: 35
+Input: [1 1 1]
+Error: [0.05846254]
+Epoch: 36
+Input: [ 1 -1 -1]
+Error: [-0.00192153]
+Epoch: 36
+Input: [ 1 -1  1]
+Error: [-0.02868768]
+Epoch: 36
+Input: [ 1  1 -1]
+Error: [-0.02544276]
+Epoch: 36
+Input: [1 1 1]
+Error: [0.05666539]
+Epoch: 37
+Input: [ 1 -1 -1]
+Error: [-0.00177494]
+Epoch: 37
+Input: [ 1 -1  1]
+Error: [-0.02783774]
+Epoch: 37
+Input: [ 1  1 -1]
+Error: [-0.02474013]
+Epoch: 37
+Input: [1 1 1]
+Error: [0.05494619]
+Epoch: 38
+Input: [ 1 -1 -1]
+Error: [-0.0016423]
+Epoch: 38
+Input: [ 1 -1  1]
+Error: [-0.0270209]
+Epoch: 38
+Input: [ 1  1 -1]
+Error: [-0.02405981]
+Epoch: 38
+Input: [1 1 1]
+Error: [0.05330132]
+Epoch: 39
+Input: [ 1 -1 -1]
+Error: [-0.0015221]
+Epoch: 39
+Input: [ 1 -1  1]
+Error: [-0.02623622]
+Epoch: 39
+Input: [ 1  1 -1]
+Error: [-0.02340162]
+Epoch: 39
+Input: [1 1 1]
+Error: [0.05172726]
+Epoch: 40
+Input: [ 1 -1 -1]
+Error: [-0.00141302]
+Epoch: 40
+Input: [ 1 -1  1]
+Error: [-0.02548267]
+Epoch: 40
+Input: [ 1  1 -1]
+Error: [-0.02276529]
+Epoch: 40
+Input: [1 1 1]
+Error: [0.05022062]
+Epoch: 41
+Input: [ 1 -1 -1]
+Error: [-0.00131386]
+Epoch: 41
+Input: [ 1 -1  1]
+Error: [-0.02475915]
+Epoch: 41
+Input: [ 1  1 -1]
+Error: [-0.02215048]
+Epoch: 41
+Input: [1 1 1]
+Error: [0.04877816]
+Epoch: 42
+Input: [ 1 -1 -1]
+Error: [-0.00122359]
+Epoch: 42
+Input: [ 1 -1  1]
+Error: [-0.02406456]
+Epoch: 42
+Input: [ 1  1 -1]
+Error: [-0.02155674]
+Epoch: 42
+Input: [1 1 1]
+Error: [0.04739673]
+Epoch: 43
+Input: [ 1 -1 -1]
+Error: [-0.00114128]
+Epoch: 43
+Input: [ 1 -1  1]
+Error: [-0.02339777]
+Epoch: 43
+Input: [ 1  1 -1]
+Error: [-0.02098358]
+Epoch: 43
+Input: [1 1 1]
+Error: [0.04607336]
+Epoch: 44
+Input: [ 1 -1 -1]
+Error: [-0.00106611]
+Epoch: 44
+Input: [ 1 -1  1]
+Error: [-0.02275765]
+Epoch: 44
+Input: [ 1  1 -1]
+Error: [-0.02043047]
+Epoch: 44
+Input: [1 1 1]
+Error: [0.04480519]
+Epoch: 45
+Input: [ 1 -1 -1]
+Error: [-0.00099737]
+Epoch: 45
+Input: [ 1 -1  1]
+Error: [-0.02214307]
+Epoch: 45
+Input: [ 1  1 -1]
+Error: [-0.01989683]
+Epoch: 45
+Input: [1 1 1]
+Error: [0.04358951]
+Epoch: 46
+Input: [ 1 -1 -1]
+Error: [-0.0009344]
+Epoch: 46
+Input: [ 1 -1  1]
+Error: [-0.02155295]
+Epoch: 46
+Input: [ 1  1 -1]
+Error: [-0.01938207]
+Epoch: 46
+Input: [1 1 1]
+Error: [0.04242373]
+Epoch: 47
+Input: [ 1 -1 -1]
+Error: [-0.00087663]
+Epoch: 47
+Input: [ 1 -1  1]
+Error: [-0.02098621]
+Epoch: 47
+Input: [ 1  1 -1]
+Error: [-0.0188856]
+Epoch: 47
+Input: [1 1 1]
+Error: [0.04130538]
+Epoch: 48
+Input: [ 1 -1 -1]
+Error: [-0.00082356]
+Epoch: 48
+Input: [ 1 -1  1]
+Error: [-0.02044181]
+Epoch: 48
+Input: [ 1  1 -1]
+Error: [-0.01840679]
+Epoch: 48
+Input: [1 1 1]
+Error: [0.04023214]
+Epoch: 49
+Input: [ 1 -1 -1]
+Error: [-0.00077473]
+Epoch: 49
+Input: [ 1 -1  1]
+Error: [-0.01991874]
+Epoch: 49
+Input: [ 1  1 -1]
+Error: [-0.01794502]
+Epoch: 49
+Input: [1 1 1]
+Error: [0.03920178]
+Epoch: 50
+Input: [ 1 -1 -1]
+Error: [-0.00072973]
+Epoch: 50
+Input: [ 1 -1  1]
+Error: [-0.01941605]
+Epoch: 50
+Input: [ 1  1 -1]
+Error: [-0.0174997]
+Epoch: 50
+Input: [1 1 1]
+Error: [0.03821221]
+Epoch: 51
+Input: [ 1 -1 -1]
+Error: [-0.00068821]
+Epoch: 51
+Input: [ 1 -1  1]
+Error: [-0.01893278]
+Epoch: 51
+Input: [ 1  1 -1]
+Error: [-0.0170702]
+Epoch: 51
+Input: [1 1 1]
+Error: [0.03726143]
+Epoch: 52
+Input: [ 1 -1 -1]
+Error: [-0.00064984]
+Epoch: 52
+Input: [ 1 -1  1]
+Error: [-0.01846806]
+Epoch: 52
+Input: [ 1  1 -1]
+Error: [-0.01665594]
+Epoch: 52
+Input: [1 1 1]
+Error: [0.03634756]
+Epoch: 53
+Input: [ 1 -1 -1]
+Error: [-0.00061434]
+Epoch: 53
+Input: [ 1 -1  1]
+Error: [-0.01802103]
+Epoch: 53
+Input: [ 1  1 -1]
+Error: [-0.01625633]
+Epoch: 53
+Input: [1 1 1]
+Error: [0.03546881]
+Epoch: 54
+Input: [ 1 -1 -1]
+Error: [-0.00058144]
+Epoch: 54
+Input: [ 1 -1  1]
+Error: [-0.01759087]
+Epoch: 54
+Input: [ 1  1 -1]
+Error: [-0.01587079]
+Epoch: 54
+Input: [1 1 1]
+Error: [0.03462349]
+Epoch: 55
+Input: [ 1 -1 -1]
+Error: [-0.00055092]
+Epoch: 55
+Input: [ 1 -1  1]
+Error: [-0.01717679]
+Epoch: 55
+Input: [ 1  1 -1]
+Error: [-0.01549878]
+Epoch: 55
+Input: [1 1 1]
+Error: [0.03380999]
+Epoch: 56
+Input: [ 1 -1 -1]
+Error: [-0.00052257]
+Epoch: 56
+Input: [ 1 -1  1]
+Error: [-0.01677807]
+Epoch: 56
+Input: [ 1  1 -1]
+Error: [-0.01513976]
+Epoch: 56
+Input: [1 1 1]
+Error: [0.0330268]
+Epoch: 57
+Input: [ 1 -1 -1]
+Error: [-0.0004962]
+Epoch: 57
+Input: [ 1 -1  1]
+Error: [-0.01639399]
+Epoch: 57
+Input: [ 1  1 -1]
+Error: [-0.0147932]
+Epoch: 57
+Input: [1 1 1]
+Error: [0.03227249]
+Epoch: 58
+Input: [ 1 -1 -1]
+Error: [-0.00047165]
+Epoch: 58
+Input: [ 1 -1  1]
+Error: [-0.01602388]
+Epoch: 58
+Input: [ 1  1 -1]
+Error: [-0.01445861]
+Epoch: 58
+Input: [1 1 1]
+Error: [0.0315457]
+Epoch: 59
+Input: [ 1 -1 -1]
+Error: [-0.00044875]
+Epoch: 59
+Input: [ 1 -1  1]
+Error: [-0.0156671]
+Epoch: 59
+Input: [ 1  1 -1]
+Error: [-0.01413549]
+Epoch: 59
+Input: [1 1 1]
+Error: [0.03084515]
+Epoch: 60
+Input: [ 1 -1 -1]
+Error: [-0.00042738]
+Epoch: 60
+Input: [ 1 -1  1]
+Error: [-0.01532305]
+Epoch: 60
+Input: [ 1  1 -1]
+Error: [-0.01382338]
+Epoch: 60
+Input: [1 1 1]
+Error: [0.03016961]
+Epoch: 61
+Input: [ 1 -1 -1]
+Error: [-0.0004074]
+Epoch: 61
+Input: [ 1 -1  1]
+Error: [-0.01499115]
+Epoch: 61
+Input: [ 1  1 -1]
+Error: [-0.01352183]
+Epoch: 61
+Input: [1 1 1]
+Error: [0.02951793]
+Epoch: 62
+Input: [ 1 -1 -1]
+Error: [-0.00038871]
+Epoch: 62
+Input: [ 1 -1  1]
+Error: [-0.01467084]
+Epoch: 62
+Input: [ 1  1 -1]
+Error: [-0.01323041]
+Epoch: 62
+Input: [1 1 1]
+Error: [0.02888904]
+Epoch: 63
+Input: [ 1 -1 -1]
+Error: [-0.0003712]
+Epoch: 63
+Input: [ 1 -1  1]
+Error: [-0.01436162]
+Epoch: 63
+Input: [ 1  1 -1]
+Error: [-0.01294871]
+Epoch: 63
+Input: [1 1 1]
+Error: [0.02828189]
+Epoch: 64
+Input: [ 1 -1 -1]
+Error: [-0.00035479]
+Epoch: 64
+Input: [ 1 -1  1]
+Error: [-0.01406299]
+Epoch: 64
+Input: [ 1  1 -1]
+Error: [-0.01267634]
+Epoch: 64
+Input: [1 1 1]
+Error: [0.0276955]
+Epoch: 65
+Input: [ 1 -1 -1]
+Error: [-0.00033938]
+Epoch: 65
+Input: [ 1 -1  1]
+Error: [-0.01377448]
+Epoch: 65
+Input: [ 1  1 -1]
+Error: [-0.0124129]
+Epoch: 65
+Input: [1 1 1]
+Error: [0.02712896]
+Epoch: 66
+Input: [ 1 -1 -1]
+Error: [-0.00032491]
+Epoch: 66
+Input: [ 1 -1  1]
+Error: [-0.01349564]
+Epoch: 66
+Input: [ 1  1 -1]
+Error: [-0.01215803]
+Epoch: 66
+Input: [1 1 1]
+Error: [0.02658137]
+Epoch: 67
+Input: [ 1 -1 -1]
+Error: [-0.0003113]
+Epoch: 67
+Input: [ 1 -1  1]
+Error: [-0.01322605]
+Epoch: 67
+Input: [ 1  1 -1]
+Error: [-0.0119114]
+Epoch: 67
+Input: [1 1 1]
+Error: [0.02605192]
+Epoch: 68
+Input: [ 1 -1 -1]
+Error: [-0.00029848]
+Epoch: 68
+Input: [ 1 -1  1]
+Error: [-0.01296532]
+Epoch: 68
+Input: [ 1  1 -1]
+Error: [-0.01167267]
+Epoch: 68
+Input: [1 1 1]
+Error: [0.02553981]
+Epoch: 69
+Input: [ 1 -1 -1]
+Error: [-0.0002864]
+Epoch: 69
+Input: [ 1 -1  1]
+Error: [-0.01271306]
+Epoch: 69
+Input: [ 1  1 -1]
+Error: [-0.01144151]
+Epoch: 69
+Input: [1 1 1]
+Error: [0.0250443]
+Epoch: 70
+Input: [ 1 -1 -1]
+Error: [-0.00027501]
+Epoch: 70
+Input: [ 1 -1  1]
+Error: [-0.01246891]
+Epoch: 70
+Input: [ 1  1 -1]
+Error: [-0.01121762]
+Epoch: 70
+Input: [1 1 1]
+Error: [0.02456466]
+Epoch: 71
+Input: [ 1 -1 -1]
+Error: [-0.00026426]
+Epoch: 71
+Input: [ 1 -1  1]
+Error: [-0.01223252]
+Epoch: 71
+Input: [ 1  1 -1]
+Error: [-0.01100072]
+Epoch: 71
+Input: [1 1 1]
+Error: [0.02410024]
+Epoch: 72
+Input: [ 1 -1 -1]
+Error: [-0.0002541]
+Epoch: 72
+Input: [ 1 -1  1]
+Error: [-0.01200358]
+Epoch: 72
+Input: [ 1  1 -1]
+Error: [-0.01079053]
+Epoch: 72
+Input: [1 1 1]
+Error: [0.02365039]
+Epoch: 73
+Input: [ 1 -1 -1]
+Error: [-0.00024449]
+Epoch: 73
+Input: [ 1 -1  1]
+Error: [-0.01178177]
+Epoch: 73
+Input: [ 1  1 -1]
+Error: [-0.01058677]
+Epoch: 73
+Input: [1 1 1]
+Error: [0.0232145]
+Epoch: 74
+Input: [ 1 -1 -1]
+Error: [-0.0002354]
+Epoch: 74
+Input: [ 1 -1  1]
+Error: [-0.01156679]
+Epoch: 74
+Input: [ 1  1 -1]
+Error: [-0.01038921]
+Epoch: 74
+Input: [1 1 1]
+Error: [0.022792]
+Epoch: 75
+Input: [ 1 -1 -1]
+Error: [-0.00022679]
+Epoch: 75
+Input: [ 1 -1  1]
+Error: [-0.01135837]
+Epoch: 75
+Input: [ 1  1 -1]
+Error: [-0.01019759]
+Epoch: 75
+Input: [1 1 1]
+Error: [0.02238234]
+Epoch: 76
+Input: [ 1 -1 -1]
+Error: [-0.00021862]
+Epoch: 76
+Input: [ 1 -1  1]
+Error: [-0.01115625]
+Epoch: 76
+Input: [ 1  1 -1]
+Error: [-0.01001168]
+Epoch: 76
+Input: [1 1 1]
+Error: [0.021985]
+Epoch: 77
+Input: [ 1 -1 -1]
+Error: [-0.00021088]
+Epoch: 77
+Input: [ 1 -1  1]
+Error: [-0.01096016]
+Epoch: 77
+Input: [ 1  1 -1]
+Error: [-0.00983127]
+Epoch: 77
+Input: [1 1 1]
+Error: [0.02159948]
+Epoch: 78
+Input: [ 1 -1 -1]
+Error: [-0.00020352]
+Epoch: 78
+Input: [ 1 -1  1]
+Error: [-0.01076986]
+Epoch: 78
+Input: [ 1  1 -1]
+Error: [-0.00965613]
+Epoch: 78
+Input: [1 1 1]
+Error: [0.02122531]
+Epoch: 79
+Input: [ 1 -1 -1]
+Error: [-0.00019654]
+Epoch: 79
+Input: [ 1 -1  1]
+Error: [-0.01058514]
+Epoch: 79
+Input: [ 1  1 -1]
+Error: [-0.00948608]
+Epoch: 79
+Input: [1 1 1]
+Error: [0.02086205]
+Epoch: 80
+Input: [ 1 -1 -1]
+Error: [-0.00018989]
+Epoch: 80
+Input: [ 1 -1  1]
+Error: [-0.01040576]
+Epoch: 80
+Input: [ 1  1 -1]
+Error: [-0.00932092]
+Epoch: 80
+Input: [1 1 1]
+Error: [0.02050926]
+Epoch: 81
+Input: [ 1 -1 -1]
+Error: [-0.00018357]
+Epoch: 81
+Input: [ 1 -1  1]
+Error: [-0.01023153]
+Epoch: 81
+Input: [ 1  1 -1]
+Error: [-0.00916046]
+Epoch: 81
+Input: [1 1 1]
+Error: [0.02016654]
+Epoch: 82
+Input: [ 1 -1 -1]
+Error: [-0.00017755]
+Epoch: 82
+Input: [ 1 -1  1]
+Error: [-0.01006223]
+Epoch: 82
+Input: [ 1  1 -1]
+Error: [-0.00900453]
+Epoch: 82
+Input: [1 1 1]
+Error: [0.0198335]
+Epoch: 83
+Input: [ 1 -1 -1]
+Error: [-0.00017182]
+Epoch: 83
+Input: [ 1 -1  1]
+Error: [-0.00989769]
+Epoch: 83
+Input: [ 1  1 -1]
+Error: [-0.00885295]
+Epoch: 83
+Input: [1 1 1]
+Error: [0.01950977]
+Epoch: 84
+Input: [ 1 -1 -1]
+Error: [-0.00016635]
+Epoch: 84
+Input: [ 1 -1  1]
+Error: [-0.00973772]
+Epoch: 84
+Input: [ 1  1 -1]
+Error: [-0.00870558]
+Epoch: 84
+Input: [1 1 1]
+Error: [0.019195]
+Epoch: 85
+Input: [ 1 -1 -1]
+Error: [-0.00016114]
+Epoch: 85
+Input: [ 1 -1  1]
+Error: [-0.00958216]
+Epoch: 85
+Input: [ 1  1 -1]
+Error: [-0.00856225]
+Epoch: 85
+Input: [1 1 1]
+Error: [0.01888886]
+Epoch: 86
+Input: [ 1 -1 -1]
+Error: [-0.00015616]
+Epoch: 86
+Input: [ 1 -1  1]
+Error: [-0.00943083]
+Epoch: 86
+Input: [ 1  1 -1]
+Error: [-0.00842282]
+Epoch: 86
+Input: [1 1 1]
+Error: [0.01859103]
+Epoch: 87
+Input: [ 1 -1 -1]
+Error: [-0.0001514]
+Epoch: 87
+Input: [ 1 -1  1]
+Error: [-0.00928359]
+Epoch: 87
+Input: [ 1  1 -1]
+Error: [-0.00828714]
+Epoch: 87
+Input: [1 1 1]
+Error: [0.01830119]
+Epoch: 88
+Input: [ 1 -1 -1]
+Error: [-0.00014686]
+Epoch: 88
+Input: [ 1 -1  1]
+Error: [-0.00914027]
+Epoch: 88
+Input: [ 1  1 -1]
+Error: [-0.00815509]
+Epoch: 88
+Input: [1 1 1]
+Error: [0.01801906]
+Epoch: 89
+Input: [ 1 -1 -1]
+Error: [-0.00014251]
+Epoch: 89
+Input: [ 1 -1  1]
+Error: [-0.00900075]
+Epoch: 89
+Input: [ 1  1 -1]
+Error: [-0.00802653]
+Epoch: 89
+Input: [1 1 1]
+Error: [0.01774436]
+Epoch: 90
+Input: [ 1 -1 -1]
+Error: [-0.00013835]
+Epoch: 90
+Input: [ 1 -1  1]
+Error: [-0.00886487]
+Epoch: 90
+Input: [ 1  1 -1]
+Error: [-0.00790134]
+Epoch: 90
+Input: [1 1 1]
+Error: [0.01747682]
+Epoch: 91
+Input: [ 1 -1 -1]
+Error: [-0.00013436]
+Epoch: 91
+Input: [ 1 -1  1]
+Error: [-0.00873252]
+Epoch: 91
+Input: [ 1  1 -1]
+Error: [-0.00777941]
+Epoch: 91
+Input: [1 1 1]
+Error: [0.01721619]
+Epoch: 92
+Input: [ 1 -1 -1]
+Error: [-0.00013055]
+Epoch: 92
+Input: [ 1 -1  1]
+Error: [-0.00860357]
+Epoch: 92
+Input: [ 1  1 -1]
+Error: [-0.00766061]
+Epoch: 92
+Input: [1 1 1]
+Error: [0.01696222]
+Epoch: 93
+Input: [ 1 -1 -1]
+Error: [-0.00012689]
+Epoch: 93
+Input: [ 1 -1  1]
+Error: [-0.0084779]
+Epoch: 93
+Input: [ 1  1 -1]
+Error: [-0.00754484]
+Epoch: 93
+Input: [1 1 1]
+Error: [0.01671469]
+Epoch: 94
+Input: [ 1 -1 -1]
+Error: [-0.00012338]
+Epoch: 94
+Input: [ 1 -1  1]
+Error: [-0.0083554]
+Epoch: 94
+Input: [ 1  1 -1]
+Error: [-0.007432]
+Epoch: 94
+Input: [1 1 1]
+Error: [0.01647336]
+Epoch: 95
+Input: [ 1 -1 -1]
+Error: [-0.00012002]
+Epoch: 95
+Input: [ 1 -1  1]
+Error: [-0.00823595]
+Epoch: 95
+Input: [ 1  1 -1]
+Error: [-0.00732199]
+Epoch: 95
+Input: [1 1 1]
+Error: [0.01623803]
+Epoch: 96
+Input: [ 1 -1 -1]
+Error: [-0.00011679]
+Epoch: 96
+Input: [ 1 -1  1]
+Error: [-0.00811945]
+Epoch: 96
+Input: [ 1  1 -1]
+Error: [-0.00721471]
+Epoch: 96
+Input: [1 1 1]
+Error: [0.01600849]
+Epoch: 97
+Input: [ 1 -1 -1]
+Error: [-0.00011369]
+Epoch: 97
+Input: [ 1 -1  1]
+Error: [-0.0080058]
+Epoch: 97
+Input: [ 1  1 -1]
+Error: [-0.00711007]
+Epoch: 97
+Input: [1 1 1]
+Error: [0.01578455]
+Epoch: 98
+Input: [ 1 -1 -1]
+Error: [-0.0001107]
+Epoch: 98
+Input: [ 1 -1  1]
+Error: [-0.00789491]
+Epoch: 98
+Input: [ 1  1 -1]
+Error: [-0.00700799]
+Epoch: 98
+Input: [1 1 1]
+Error: [0.01556602]
+Epoch: 99
+Input: [ 1 -1 -1]
+Error: [-0.00010784]
+Epoch: 99
+Input: [ 1 -1  1]
+Error: [-0.00778668]
+Epoch: 99
+Input: [ 1  1 -1]
+Error: [-0.00690837]
+Epoch: 99
+Input: [1 1 1]
+Error: [0.01535272]
+Epoch: 100
+Input: [ 1 -1 -1]
+Error: [-0.00010508]
+Epoch: 100
+Input: [ 1 -1  1]
+Error: [-0.00768103]
+Epoch: 100
+Input: [ 1  1 -1]
+Error: [-0.00681114]
+Epoch: 100
+Input: [1 1 1]
+Error: [0.01514447]

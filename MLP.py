@@ -38,23 +38,24 @@ class MLP:
         for i in range(self.hiddenNumber):  # for each hiddenNeuron
             summ = 0
             for j in range(len(inputValues)):  # each inputNeuron
-                summ += inputValues[j] * self.weightsInputToHidden[i][
-                    j]  # linear combination of all the inputValues with their respective weight to a hidden perceptron i
+                # linear combination of all the inputValues with their respective weight to a hidden perceptron i
+                summ += inputValues[j] * self.weightsInputToHidden[i][j] 
             hiddenValues[i] = self.sigmoid(summ)  # applying the step function to the summation
 
         # adding the bias as a hiddenValue to facilitate the calculus
         # this is a development preference, the weights already contain the bias's weights, then, the bias comes as an input
         # this have to be treated at the backpropagation because the bias node does not propagate an error because the previous layer is not connected to it
         if len(hiddenValues) == self.hiddenNumber:
-            hiddenValues = np.insert(hiddenValues, 0, 1)  # adding the value 1 in the index 0
+            # adding the value 1 in the index 0
+            hiddenValues = np.insert(hiddenValues, 0, 1)
 
         # feed values from hidden layer through output layer
         outputValues = np.zeros((self.outputNumber))
         for i in range(self.outputNumber):  # for each outputNeuron
             summ = 0
             for j in range(len(hiddenValues)):  # each hiddenNeuron
-                summ += hiddenValues[j] * self.weightsHiddenToOutput[i][
-                    j]  # linear combination of all the hiddenValues with their respective weight to an output perceptron i
+                # linear combination of all the hiddenValues with their respective weight to an output perceptron i
+                summ += hiddenValues[j] * self.weightsHiddenToOutput[i][j]
             outputValues[i] = self.sigmoid(summ)  # applying the step function to the summation
 
         return outputValues, hiddenValues, inputValues
@@ -124,7 +125,7 @@ class MLP:
         errorPerEpoch = ''
         outputPerEpoch = ''
         for epoch in range(epochs):
-            # for each epoch we iterate over all the input and targets of a specific case and send it to the backpropagation function, whose call the feedfoward function
+            # for each epoch we iterate over all the input and targets of a specific case and send it to the backpropagation function
             for inputValues, targetValues in zip(inputs, targets):
                 # this condition is a data treatment for targets with more than one value, for example targets that are arrays
                 if type(targetValues[0]) == type(np.array((2))):
@@ -138,7 +139,8 @@ class MLP:
                     outputValues) + '\n'
 
                 self.backpropagation(targetValues, inputValues, learningRate)
-                learningRate *= learningRateMultiplierPerEpoch  # updating the learning rate according to the multiplier, if the multiplier is 1, we can assume that our learning rate is static
+                # updating the learning rate according to the multiplier, if the multiplier is 1, we can assume that our learning rate is static
+                learningRate *= learningRateMultiplierPerEpoch 
 
         # making error and output per epoch log
         writetxt(problem + '_Errors_Per_Epoch', errorPerEpoch)
@@ -182,17 +184,18 @@ def plot(mlp,dataframe, start, end,scale):
         for j in range(start*scale,end*scale):
             x.append([i/scale,j/scale])
     x = np.array(x)
+    #print(x)
     colors = []
     inputs = dataframe.drop(dataframe.columns[-1], axis=1)
     targets = dataframe.drop(dataframe.columns[:-1], axis=1).values
     for y in targets:
-        colors.append('red') if y == 0 else colors.append('blue')
+        colors.append('red') if y == 0 else colors.append('green')
     fig = plt.figure()
     ax = Axes3D(fig)
     ax.scatter(inputs[inputs.columns[0]], inputs[inputs.columns[1]],targets,color=colors)
     y = mlp.predict(x)
     y = [y[i][0] for i in range(len(y))]
-    ax.plot(x[:,0],x[:,1], y)
+    ax.plot_trisurf(x[:,0],x[:,1], y)
     plt.suptitle(problem)
     plt.show()
 
@@ -216,13 +219,17 @@ def _and(inputNumber, hiddenNumber, outputNumber, epochs, learningRate):
     data = mlp.openFile('Data/problemAND.csv')
     output = mlp.train(data, epochs, learningRate)
 
+    inputs = data.drop(data.columns[-1], axis=1).values
+    for inputvalue in inputs:
+        print("Input: {} Predicted Output: {} Output: {}".format(inputvalue,1 if mlp.predict([inputvalue])[0] >= 0.5 else 0, mlp.predict([inputvalue])[0]))
+
     # making final weights log
     writetxt('AND_Final_Weights',
              'From input layer through hidden layer:\n' + str(mlp.weightsInputToHidden) +
              '\n\nFrom hidden layer through output layer:\n' + str(mlp.weightsHiddenToOutput))
 
     data = mlp.openFile('Data/problemAND.csv')
-    plot(mlp,data,-2, 2, 10)
+    plot(mlp,data,-2, 2, 6)
 
 
 def _or(inputNumber, hiddenNumber, outputNumber, epochs, learningRate):
@@ -245,13 +252,17 @@ def _or(inputNumber, hiddenNumber, outputNumber, epochs, learningRate):
     data = mlp.openFile('Data/problemOR.csv')
     output = mlp.train(data, epochs, learningRate)
 
+    inputs = data.drop(data.columns[-1], axis=1).values
+    for inputvalue in inputs:
+        print("Input: {} Predicted Output: {} Output: {}".format(inputvalue,1 if mlp.predict([inputvalue])[0] >= 0.5 else 0, mlp.predict([inputvalue])[0]))
+
     # making final weights log
     writetxt('OR_Final_Weights',
              'From input layer through hidden layer:\n' + str(mlp.weightsInputToHidden) +
              '\n\nFrom hidden layer through output layer:\n' + str(mlp.weightsHiddenToOutput))
 
     data = mlp.openFile('Data/problemOR.csv')
-    plot(mlp, data, -2, 2, 10)
+    plot(mlp, data, -2, 2, 6)
 
 
 def _xor(inputNumber, hiddenNumber, outputNumber, epochs, learningRate):
@@ -274,13 +285,17 @@ def _xor(inputNumber, hiddenNumber, outputNumber, epochs, learningRate):
     data = mlp.openFile('Data/problemXOR.csv')
     output = mlp.train(data, epochs, learningRate)
 
+    inputs = data.drop(data.columns[-1], axis=1).values
+    for inputvalue in inputs:
+       print("Input: {} Predicted Output: {} Output: {}".format(inputvalue,1 if mlp.predict([inputvalue])[0] >= 0.5 else 0, mlp.predict([inputvalue])[0]))
+
     # making final weights log
     writetxt('XOR_Final_Weights',
              'From input layer through hidden layer:\n' + str(mlp.weightsInputToHidden) +
              '\n\nFrom hidden layer through output layer:\n' + str(mlp.weightsHiddenToOutput))
 
     data = mlp.openFile('Data/problemXOR.csv')
-    plot(mlp, data, -2, 2, 10)
+    plot(mlp, data, -2, 2, 6)
 
 
 def _characters(inputNumber, hiddenNumber, outputNumber, epochs, learningRate):
@@ -309,11 +324,12 @@ def _characters(inputNumber, hiddenNumber, outputNumber, epochs, learningRate):
                    'E': np.array([0, 0, 0, 0, 1, 0, 0]),
                    'J': np.array([0, 0, 0, 0, 0, 1, 0]),
                    'K': np.array([0, 0, 0, 0, 0, 0, 1])}
+    print('Testing with a clean dataframe:')
     data[data.columns[-1]] = data[data.columns[-1]].apply(lambda x: letters_map[x])
 
     # training and predict
     output = mlp.train(data, epochs, learningRate)
-
+    inputs = data.drop(data.columns[-1], axis=1).values
     # making final weights log
     writetxt('CHAR_Final_Weights',
              'From input layer through hidden layer:\n' + str(mlp.weightsInputToHidden) +
@@ -321,14 +337,14 @@ def _characters(inputNumber, hiddenNumber, outputNumber, epochs, learningRate):
 
     letters = list(letters_map.keys())
 
-    for outputValues, targetValues in zip(output, data[data.columns[-1]].values):
-        i = max(range(len(outputValues)), key=lambda x: outputValues[x])
-        print('y:', letters[i], end=' ')
+    for inputValues, outputValues, targetValues in zip(inputs, output, data[data.columns[-1]].values):
         i = max(range(len(targetValues)), key=lambda x: targetValues[x])
-        print('t:', letters[i])
+        print('Expected Output:', letters[i], letters_map[letters[i]], end=' ')
+        i = max(range(len(outputValues)), key=lambda x: outputValues[x])
+        print('Output:', letters[i], letters_map[letters[i]], outputValues)
 
     ''' Noisy Characters '''
-    print('\ntesting with a dataframe containing messy pixels:')
+    print('\nTesting with a dataframe containing messy pixels:')
     # testing on a messy pixels characters dataframe
     data = mlp.openFile('Data/caracteres-ruido.csv')
     # mapping letters to array of values
@@ -340,13 +356,13 @@ def _characters(inputNumber, hiddenNumber, outputNumber, epochs, learningRate):
 
     # predict
     for outputValues, targetValues in zip(output, data[data.columns[-1]].values):
-        i = max(range(len(outputValues)), key=lambda x: outputValues[x])
-        print('y:', letters[i], end=' ')
         i = max(range(len(targetValues)), key=lambda x: targetValues[x])
-        print('t:', letters[i])
+        print('Expected Output:', letters[i], letters_map[letters[i]], end=' ')
+        i = max(range(len(outputValues)), key=lambda x: outputValues[x])
+        print('Output:', letters[i], letters_map[letters[i]], outputValues)
 
 
-# _and(2,4,1,100,0.5)
-# _or(2,4,1,100,0.5)
-# _xor(2,4,1,1000,0.5)
-_characters(63, 20, 7, 100, 0.5)
+_and(2,4,1,100,0.7)
+#_or(2,4,1,100,0.5)
+#_xor(2,4,1,1000,0.5)
+#_characters(63, 20, 7, 100, 0.5)
