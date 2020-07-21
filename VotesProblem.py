@@ -1,4 +1,4 @@
-import MLP
+from MLP import MLP
 import pandas as pd
 import numpy as np
 
@@ -29,9 +29,11 @@ testLabel = test.drop(test.columns.difference(['is-republican']), 1)
 # Estratégia de grade (trocar nome sei la qual é)
 grade = {'hidden_neurons': [6, 8, 12, 17, 34, 50], 'learning_rate': [0.5, 0.3, 0.1], 'epochs': [300, 1000, 5000]}
 
-inputNumber = 17
-hiddenNumber = 20
+inputNumber = 16
 outputNumber = 1
 
-mlp = MLP(inputNumber, hiddenNumber, outputNumber)
-mlp.train(trainInputs, trainLabel, testInputs, testLabel)
+for hn in grade['hidden_neurons']:
+    for lr in grade['learning_rate']:
+        for ep in grade['epochs']:
+            mlp = MLP(inputNumber, hn, outputNumber)
+            mlp.train(trainInputs, trainLabel, testInputs, testLabel, ep, lr)

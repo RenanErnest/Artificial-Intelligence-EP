@@ -109,7 +109,7 @@ class MLP:
             for j in range(len(self.weightsInputToHidden[i])):
                 self.weightsInputToHidden[i][j] += deltasInputToHidden[i][j]
 
-    def train(self, trainSet, trainLabel, testSet, epochs=1000, learningRate=1, learningRateMultiplierPerEpoch=1):
+    def train(self, trainSet, trainLabel, testSet, testLabel, epochs=1000, learningRate=1, learningRateMultiplierPerEpoch=1):
         '''
             trainSet: a pandas dataframe with the values for training
         '''
@@ -117,17 +117,26 @@ class MLP:
         inputs = trainSet.values
         targets = trainLabel.values
 
+        testSet = testSet.values
+        testLabel = testLabel.values
+
         errorPerEpoch = ''
         outputPerEpoch = ''
         overfitTestPerEpoch = ''
+        msePerEpoch = ''
 
         for epoch in range(epochs):
 
             ##################### FAZER PREDICT NO DATASET DE TESTE E CALCULAR O ERRO ##################### 
-            testOutput = predict(testSet)
-            erros = calcularErro(testOutput, outputLabel)
-            for o, e in enumerate(erros):
-                overfitTestPerEpoch += 'Epoch: ' + str(epoch + 1) + '\nValue: ' + erros[o] + '\n'
+            testOutput = self.predict(testSet)
+            erros = self.calcularErro(testOutput, testLabel)
+
+            # Erro quadratico medio         
+            mse = np.square(np.subtract(testLabel, testOutput)).mean()
+            msePerEpoch += 'Epoch: ' + str(epoch + 1) + '\nValue: ' + str(mse) + '\n'
+
+            for e in erros:
+                overfitTestPerEpoch += 'Epoch: ' + str(epoch + 1) + '\nValue: ' + str(e) + '\n'
             ###############################################################################################
 
             # for each epoch we iterate over all the input and targets of a specific case and send it to the backpropagation function
@@ -151,6 +160,9 @@ class MLP:
         # writetxt(problem + '_Errors_Per_Epoch', errorPerEpoch)
         # writetxt(problem + '_Outputs_Per_Epoch', outputPerEpoch)
 
+        self.writetxt("Overfit_Test" + '_Per_Epoch', overfitTestPerEpoch)
+        self.writetxt("MSE_Overfit_Test" + '_Per_Epoch', msePerEpoch)
+        
         # at the end it returns the a prediction of the inputs that were used to train the model
         # what is expected is that the predictions match with the target values of each input case
         return self.predict(inputs)
@@ -169,3 +181,8 @@ class MLP:
             output.append(outputValues)
         # at the end we return all the outputs of our model in a list
         return output
+
+    def writetxt(self, filename, string):
+        f = open(filename + '.txt', 'w')
+        f.write(string)
+        f.close()
