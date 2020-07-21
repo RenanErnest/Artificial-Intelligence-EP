@@ -1,1200 +1,1200 @@
 Epoch: 1
 Input: [ 1 -1 -1]
-Error: [-0.02929605]
+Error: [-0.14814331]
 Epoch: 1
 Input: [ 1 -1  1]
-Error: [-0.04431903]
+Error: [-0.14810663]
 Epoch: 1
 Input: [ 1  1 -1]
-Error: [-0.03833946]
+Error: [-0.14432122]
 Epoch: 1
 Input: [1 1 1]
-Error: [0.14788155]
+Error: [0.10388576]
 Epoch: 2
 Input: [ 1 -1 -1]
-Error: [-0.02941676]
+Error: [-0.13745122]
 Epoch: 2
 Input: [ 1 -1  1]
-Error: [-0.04667526]
+Error: [-0.13646528]
 Epoch: 2
 Input: [ 1  1 -1]
-Error: [-0.03989258]
+Error: [-0.12503996]
 Epoch: 2
 Input: [1 1 1]
-Error: [0.14814624]
+Error: [0.1311057]
 Epoch: 3
 Input: [ 1 -1 -1]
-Error: [-0.02914528]
+Error: [-0.11591934]
 Epoch: 3
 Input: [ 1 -1  1]
-Error: [-0.0486693]
+Error: [-0.11615757]
 Epoch: 3
 Input: [ 1  1 -1]
-Error: [-0.04117462]
+Error: [-0.10488551]
 Epoch: 3
 Input: [1 1 1]
-Error: [0.14780698]
+Error: [0.14269923]
 Epoch: 4
 Input: [ 1 -1 -1]
-Error: [-0.02853566]
+Error: [-0.09562795]
 Epoch: 4
 Input: [ 1 -1  1]
-Error: [-0.05031801]
+Error: [-0.09865866]
 Epoch: 4
 Input: [ 1  1 -1]
-Error: [-0.04220836]
+Error: [-0.09019745]
 Epoch: 4
 Input: [1 1 1]
-Error: [0.14692365]
+Error: [0.14668793]
 Epoch: 5
 Input: [ 1 -1 -1]
-Error: [-0.02764634]
+Error: [-0.08009198]
 Epoch: 5
 Input: [ 1 -1  1]
-Error: [-0.05164411]
+Error: [-0.08610918]
 Epoch: 5
 Input: [ 1  1 -1]
-Error: [-0.04301812]
+Error: [-0.08038009]
 Epoch: 5
 Input: [1 1 1]
-Error: [0.14554827]
+Error: [0.14786174]
 Epoch: 6
 Input: [ 1 -1 -1]
-Error: [-0.02653493]
+Error: [-0.06872694]
 Epoch: 6
 Input: [ 1 -1  1]
-Error: [-0.05267147]
+Error: [-0.0774879]
 Epoch: 6
 Input: [ 1  1 -1]
-Error: [-0.04362672]
+Error: [-0.07389535]
 Epoch: 6
 Input: [1 1 1]
-Error: [0.14372808]
+Error: [0.148124]
 Epoch: 7
 Input: [ 1 -1 -1]
-Error: [-0.0252554]
+Error: [-0.06033289]
 Epoch: 7
 Input: [ 1 -1  1]
-Error: [-0.05342267]
+Error: [-0.07157529]
 Epoch: 7
 Input: [ 1  1 -1]
-Error: [-0.04405417]
+Error: [-0.06960262]
 Epoch: 7
 Input: [1 1 1]
-Error: [0.1415086]
+Error: [0.14814723]
 Epoch: 8
 Input: [ 1 -1 -1]
-Error: [-0.02385668]
+Error: [-0.05396382]
 Epoch: 8
 Input: [ 1 -1  1]
-Error: [-0.05391823]
+Error: [-0.0674908]
 Epoch: 8
 Input: [ 1  1 -1]
-Error: [-0.04431738]
+Error: [-0.06676983]
 Epoch: 8
 Input: [1 1 1]
-Error: [0.13893585]
+Error: [0.14814121]
 Epoch: 9
 Input: [ 1 -1 -1]
-Error: [-0.02238229]
+Error: [-0.04897713]
 Epoch: 9
 Input: [ 1 -1  1]
-Error: [-0.05417679]
+Error: [-0.06465228]
 Epoch: 9
 Input: [ 1  1 -1]
-Error: [-0.04443068]
+Error: [-0.06493105]
 Epoch: 9
 Input: [1 1 1]
-Error: [0.13605751]
+Error: [0.14814629]
 Epoch: 10
 Input: [ 1 -1 -1]
-Error: [-0.02087025]
+Error: [-0.04494787]
 Epoch: 10
 Input: [ 1 -1  1]
-Error: [-0.05421581]
+Error: [-0.0626759]
 Epoch: 10
 Input: [ 1  1 -1]
-Error: [-0.04440639]
+Error: [-0.06378148]
 Epoch: 10
 Input: [1 1 1]
-Error: [0.13292279]
+Error: [0.14814404]
 Epoch: 11
 Input: [ 1 -1 -1]
-Error: [-0.01935316]
+Error: [-0.04159302]
 Epoch: 11
 Input: [ 1 -1  1]
-Error: [-0.05405229]
+Error: [-0.06130294]
 Epoch: 11
 Input: [ 1  1 -1]
-Error: [-0.04425563]
+Error: [-0.06311424]
 Epoch: 11
 Input: [1 1 1]
-Error: [0.12958157]
+Error: [0.14809979]
 Epoch: 12
 Input: [ 1 -1 -1]
-Error: [-0.0178583]
+Error: [-0.03872103]
 Epoch: 12
 Input: [ 1 -1  1]
-Error: [-0.05370337]
+Error: [-0.06035402]
 Epoch: 12
 Input: [ 1  1 -1]
-Error: [-0.04398887]
+Error: [-0.06278371]
 Epoch: 12
 Input: [1 1 1]
-Error: [0.12608303]
+Error: [0.14797908]
 Epoch: 13
 Input: [ 1 -1 -1]
-Error: [-0.01640782]
+Error: [-0.03620022]
 Epoch: 13
 Input: [ 1 -1  1]
-Error: [-0.05318665]
+Error: [-0.05970145]
 Epoch: 13
 Input: [ 1  1 -1]
-Error: [-0.04361634]
+Error: [-0.062684]
 Epoch: 13
 Input: [1 1 1]
-Error: [0.12247414]
+Error: [0.14775358]
 Epoch: 14
 Input: [ 1 -1 -1]
-Error: [-0.01501892]
+Error: [-0.03393908]
 Epoch: 14
 Input: [ 1 -1  1]
-Error: [-0.05252032]
+Error: [-0.05925237]
 Epoch: 14
 Input: [ 1  1 -1]
-Error: [-0.04314829]
+Error: [-0.06273608]
 Epoch: 14
 Input: [1 1 1]
-Error: [0.11879829]
+Error: [0.14740265]
 Epoch: 15
 Input: [ 1 -1 -1]
-Error: [-0.01370419]
+Error: [-0.03187364]
 Epoch: 15
 Input: [ 1 -1  1]
-Error: [-0.05172295]
+Error: [-0.05893821]
 Epoch: 15
 Input: [ 1  1 -1]
-Error: [-0.04259501]
+Error: [-0.06287978]
 Epoch: 15
 Input: [1 1 1]
-Error: [0.11509434]
+Error: [0.14691297]
 Epoch: 16
 Input: [ 1 -1 -1]
-Error: [-0.01247205]
+Error: [-0.02995925]
 Epoch: 16
 Input: [ 1 -1  1]
-Error: [-0.05081324]
+Error: [-0.05870793]
 Epoch: 16
 Input: [ 1  1 -1]
-Error: [-0.04196683]
+Error: [-0.06306867]
 Epoch: 16
 Input: [1 1 1]
-Error: [0.11139602]
+Error: [0.14627751]
 Epoch: 17
 Input: [ 1 -1 -1]
-Error: [-0.01132726]
+Error: [-0.02816495]
 Epoch: 17
 Input: [ 1 -1  1]
-Error: [-0.04980961]
+Error: [-0.05852351]
 Epoch: 17
 Input: [ 1  1 -1]
-Error: [-0.04127397]
+Error: [-0.06326666]
 Epoch: 17
 Input: [1 1 1]
-Error: [0.10773169]
+Error: [0.14549421]
 Epoch: 18
 Input: [ 1 -1 -1]
-Error: [-0.01027152]
+Error: [-0.02646959]
 Epoch: 18
 Input: [ 1 -1  1]
-Error: [-0.04872987]
+Error: [-0.0583568]
 Epoch: 18
 Input: [ 1  1 -1]
-Error: [-0.04052639]
+Error: [-0.0634456]
 Epoch: 18
 Input: [1 1 1]
-Error: [0.10412456]
+Error: [0.1445647]
 Epoch: 19
 Input: [ 1 -1 -1]
-Error: [-0.00930404]
+Error: [-0.02485901]
 Epoch: 19
 Input: [ 1 -1  1]
-Error: [-0.04759081]
+Error: [-0.05818721]
 Epoch: 19
 Input: [ 1  1 -1]
-Error: [-0.03973366]
+Error: [-0.06358358]
 Epoch: 19
 Input: [1 1 1]
-Error: [0.10059297]
+Error: [0.1434932]
 Epoch: 20
 Input: [ 1 -1 -1]
-Error: [-0.00842217]
+Error: [-0.023324]
 Epoch: 20
 Input: [ 1 -1  1]
-Error: [-0.04640799]
+Error: [-0.05799999]
 Epoch: 20
 Input: [ 1  1 -1]
-Error: [-0.0389048]
+Error: [-0.06366364]
 Epoch: 20
 Input: [1 1 1]
-Error: [0.097151]
+Error: [0.14228563]
 Epoch: 21
 Input: [ 1 -1 -1]
-Error: [-0.00762186]
+Error: [-0.02185877]
 Epoch: 21
 Input: [ 1 -1  1]
-Error: [-0.04519549]
+Error: [-0.05778496]
 Epoch: 21
 Input: [ 1  1 -1]
-Error: [-0.03804818]
+Error: [-0.06367281]
 Epoch: 21
 Input: [1 1 1]
-Error: [0.09380895]
+Error: [0.14094889]
 Epoch: 22
 Input: [ 1 -1 -1]
-Error: [-0.00689817]
+Error: [-0.02045985]
 Epoch: 22
 Input: [ 1 -1  1]
-Error: [-0.04396582]
+Error: [-0.05753539]
 Epoch: 22
 Input: [ 1  1 -1]
-Error: [-0.03717149]
+Error: [-0.06360137]
 Epoch: 22
 Input: [1 1 1]
-Error: [0.09057399]
+Error: [0.13949039]
 Epoch: 23
 Input: [ 1 -1 -1]
-Error: [-0.00624562]
+Error: [-0.01912522]
 Epoch: 23
 Input: [ 1 -1  1]
-Error: [-0.04272991]
+Error: [-0.05724723]
 Epoch: 23
 Input: [ 1  1 -1]
-Error: [-0.03628165]
+Error: [-0.06344226]
 Epoch: 23
 Input: [1 1 1]
-Error: [0.0874507]
+Error: [0.13791767]
 Epoch: 24
 Input: [ 1 -1 -1]
-Error: [-0.00565851]
+Error: [-0.01785378]
 Epoch: 24
 Input: [ 1 -1  1]
-Error: [-0.0414971]
+Error: [-0.05691844]
 Epoch: 24
 Input: [ 1  1 -1]
-Error: [-0.03538484]
+Error: [-0.06319065]
 Epoch: 24
 Input: [1 1 1]
-Error: [0.08444152]
+Error: [0.13623823]
 Epoch: 25
 Input: [ 1 -1 -1]
-Error: [-0.0051311]
+Error: [-0.01664486]
 Epoch: 25
 Input: [ 1 -1  1]
-Error: [-0.04027526]
+Error: [-0.05654844]
 Epoch: 25
 Input: [ 1  1 -1]
-Error: [-0.03448649]
+Error: [-0.06284361]
 Epoch: 25
 Input: [1 1 1]
-Error: [0.08154725]
+Error: [0.13445938]
 Epoch: 26
 Input: [ 1 -1 -1]
-Error: [-0.00465786]
+Error: [-0.01549794]
 Epoch: 26
 Input: [ 1 -1  1]
-Error: [-0.03907086]
+Error: [-0.05613774]
 Epoch: 26
 Input: [ 1  1 -1]
-Error: [-0.03359133]
+Error: [-0.06239986]
 Epoch: 26
 Input: [1 1 1]
-Error: [0.07876734]
+Error: [0.13258824]
 Epoch: 27
 Input: [ 1 -1 -1]
-Error: [-0.00423348]
+Error: [-0.01441248]
 Epoch: 27
 Input: [ 1 -1  1]
-Error: [-0.03788912]
+Error: [-0.05568757]
 Epoch: 27
 Input: [ 1  1 -1]
-Error: [-0.03270341]
+Error: [-0.06185959]
 Epoch: 27
 Input: [1 1 1]
-Error: [0.07610024]
+Error: [0.13063172]
 Epoch: 28
 Input: [ 1 -1 -1]
-Error: [-0.00385302]
+Error: [-0.01338776]
 Epoch: 28
 Input: [ 1 -1  1]
-Error: [-0.03673415]
+Error: [-0.05519967]
 Epoch: 28
 Input: [ 1  1 -1]
-Error: [-0.03182617]
+Error: [-0.06122429]
 Epoch: 28
 Input: [1 1 1]
-Error: [0.07354364]
+Error: [0.12859656]
 Epoch: 29
 Input: [ 1 -1 -1]
-Error: [-0.00351191]
+Error: [-0.01242282]
 Epoch: 29
 Input: [ 1 -1  1]
-Error: [-0.03560908]
+Error: [-0.05467608]
 Epoch: 29
 Input: [ 1  1 -1]
-Error: [-0.03096248]
+Error: [-0.06049667]
 Epoch: 29
 Input: [1 1 1]
-Error: [0.07109466]
+Error: [0.1264894]
 Epoch: 30
 Input: [ 1 -1 -1]
-Error: [-0.00320596]
+Error: [-0.01151646]
 Epoch: 30
 Input: [ 1 -1  1]
-Error: [-0.03451622]
+Error: [-0.05411899]
 Epoch: 30
 Input: [ 1  1 -1]
-Error: [-0.03011469]
+Error: [-0.05968052]
 Epoch: 30
 Input: [1 1 1]
-Error: [0.06875002]
+Error: [0.12431681]
 Epoch: 31
 Input: [ 1 -1 -1]
-Error: [-0.0029314]
+Error: [-0.0106672]
 Epoch: 31
 Input: [ 1 -1  1]
-Error: [-0.03345714]
+Error: [-0.05353067]
 Epoch: 31
 Input: [ 1  1 -1]
-Error: [-0.02928471]
+Error: [-0.05878065]
 Epoch: 31
 Input: [1 1 1]
-Error: [0.06650614]
+Error: [0.12208535]
 Epoch: 32
 Input: [ 1 -1 -1]
-Error: [-0.0026848]
+Error: [-0.00987329]
 Epoch: 32
 Input: [ 1 -1  1]
-Error: [-0.03243283]
+Error: [-0.05291337]
 Epoch: 32
 Input: [ 1  1 -1]
-Error: [-0.02847403]
+Error: [-0.05780274]
 Epoch: 32
 Input: [1 1 1]
-Error: [0.0643593]
+Error: [0.11980164]
 Epoch: 33
 Input: [ 1 -1 -1]
-Error: [-0.0024631]
+Error: [-0.00913279]
 Epoch: 33
 Input: [ 1 -1  1]
-Error: [-0.0314438]
+Error: [-0.05226926]
 Epoch: 33
 Input: [ 1  1 -1]
-Error: [-0.02768379]
+Error: [-0.05675329]
 Epoch: 33
 Input: [1 1 1]
-Error: [0.06230567]
+Error: [0.11747234]
 Epoch: 34
 Input: [ 1 -1 -1]
-Error: [-0.00226357]
+Error: [-0.00844356]
 Epoch: 34
 Input: [ 1 -1  1]
-Error: [-0.03049013]
+Error: [-0.05160047]
 Epoch: 34
 Input: [ 1  1 -1]
-Error: [-0.02691483]
+Error: [-0.05563943]
 Epoch: 34
 Input: [1 1 1]
-Error: [0.06034136]
+Error: [0.11510422]
 Epoch: 35
 Input: [ 1 -1 -1]
-Error: [-0.00208377]
+Error: [-0.00780329]
 Epoch: 35
 Input: [ 1 -1  1]
-Error: [-0.02957158]
+Error: [-0.05090904]
 Epoch: 35
 Input: [ 1  1 -1]
-Error: [-0.02616771]
+Error: [-0.05446884]
 Epoch: 35
 Input: [1 1 1]
-Error: [0.05846254]
+Error: [0.11270411]
 Epoch: 36
 Input: [ 1 -1 -1]
-Error: [-0.00192153]
+Error: [-0.00720959]
 Epoch: 36
 Input: [ 1 -1  1]
-Error: [-0.02868768]
+Error: [-0.0501969]
 Epoch: 36
 Input: [ 1  1 -1]
-Error: [-0.02544276]
+Error: [-0.05324954]
 Epoch: 36
 Input: [1 1 1]
-Error: [0.05666539]
+Error: [0.1102789]
 Epoch: 37
 Input: [ 1 -1 -1]
-Error: [-0.00177494]
+Error: [-0.00665998]
 Epoch: 37
 Input: [ 1 -1  1]
-Error: [-0.02783774]
+Error: [-0.04946595]
 Epoch: 37
 Input: [ 1  1 -1]
-Error: [-0.02474013]
+Error: [-0.05198981]
 Epoch: 37
 Input: [1 1 1]
-Error: [0.05494619]
+Error: [0.10783552]
 Epoch: 38
 Input: [ 1 -1 -1]
-Error: [-0.0016423]
+Error: [-0.00615194]
 Epoch: 38
 Input: [ 1 -1  1]
-Error: [-0.0270209]
+Error: [-0.048718]
 Epoch: 38
 Input: [ 1  1 -1]
-Error: [-0.02405981]
+Error: [-0.05069794]
 Epoch: 38
 Input: [1 1 1]
-Error: [0.05330132]
+Error: [0.10538088]
 Epoch: 39
 Input: [ 1 -1 -1]
-Error: [-0.0015221]
+Error: [-0.00568296]
 Epoch: 39
 Input: [ 1 -1  1]
-Error: [-0.02623622]
+Error: [-0.04795486]
 Epoch: 39
 Input: [ 1  1 -1]
-Error: [-0.02340162]
+Error: [-0.04938217]
 Epoch: 39
 Input: [1 1 1]
-Error: [0.05172726]
+Error: [0.10292179]
 Epoch: 40
 Input: [ 1 -1 -1]
-Error: [-0.00141302]
+Error: [-0.00525055]
 Epoch: 40
 Input: [ 1 -1  1]
-Error: [-0.02548267]
+Error: [-0.0471783]
 Epoch: 40
 Input: [ 1  1 -1]
-Error: [-0.02276529]
+Error: [-0.04805047]
 Epoch: 40
 Input: [1 1 1]
-Error: [0.05022062]
+Error: [0.10046492]
 Epoch: 41
 Input: [ 1 -1 -1]
-Error: [-0.00131386]
+Error: [-0.00485225]
 Epoch: 41
 Input: [ 1 -1  1]
-Error: [-0.02475915]
+Error: [-0.0463901]
 Epoch: 41
 Input: [ 1  1 -1]
-Error: [-0.02215048]
+Error: [-0.04671046]
 Epoch: 41
 Input: [1 1 1]
-Error: [0.04877816]
+Error: [0.09801676]
 Epoch: 42
 Input: [ 1 -1 -1]
-Error: [-0.00122359]
+Error: [-0.0044857]
 Epoch: 42
 Input: [ 1 -1  1]
-Error: [-0.02406456]
+Error: [-0.04559201]
 Epoch: 42
 Input: [ 1  1 -1]
-Error: [-0.02155674]
+Error: [-0.04536926]
 Epoch: 42
 Input: [1 1 1]
-Error: [0.04739673]
+Error: [0.09558347]
 Epoch: 43
 Input: [ 1 -1 -1]
-Error: [-0.00114128]
+Error: [-0.00414861]
 Epoch: 43
 Input: [ 1 -1  1]
-Error: [-0.02339777]
+Error: [-0.04478584]
 Epoch: 43
 Input: [ 1  1 -1]
-Error: [-0.02098358]
+Error: [-0.04403346]
 Epoch: 43
 Input: [1 1 1]
-Error: [0.04607336]
+Error: [0.09317092]
 Epoch: 44
 Input: [ 1 -1 -1]
-Error: [-0.00106611]
+Error: [-0.00383879]
 Epoch: 44
 Input: [ 1 -1  1]
-Error: [-0.02275765]
+Error: [-0.04397336]
 Epoch: 44
 Input: [ 1  1 -1]
-Error: [-0.02043047]
+Error: [-0.04270901]
 Epoch: 44
 Input: [1 1 1]
-Error: [0.04480519]
+Error: [0.09078455]
 Epoch: 45
 Input: [ 1 -1 -1]
-Error: [-0.00099737]
+Error: [-0.00355416]
 Epoch: 45
 Input: [ 1 -1  1]
-Error: [-0.02214307]
+Error: [-0.04315637]
 Epoch: 45
 Input: [ 1  1 -1]
-Error: [-0.01989683]
+Error: [-0.04140118]
 Epoch: 45
 Input: [1 1 1]
-Error: [0.04358951]
+Error: [0.08842939]
 Epoch: 46
 Input: [ 1 -1 -1]
-Error: [-0.0009344]
+Error: [-0.00329274]
 Epoch: 46
 Input: [ 1 -1  1]
-Error: [-0.02155295]
+Error: [-0.04233665]
 Epoch: 46
 Input: [ 1  1 -1]
-Error: [-0.01938207]
+Error: [-0.04011459]
 Epoch: 46
 Input: [1 1 1]
-Error: [0.04242373]
+Error: [0.08610997]
 Epoch: 47
 Input: [ 1 -1 -1]
-Error: [-0.00087663]
+Error: [-0.0030527]
 Epoch: 47
 Input: [ 1 -1  1]
-Error: [-0.02098621]
+Error: [-0.04151598]
 Epoch: 47
 Input: [ 1  1 -1]
-Error: [-0.0188856]
+Error: [-0.03885317]
 Epoch: 47
 Input: [1 1 1]
-Error: [0.04130538]
+Error: [0.08383034]
 Epoch: 48
 Input: [ 1 -1 -1]
-Error: [-0.00082356]
+Error: [-0.00283229]
 Epoch: 48
 Input: [ 1 -1  1]
-Error: [-0.02044181]
+Error: [-0.04069607]
 Epoch: 48
 Input: [ 1  1 -1]
-Error: [-0.01840679]
+Error: [-0.03762018]
 Epoch: 48
 Input: [1 1 1]
-Error: [0.04023214]
+Error: [0.08159407]
 Epoch: 49
 Input: [ 1 -1 -1]
-Error: [-0.00077473]
+Error: [-0.0026299]
 Epoch: 49
 Input: [ 1 -1  1]
-Error: [-0.01991874]
+Error: [-0.03987861]
 Epoch: 49
 Input: [ 1  1 -1]
-Error: [-0.01794502]
+Error: [-0.03641829]
 Epoch: 49
 Input: [1 1 1]
-Error: [0.03920178]
+Error: [0.07940417]
 Epoch: 50
 Input: [ 1 -1 -1]
-Error: [-0.00072973]
+Error: [-0.00244404]
 Epoch: 50
 Input: [ 1 -1  1]
-Error: [-0.01941605]
+Error: [-0.0390652]
 Epoch: 50
 Input: [ 1  1 -1]
-Error: [-0.0174997]
+Error: [-0.03524958]
 Epoch: 50
 Input: [1 1 1]
-Error: [0.03821221]
+Error: [0.07726322]
 Epoch: 51
 Input: [ 1 -1 -1]
-Error: [-0.00068821]
+Error: [-0.0022733]
 Epoch: 51
 Input: [ 1 -1  1]
-Error: [-0.01893278]
+Error: [-0.03825739]
 Epoch: 51
 Input: [ 1  1 -1]
-Error: [-0.0170702]
+Error: [-0.03411558]
 Epoch: 51
 Input: [1 1 1]
-Error: [0.03726143]
+Error: [0.07517327]
 Epoch: 52
 Input: [ 1 -1 -1]
-Error: [-0.00064984]
+Error: [-0.00211642]
 Epoch: 52
 Input: [ 1 -1  1]
-Error: [-0.01846806]
+Error: [-0.03745662]
 Epoch: 52
 Input: [ 1  1 -1]
-Error: [-0.01665594]
+Error: [-0.03301737]
 Epoch: 52
 Input: [1 1 1]
-Error: [0.03634756]
+Error: [0.07313595]
 Epoch: 53
 Input: [ 1 -1 -1]
-Error: [-0.00061434]
+Error: [-0.00197221]
 Epoch: 53
 Input: [ 1 -1  1]
-Error: [-0.01802103]
+Error: [-0.03666421]
 Epoch: 53
 Input: [ 1  1 -1]
-Error: [-0.01625633]
+Error: [-0.03195562]
 Epoch: 53
 Input: [1 1 1]
-Error: [0.03546881]
+Error: [0.07115246]
 Epoch: 54
 Input: [ 1 -1 -1]
-Error: [-0.00058144]
+Error: [-0.00183958]
 Epoch: 54
 Input: [ 1 -1  1]
-Error: [-0.01759087]
+Error: [-0.03588139]
 Epoch: 54
 Input: [ 1  1 -1]
-Error: [-0.01587079]
+Error: [-0.03093061]
 Epoch: 54
 Input: [1 1 1]
-Error: [0.03462349]
+Error: [0.0692236]
 Epoch: 55
 Input: [ 1 -1 -1]
-Error: [-0.00055092]
+Error: [-0.00171754]
 Epoch: 55
 Input: [ 1 -1  1]
-Error: [-0.01717679]
+Error: [-0.03510928]
 Epoch: 55
 Input: [ 1  1 -1]
-Error: [-0.01549878]
+Error: [-0.02994233]
 Epoch: 55
 Input: [1 1 1]
-Error: [0.03380999]
+Error: [0.06734983]
 Epoch: 56
 Input: [ 1 -1 -1]
-Error: [-0.00052257]
+Error: [-0.00160518]
 Epoch: 56
 Input: [ 1 -1  1]
-Error: [-0.01677807]
+Error: [-0.03434886]
 Epoch: 56
 Input: [ 1  1 -1]
-Error: [-0.01513976]
+Error: [-0.0289905]
 Epoch: 56
 Input: [1 1 1]
-Error: [0.0330268]
+Error: [0.06553127]
 Epoch: 57
 Input: [ 1 -1 -1]
-Error: [-0.0004962]
+Error: [-0.00150166]
 Epoch: 57
 Input: [ 1 -1  1]
-Error: [-0.01639399]
+Error: [-0.033601]
 Epoch: 57
 Input: [ 1  1 -1]
-Error: [-0.0147932]
+Error: [-0.02807462]
 Epoch: 57
 Input: [1 1 1]
-Error: [0.03227249]
+Error: [0.06376779]
 Epoch: 58
 Input: [ 1 -1 -1]
-Error: [-0.00047165]
+Error: [-0.00140623]
 Epoch: 58
 Input: [ 1 -1  1]
-Error: [-0.01602388]
+Error: [-0.03286644]
 Epoch: 58
 Input: [ 1  1 -1]
-Error: [-0.01445861]
+Error: [-0.027194]
 Epoch: 58
 Input: [1 1 1]
-Error: [0.0315457]
+Error: [0.06205898]
 Epoch: 59
 Input: [ 1 -1 -1]
-Error: [-0.00044875]
+Error: [-0.00131818]
 Epoch: 59
 Input: [ 1 -1  1]
-Error: [-0.0156671]
+Error: [-0.03214583]
 Epoch: 59
 Input: [ 1  1 -1]
-Error: [-0.01413549]
+Error: [-0.02634785]
 Epoch: 59
 Input: [1 1 1]
-Error: [0.03084515]
+Error: [0.06040423]
 Epoch: 60
 Input: [ 1 -1 -1]
-Error: [-0.00042738]
+Error: [-0.00123688]
 Epoch: 60
 Input: [ 1 -1  1]
-Error: [-0.01532305]
+Error: [-0.03143969]
 Epoch: 60
 Input: [ 1  1 -1]
-Error: [-0.01382338]
+Error: [-0.02553522]
 Epoch: 60
 Input: [1 1 1]
-Error: [0.03016961]
+Error: [0.05880274]
 Epoch: 61
 Input: [ 1 -1 -1]
-Error: [-0.0004074]
+Error: [-0.00116176]
 Epoch: 61
 Input: [ 1 -1  1]
-Error: [-0.01499115]
+Error: [-0.03074843]
 Epoch: 61
 Input: [ 1  1 -1]
-Error: [-0.01352183]
+Error: [-0.02475512]
 Epoch: 61
 Input: [1 1 1]
-Error: [0.02951793]
+Error: [0.05725357]
 Epoch: 62
 Input: [ 1 -1 -1]
-Error: [-0.00038871]
+Error: [-0.00109229]
 Epoch: 62
 Input: [ 1 -1  1]
-Error: [-0.01467084]
+Error: [-0.03007237]
 Epoch: 62
 Input: [ 1  1 -1]
-Error: [-0.01323041]
+Error: [-0.02400647]
 Epoch: 62
 Input: [1 1 1]
-Error: [0.02888904]
+Error: [0.05575563]
 Epoch: 63
 Input: [ 1 -1 -1]
-Error: [-0.0003712]
+Error: [-0.001028]
 Epoch: 63
 Input: [ 1 -1  1]
-Error: [-0.01436162]
+Error: [-0.02941176]
 Epoch: 63
 Input: [ 1  1 -1]
-Error: [-0.01294871]
+Error: [-0.02328817]
 Epoch: 63
 Input: [1 1 1]
-Error: [0.02828189]
+Error: [0.05430775]
 Epoch: 64
 Input: [ 1 -1 -1]
-Error: [-0.00035479]
+Error: [-0.00096843]
 Epoch: 64
 Input: [ 1 -1  1]
-Error: [-0.01406299]
+Error: [-0.02876672]
 Epoch: 64
 Input: [ 1  1 -1]
-Error: [-0.01267634]
+Error: [-0.02259909]
 Epoch: 64
 Input: [1 1 1]
-Error: [0.0276955]
+Error: [0.05290865]
 Epoch: 65
 Input: [ 1 -1 -1]
-Error: [-0.00033938]
+Error: [-0.00091321]
 Epoch: 65
 Input: [ 1 -1  1]
-Error: [-0.01377448]
+Error: [-0.02813735]
 Epoch: 65
 Input: [ 1  1 -1]
-Error: [-0.0124129]
+Error: [-0.0219381]
 Epoch: 65
 Input: [1 1 1]
-Error: [0.02712896]
+Error: [0.05155703]
 Epoch: 66
 Input: [ 1 -1 -1]
-Error: [-0.00032491]
+Error: [-0.00086197]
 Epoch: 66
 Input: [ 1 -1  1]
-Error: [-0.01349564]
+Error: [-0.02752365]
 Epoch: 66
 Input: [ 1  1 -1]
-Error: [-0.01215803]
+Error: [-0.02130406]
 Epoch: 66
 Input: [1 1 1]
-Error: [0.02658137]
+Error: [0.05025149]
 Epoch: 67
 Input: [ 1 -1 -1]
-Error: [-0.0003113]
+Error: [-0.00081437]
 Epoch: 67
 Input: [ 1 -1  1]
-Error: [-0.01322605]
+Error: [-0.02692555]
 Epoch: 67
 Input: [ 1  1 -1]
-Error: [-0.0119114]
+Error: [-0.02069586]
 Epoch: 67
 Input: [1 1 1]
-Error: [0.02605192]
+Error: [0.04899066]
 Epoch: 68
 Input: [ 1 -1 -1]
-Error: [-0.00029848]
+Error: [-0.00077012]
 Epoch: 68
 Input: [ 1 -1  1]
-Error: [-0.01296532]
+Error: [-0.02634296]
 Epoch: 68
 Input: [ 1  1 -1]
-Error: [-0.01167267]
+Error: [-0.02011239]
 Epoch: 68
 Input: [1 1 1]
-Error: [0.02553981]
+Error: [0.0477731]
 Epoch: 69
 Input: [ 1 -1 -1]
-Error: [-0.0002864]
+Error: [-0.00072895]
 Epoch: 69
 Input: [ 1 -1  1]
-Error: [-0.01271306]
+Error: [-0.02577573]
 Epoch: 69
 Input: [ 1  1 -1]
-Error: [-0.01144151]
+Error: [-0.01955258]
 Epoch: 69
 Input: [1 1 1]
-Error: [0.0250443]
+Error: [0.0465974]
 Epoch: 70
 Input: [ 1 -1 -1]
-Error: [-0.00027501]
+Error: [-0.00069061]
 Epoch: 70
 Input: [ 1 -1  1]
-Error: [-0.01246891]
+Error: [-0.02522365]
 Epoch: 70
 Input: [ 1  1 -1]
-Error: [-0.01121762]
+Error: [-0.01901539]
 Epoch: 70
 Input: [1 1 1]
-Error: [0.02456466]
+Error: [0.04546214]
 Epoch: 71
 Input: [ 1 -1 -1]
-Error: [-0.00026426]
+Error: [-0.00065487]
 Epoch: 71
 Input: [ 1 -1  1]
-Error: [-0.01223252]
+Error: [-0.02468651]
 Epoch: 71
 Input: [ 1  1 -1]
-Error: [-0.01100072]
+Error: [-0.01849979]
 Epoch: 71
 Input: [1 1 1]
-Error: [0.02410024]
+Error: [0.0443659]
 Epoch: 72
 Input: [ 1 -1 -1]
-Error: [-0.0002541]
+Error: [-0.00062152]
 Epoch: 72
 Input: [ 1 -1  1]
-Error: [-0.01200358]
+Error: [-0.02416405]
 Epoch: 72
 Input: [ 1  1 -1]
-Error: [-0.01079053]
+Error: [-0.01800482]
 Epoch: 72
 Input: [1 1 1]
-Error: [0.02365039]
+Error: [0.0433073]
 Epoch: 73
 Input: [ 1 -1 -1]
-Error: [-0.00024449]
+Error: [-0.00059038]
 Epoch: 73
 Input: [ 1 -1  1]
-Error: [-0.01178177]
+Error: [-0.023656]
 Epoch: 73
 Input: [ 1  1 -1]
-Error: [-0.01058677]
+Error: [-0.01752953]
 Epoch: 73
 Input: [1 1 1]
-Error: [0.0232145]
+Error: [0.04228498]
 Epoch: 74
 Input: [ 1 -1 -1]
-Error: [-0.0002354]
+Error: [-0.00056128]
 Epoch: 74
 Input: [ 1 -1  1]
-Error: [-0.01156679]
+Error: [-0.02316205]
 Epoch: 74
 Input: [ 1  1 -1]
-Error: [-0.01038921]
+Error: [-0.01707301]
 Epoch: 74
 Input: [1 1 1]
-Error: [0.022792]
+Error: [0.04129759]
 Epoch: 75
 Input: [ 1 -1 -1]
-Error: [-0.00022679]
+Error: [-0.00053406]
 Epoch: 75
 Input: [ 1 -1  1]
-Error: [-0.01135837]
+Error: [-0.02268189]
 Epoch: 75
 Input: [ 1  1 -1]
-Error: [-0.01019759]
+Error: [-0.01663441]
 Epoch: 75
 Input: [1 1 1]
-Error: [0.02238234]
+Error: [0.04034384]
 Epoch: 76
 Input: [ 1 -1 -1]
-Error: [-0.00021862]
+Error: [-0.00050857]
 Epoch: 76
 Input: [ 1 -1  1]
-Error: [-0.01115625]
+Error: [-0.0222152]
 Epoch: 76
 Input: [ 1  1 -1]
-Error: [-0.01001168]
+Error: [-0.01621289]
 Epoch: 76
 Input: [1 1 1]
-Error: [0.021985]
+Error: [0.03942244]
 Epoch: 77
 Input: [ 1 -1 -1]
-Error: [-0.00021088]
+Error: [-0.00048468]
 Epoch: 77
 Input: [ 1 -1  1]
-Error: [-0.01096016]
+Error: [-0.02176165]
 Epoch: 77
 Input: [ 1  1 -1]
-Error: [-0.00983127]
+Error: [-0.01580765]
 Epoch: 77
 Input: [1 1 1]
-Error: [0.02159948]
+Error: [0.03853216]
 Epoch: 78
 Input: [ 1 -1 -1]
-Error: [-0.00020352]
+Error: [-0.00046228]
 Epoch: 78
 Input: [ 1 -1  1]
-Error: [-0.01076986]
+Error: [-0.0213209]
 Epoch: 78
 Input: [ 1  1 -1]
-Error: [-0.00965613]
+Error: [-0.01541795]
 Epoch: 78
 Input: [1 1 1]
-Error: [0.02122531]
+Error: [0.0376718]
 Epoch: 79
 Input: [ 1 -1 -1]
-Error: [-0.00019654]
+Error: [-0.00044125]
 Epoch: 79
 Input: [ 1 -1  1]
-Error: [-0.01058514]
+Error: [-0.02089261]
 Epoch: 79
 Input: [ 1  1 -1]
-Error: [-0.00948608]
+Error: [-0.01504306]
 Epoch: 79
 Input: [1 1 1]
-Error: [0.02086205]
+Error: [0.03684021]
 Epoch: 80
 Input: [ 1 -1 -1]
-Error: [-0.00018989]
+Error: [-0.00042149]
 Epoch: 80
 Input: [ 1 -1  1]
-Error: [-0.01040576]
+Error: [-0.02047643]
 Epoch: 80
 Input: [ 1  1 -1]
-Error: [-0.00932092]
+Error: [-0.0146823]
 Epoch: 80
 Input: [1 1 1]
-Error: [0.02050926]
+Error: [0.03603627]
 Epoch: 81
 Input: [ 1 -1 -1]
-Error: [-0.00018357]
+Error: [-0.00040291]
 Epoch: 81
 Input: [ 1 -1  1]
-Error: [-0.01023153]
+Error: [-0.02007201]
 Epoch: 81
 Input: [ 1  1 -1]
-Error: [-0.00916046]
+Error: [-0.01433501]
 Epoch: 81
 Input: [1 1 1]
-Error: [0.02016654]
+Error: [0.03525889]
 Epoch: 82
 Input: [ 1 -1 -1]
-Error: [-0.00017755]
+Error: [-0.00038543]
 Epoch: 82
 Input: [ 1 -1  1]
-Error: [-0.01006223]
+Error: [-0.01967903]
 Epoch: 82
 Input: [ 1  1 -1]
-Error: [-0.00900453]
+Error: [-0.01400057]
 Epoch: 82
 Input: [1 1 1]
-Error: [0.0198335]
+Error: [0.03450703]
 Epoch: 83
 Input: [ 1 -1 -1]
-Error: [-0.00017182]
+Error: [-0.00036897]
 Epoch: 83
 Input: [ 1 -1  1]
-Error: [-0.00989769]
+Error: [-0.01929714]
 Epoch: 83
 Input: [ 1  1 -1]
-Error: [-0.00885295]
+Error: [-0.0136784]
 Epoch: 83
 Input: [1 1 1]
-Error: [0.01950977]
+Error: [0.0337797]
 Epoch: 84
 Input: [ 1 -1 -1]
-Error: [-0.00016635]
+Error: [-0.00035345]
 Epoch: 84
 Input: [ 1 -1  1]
-Error: [-0.00973772]
+Error: [-0.01892601]
 Epoch: 84
 Input: [ 1  1 -1]
-Error: [-0.00870558]
+Error: [-0.01336792]
 Epoch: 84
 Input: [1 1 1]
-Error: [0.019195]
+Error: [0.03307593]
 Epoch: 85
 Input: [ 1 -1 -1]
-Error: [-0.00016114]
+Error: [-0.00033881]
 Epoch: 85
 Input: [ 1 -1  1]
-Error: [-0.00958216]
+Error: [-0.0185653]
 Epoch: 85
 Input: [ 1  1 -1]
-Error: [-0.00856225]
+Error: [-0.01306861]
 Epoch: 85
 Input: [1 1 1]
-Error: [0.01888886]
+Error: [0.03239479]
 Epoch: 86
 Input: [ 1 -1 -1]
-Error: [-0.00015616]
+Error: [-0.00032499]
 Epoch: 86
 Input: [ 1 -1  1]
-Error: [-0.00943083]
+Error: [-0.0182147]
 Epoch: 86
 Input: [ 1  1 -1]
-Error: [-0.00842282]
+Error: [-0.01277996]
 Epoch: 86
 Input: [1 1 1]
-Error: [0.01859103]
+Error: [0.03173539]
 Epoch: 87
 Input: [ 1 -1 -1]
-Error: [-0.0001514]
+Error: [-0.00031194]
 Epoch: 87
 Input: [ 1 -1  1]
-Error: [-0.00928359]
+Error: [-0.01787389]
 Epoch: 87
 Input: [ 1  1 -1]
-Error: [-0.00828714]
+Error: [-0.01250149]
 Epoch: 87
 Input: [1 1 1]
-Error: [0.01830119]
+Error: [0.03109689]
 Epoch: 88
 Input: [ 1 -1 -1]
-Error: [-0.00014686]
+Error: [-0.0002996]
 Epoch: 88
 Input: [ 1 -1  1]
-Error: [-0.00914027]
+Error: [-0.01754257]
 Epoch: 88
 Input: [ 1  1 -1]
-Error: [-0.00815509]
+Error: [-0.01223274]
 Epoch: 88
 Input: [1 1 1]
-Error: [0.01801906]
+Error: [0.03047847]
 Epoch: 89
 Input: [ 1 -1 -1]
-Error: [-0.00014251]
+Error: [-0.00028793]
 Epoch: 89
 Input: [ 1 -1  1]
-Error: [-0.00900075]
+Error: [-0.01722042]
 Epoch: 89
 Input: [ 1  1 -1]
-Error: [-0.00802653]
+Error: [-0.01197329]
 Epoch: 89
 Input: [1 1 1]
-Error: [0.01774436]
+Error: [0.02987933]
 Epoch: 90
 Input: [ 1 -1 -1]
-Error: [-0.00013835]
+Error: [-0.00027687]
 Epoch: 90
 Input: [ 1 -1  1]
-Error: [-0.00886487]
+Error: [-0.01690716]
 Epoch: 90
 Input: [ 1  1 -1]
-Error: [-0.00790134]
+Error: [-0.01172271]
 Epoch: 90
 Input: [1 1 1]
-Error: [0.01747682]
+Error: [0.02929874]
 Epoch: 91
 Input: [ 1 -1 -1]
-Error: [-0.00013436]
+Error: [-0.0002664]
 Epoch: 91
 Input: [ 1 -1  1]
-Error: [-0.00873252]
+Error: [-0.01660249]
 Epoch: 91
 Input: [ 1  1 -1]
-Error: [-0.00777941]
+Error: [-0.01148062]
 Epoch: 91
 Input: [1 1 1]
-Error: [0.01721619]
+Error: [0.02873596]
 Epoch: 92
 Input: [ 1 -1 -1]
-Error: [-0.00013055]
+Error: [-0.00025647]
 Epoch: 92
 Input: [ 1 -1  1]
-Error: [-0.00860357]
+Error: [-0.01630615]
 Epoch: 92
 Input: [ 1  1 -1]
-Error: [-0.00766061]
+Error: [-0.01124665]
 Epoch: 92
 Input: [1 1 1]
-Error: [0.01696222]
+Error: [0.02819032]
 Epoch: 93
 Input: [ 1 -1 -1]
-Error: [-0.00012689]
+Error: [-0.00024705]
 Epoch: 93
 Input: [ 1 -1  1]
-Error: [-0.0084779]
+Error: [-0.01601786]
 Epoch: 93
 Input: [ 1  1 -1]
-Error: [-0.00754484]
+Error: [-0.01102044]
 Epoch: 93
 Input: [1 1 1]
-Error: [0.01671469]
+Error: [0.02766115]
 Epoch: 94
 Input: [ 1 -1 -1]
-Error: [-0.00012338]
+Error: [-0.00023811]
 Epoch: 94
 Input: [ 1 -1  1]
-Error: [-0.0083554]
+Error: [-0.01573736]
 Epoch: 94
 Input: [ 1  1 -1]
-Error: [-0.007432]
+Error: [-0.01080167]
 Epoch: 94
 Input: [1 1 1]
-Error: [0.01647336]
+Error: [0.02714782]
 Epoch: 95
 Input: [ 1 -1 -1]
-Error: [-0.00012002]
+Error: [-0.00022961]
 Epoch: 95
 Input: [ 1 -1  1]
-Error: [-0.00823595]
+Error: [-0.0154644]
 Epoch: 95
 Input: [ 1  1 -1]
-Error: [-0.00732199]
+Error: [-0.01059001]
 Epoch: 95
 Input: [1 1 1]
-Error: [0.01623803]
+Error: [0.02664973]
 Epoch: 96
 Input: [ 1 -1 -1]
-Error: [-0.00011679]
+Error: [-0.00022153]
 Epoch: 96
 Input: [ 1 -1  1]
-Error: [-0.00811945]
+Error: [-0.01519873]
 Epoch: 96
 Input: [ 1  1 -1]
-Error: [-0.00721471]
+Error: [-0.01038516]
 Epoch: 96
 Input: [1 1 1]
-Error: [0.01600849]
+Error: [0.02616629]
 Epoch: 97
 Input: [ 1 -1 -1]
-Error: [-0.00011369]
+Error: [-0.00021385]
 Epoch: 97
 Input: [ 1 -1  1]
-Error: [-0.0080058]
+Error: [-0.01494011]
 Epoch: 97
 Input: [ 1  1 -1]
-Error: [-0.00711007]
+Error: [-0.01018684]
 Epoch: 97
 Input: [1 1 1]
-Error: [0.01578455]
+Error: [0.02569696]
 Epoch: 98
 Input: [ 1 -1 -1]
-Error: [-0.0001107]
+Error: [-0.00020654]
 Epoch: 98
 Input: [ 1 -1  1]
-Error: [-0.00789491]
+Error: [-0.01468832]
 Epoch: 98
 Input: [ 1  1 -1]
-Error: [-0.00700799]
+Error: [-0.00999476]
 Epoch: 98
 Input: [1 1 1]
-Error: [0.01556602]
+Error: [0.02524121]
 Epoch: 99
 Input: [ 1 -1 -1]
-Error: [-0.00010784]
+Error: [-0.00019957]
 Epoch: 99
 Input: [ 1 -1  1]
-Error: [-0.00778668]
+Error: [-0.01444313]
 Epoch: 99
 Input: [ 1  1 -1]
-Error: [-0.00690837]
+Error: [-0.00980869]
 Epoch: 99
 Input: [1 1 1]
-Error: [0.01535272]
+Error: [0.02479852]
 Epoch: 100
 Input: [ 1 -1 -1]
-Error: [-0.00010508]
+Error: [-0.00019294]
 Epoch: 100
 Input: [ 1 -1  1]
-Error: [-0.00768103]
+Error: [-0.01420432]
 Epoch: 100
 Input: [ 1  1 -1]
-Error: [-0.00681114]
+Error: [-0.00962835]
 Epoch: 100
 Input: [1 1 1]
-Error: [0.01514447]
+Error: [0.02436841]

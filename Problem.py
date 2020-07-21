@@ -1,4 +1,9 @@
+from matplotlib import pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
 import numpy as np
+import pandas as pd
+np.set_printoptions(threshold=np.inf)
+
 
 class MLP:
 
@@ -109,7 +114,7 @@ class MLP:
             for j in range(len(self.weightsInputToHidden[i])):
                 self.weightsInputToHidden[i][j] += deltasInputToHidden[i][j]
 
-    def train(self, trainSet, testSet, epochs=1000, learningRate=1, learningRateMultiplierPerEpoch=1):
+    def train(self, trainSet, testSet, testLabel, epochs=1000, learningRate=1, learningRateMultiplierPerEpoch=1):
         '''
             trainSet: a pandas dataframe with the values for training
         '''
@@ -146,8 +151,8 @@ class MLP:
                 learningRate *= learningRateMultiplierPerEpoch 
 
         # making error and output per epoch log
-        # writetxt(problem + '_Errors_Per_Epoch', errorPerEpoch)
-        # writetxt(problem + '_Outputs_Per_Epoch', outputPerEpoch)
+        writetxt(problem + '_Errors_Per_Epoch', errorPerEpoch)
+        writetxt(problem + '_Outputs_Per_Epoch', outputPerEpoch)
 
         # at the end it returns the a prediction of the inputs that were used to train the model
         # what is expected is that the predictions match with the target values of each input case
@@ -161,3 +166,211 @@ class MLP:
             output.append(outputValues)
         # at the end we return all the outputs of our model in a list
         return output
+
+    def openFile(self, filePath):
+        '''
+            filePath: an entire file path including the extension. For example: "MLP_Data/problemOR.csv"
+        '''
+        # just a function to open a csv inside our mlp class, just not to charge the user of knowing about pandas library
+        data = pd.read_csv(filePath, header=None)
+        return data
+
+# global variable
+problem = ''
+
+def writetxt(filename, string):
+    f = open(filename + '.txt', 'w')
+    f.write(string)
+    f.close()
+
+def plot(mlp,dataframe, start, end,scale):
+
+    global problem
+
+    x = []
+    for i in range(start*scale, end*scale):
+        for j in range(start*scale,end*scale):
+            x.append([i/scale,j/scale])
+    x = np.array(x)
+    #print(x)
+    colors = []
+    inputs = dataframe.drop(dataframe.columns[-1], axis=1)
+    targets = dataframe.drop(dataframe.columns[:-1], axis=1).values
+    for y in targets:
+        colors.append('red') if y == 0 else colors.append('green')
+    fig = plt.figure()
+    ax = Axes3D(fig)
+    ax.scatter(inputs[inputs.columns[0]], inputs[inputs.columns[1]],targets,color=colors)
+    y = mlp.predict(x)
+    y = [y[i][0] for i in range(len(y))]
+    ax.plot_trisurf(x[:,0],x[:,1], y)
+    plt.suptitle(problem)
+    plt.show()
+
+def _and(inputNumber, hiddenNumber, outputNumber, epochs, learningRate):
+    global problem
+    problem = 'AND'
+
+    # making parameters log
+    writetxt('AND_Parameters',
+             'Input: ' + str(inputNumber) + '\nHidden: ' + str(hiddenNumber) + '\nOutput: ' + str(
+                 outputNumber) + '\nEpochs: ' +
+             str(epochs) + '\nLearning Rate: ' + str(learningRate))
+
+    mlp = MLP(inputNumber, hiddenNumber, outputNumber)
+
+    # making initial weights log
+    writetxt('AND_Initial_Weights',
+             'From input layer through hidden layer:\n' + str(mlp.weightsInputToHidden) +
+             '\n\nFrom hidden layer through output layer:\n' + str(mlp.weightsHiddenToOutput))
+
+    data = mlp.openFile('Data/problemAND.csv')
+    output = mlp.train(data, epochs, learningRate)
+
+    inputs = data.drop(data.columns[-1], axis=1).values
+    for inputvalue in inputs:
+        print("Input: {} Predicted Output: {} Output: {}".format(inputvalue,1 if mlp.predict([inputvalue])[0] >= 0.5 else 0, mlp.predict([inputvalue])[0]))
+
+    # making final weights log
+    writetxt('AND_Final_Weights',
+             'From input layer through hidden layer:\n' + str(mlp.weightsInputToHidden) +
+             '\n\nFrom hidden layer through output layer:\n' + str(mlp.weightsHiddenToOutput))
+
+    data = mlp.openFile('Data/problemAND.csv')
+    plot(mlp,data,-2, 2, 6)
+
+
+def _or(inputNumber, hiddenNumber, outputNumber, epochs, learningRate):
+    global problem
+    problem = 'OR'
+
+    # making parameters log
+    writetxt('OR_Parameters',
+             'Input: ' + str(inputNumber) + '\nHidden: ' + str(hiddenNumber) + '\nOutput: ' + str(
+                 outputNumber) + '\nEpochs: ' +
+             str(epochs) + '\nLearning Rate: ' + str(learningRate))
+
+    mlp = MLP(inputNumber, hiddenNumber, outputNumber)
+
+    # making initial weights log
+    writetxt('OR_Initial_Weights',
+             'From input layer through hidden layer:\n' + str(mlp.weightsInputToHidden) +
+             '\n\nFrom hidden layer through output layer:\n' + str(mlp.weightsHiddenToOutput))
+
+    data = mlp.openFile('Data/problemOR.csv')
+    output = mlp.train(data, epochs, learningRate)
+
+    inputs = data.drop(data.columns[-1], axis=1).values
+    for inputvalue in inputs:
+        print("Input: {} Predicted Output: {} Output: {}".format(inputvalue,1 if mlp.predict([inputvalue])[0] >= 0.5 else 0, mlp.predict([inputvalue])[0]))
+
+    # making final weights log
+    writetxt('OR_Final_Weights',
+             'From input layer through hidden layer:\n' + str(mlp.weightsInputToHidden) +
+             '\n\nFrom hidden layer through output layer:\n' + str(mlp.weightsHiddenToOutput))
+
+    data = mlp.openFile('Data/problemOR.csv')
+    plot(mlp, data, -2, 2, 6)
+
+
+def _xor(inputNumber, hiddenNumber, outputNumber, epochs, learningRate):
+    global problem
+    problem = 'XOR'
+
+    # making parameters log
+    writetxt('XOR_Parameters',
+             'Input: ' + str(inputNumber) + '\nHidden: ' + str(hiddenNumber) + '\nOutput: ' + str(
+                 outputNumber) + '\nEpochs: ' +
+             str(epochs) + '\nLearning Rate: ' + str(learningRate))
+
+    mlp = MLP(inputNumber, hiddenNumber, outputNumber)
+
+    # making initial weights log
+    writetxt('XOR_Initial_Weights',
+             'From input layer through hidden layer:\n' + str(mlp.weightsInputToHidden) +
+             '\n\nFrom hidden layer through output layer:\n' + str(mlp.weightsHiddenToOutput))
+
+    data = mlp.openFile('Data/problemXOR.csv')
+    output = mlp.train(data, epochs, learningRate)
+
+    inputs = data.drop(data.columns[-1], axis=1).values
+    for inputvalue in inputs:
+       print("Input: {} Predicted Output: {} Output: {}".format(inputvalue,1 if mlp.predict([inputvalue])[0] >= 0.5 else 0, mlp.predict([inputvalue])[0]))
+
+    # making final weights log
+    writetxt('XOR_Final_Weights',
+             'From input layer through hidden layer:\n' + str(mlp.weightsInputToHidden) +
+             '\n\nFrom hidden layer through output layer:\n' + str(mlp.weightsHiddenToOutput))
+
+    data = mlp.openFile('Data/problemXOR.csv')
+    plot(mlp, data, -2, 2, 6)
+
+
+def _characters(inputNumber, hiddenNumber, outputNumber, epochs, learningRate):
+    global problem
+    problem = 'CHAR'
+
+    # making parameters log
+    writetxt('CHAR_Parameters',
+             'Input: ' + str(inputNumber) + '\nHidden: ' + str(hiddenNumber) + '\nOutput: ' + str(
+                 outputNumber) + '\nEpochs: ' +
+             str(epochs) + '\nLearning Rate: ' + str(learningRate))
+
+    mlp = MLP(inputNumber, hiddenNumber, outputNumber)
+
+    # making initial weights log
+    writetxt('CHAR_Initial_Weights',
+             'From input layer through hidden layer:\n' + str(mlp.weightsInputToHidden) +
+             '\n\nFrom hidden layer through output layer:\n' + str(mlp.weightsHiddenToOutput))
+
+    data = mlp.openFile('Data/caracteres-limpo.csv')
+    # mapping letters to array of values
+    letters_map = {'A': np.array([1, 0, 0, 0, 0, 0, 0]),
+                   'B': np.array([0, 1, 0, 0, 0, 0, 0]),
+                   'C': np.array([0, 0, 1, 0, 0, 0, 0]),
+                   'D': np.array([0, 0, 0, 1, 0, 0, 0]),
+                   'E': np.array([0, 0, 0, 0, 1, 0, 0]),
+                   'J': np.array([0, 0, 0, 0, 0, 1, 0]),
+                   'K': np.array([0, 0, 0, 0, 0, 0, 1])}
+    print('Testing with a clean dataframe:')
+    data[data.columns[-1]] = data[data.columns[-1]].apply(lambda x: letters_map[x])
+
+    # training and predict
+    output = mlp.train(data, epochs, learningRate)
+    inputs = data.drop(data.columns[-1], axis=1).values
+    # making final weights log
+    writetxt('CHAR_Final_Weights',
+             'From input layer through hidden layer:\n' + str(mlp.weightsInputToHidden) +
+             '\n\nFrom hidden layer through output layer:\n' + str(mlp.weightsHiddenToOutput))
+
+    letters = list(letters_map.keys())
+
+    for inputValues, outputValues, targetValues in zip(inputs, output, data[data.columns[-1]].values):
+        i = max(range(len(targetValues)), key=lambda x: targetValues[x])
+        print('Expected Output:', letters[i], letters_map[letters[i]], end=' ')
+        i = max(range(len(outputValues)), key=lambda x: outputValues[x])
+        print('Output:', letters[i], letters_map[letters[i]], outputValues)
+
+    ''' Noisy Characters '''
+    print('\nTesting with a dataframe containing messy pixels:')
+    # testing on a messy pixels characters dataframe
+    data = mlp.openFile('Data/caracteres-ruido.csv')
+    # mapping letters to array of values
+    data[data.columns[-1]] = data[data.columns[-1]].apply(lambda x: letters_map[x])
+
+    # data treatment
+    inputs = data.drop(data.columns[-1], axis=1).values
+    output = mlp.predict(inputs)
+
+    # predict
+    for outputValues, targetValues in zip(output, data[data.columns[-1]].values):
+        i = max(range(len(targetValues)), key=lambda x: targetValues[x])
+        print('Expected Output:', letters[i], letters_map[letters[i]], end=' ')
+        i = max(range(len(outputValues)), key=lambda x: outputValues[x])
+        print('Output:', letters[i], letters_map[letters[i]], outputValues)
+
+
+_and(2,4,1,100,0.7)
+#_or(2,4,1,100,0.5)
+#_xor(2,4,1,1000,0.5)
+#_characters(63, 20, 7, 100, 0.5)
