@@ -18,5 +18,20 @@ votos = votos.dropna()
 train = votos.sample(frac=0.7, random_state=np.random.randint(1000)) #random state is a seed value
 test = votos.drop(train.index)
 
+# TrainInputs and labels
+trainInputs = train.drop(train.columns[0], axis=1)
+trainLabel = train.drop(train.columns.difference(['is-republican']), 1)
+
+# TestInputs and labels
+testInputs = test.drop(test.columns[0], axis=1)
+testLabel = test.drop(test.columns.difference(['is-republican']), 1)
+
 # Estratégia de grade (trocar nome sei la qual é)
 grade = {'hidden_neurons': [6, 8, 12, 17, 34, 50], 'learning_rate': [0.5, 0.3, 0.1], 'epochs': [300, 1000, 5000]}
+
+inputNumber = 17
+hiddenNumber = 20
+outputNumber = 1
+
+mlp = MLP(inputNumber, hiddenNumber, outputNumber)
+mlp.train(trainInputs, trainLabel, testInputs, testLabel)

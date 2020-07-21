@@ -109,13 +109,13 @@ class MLP:
             for j in range(len(self.weightsInputToHidden[i])):
                 self.weightsInputToHidden[i][j] += deltasInputToHidden[i][j]
 
-    def train(self, trainSet, testSet, epochs=1000, learningRate=1, learningRateMultiplierPerEpoch=1):
+    def train(self, trainSet, trainLabel, testSet, epochs=1000, learningRate=1, learningRateMultiplierPerEpoch=1):
         '''
             trainSet: a pandas dataframe with the values for training
         '''
         # data treatment, creating a numpy array for only the inputs, and another for only the targets
-        inputs = trainSet.drop(trainSet.columns[-1], axis=1).values
-        targets = trainSet.drop(trainSet.columns[:-1], axis=1).values
+        inputs = trainSet.values
+        targets = trainLabel.values
 
         errorPerEpoch = ''
         outputPerEpoch = ''
@@ -124,7 +124,7 @@ class MLP:
             ##################### FAZER PREDICT NO DATASET DE TESTE E CALCULAR O ERRO ##################### 
 
             testOutput = predict(trainSet)
-            calcularErro(testOutput, outputLabel)
+            print(calcularErro(testOutput, outputLabel))
 
             ###############################################################################################
 
@@ -152,6 +152,12 @@ class MLP:
         # at the end it returns the a prediction of the inputs that were used to train the model
         # what is expected is that the predictions match with the target values of each input case
         return self.predict(inputs)
+
+    def calcularErro(self, outputs, expectedLabels):
+        errorList = []
+        for i,o in enumerate(outputs):
+            errorList.append(expectedLabels[i] - outputs[i])
+        return errorList
 
     def predict(self, inputs):
         output = []
