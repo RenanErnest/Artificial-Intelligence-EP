@@ -119,13 +119,15 @@ class MLP:
 
         errorPerEpoch = ''
         outputPerEpoch = ''
+        overfitTestPerEpoch = ''
+
         for epoch in range(epochs):
 
             ##################### FAZER PREDICT NO DATASET DE TESTE E CALCULAR O ERRO ##################### 
-
-            testOutput = predict(trainSet)
-            print(calcularErro(testOutput, outputLabel))
-
+            testOutput = predict(testSet)
+            erros = calcularErro(testOutput, outputLabel)
+            for o, e in enumerate(erros):
+                overfitTestPerEpoch += 'Epoch: ' + str(epoch + 1) + '\nValue: ' + erros[o] + '\n'
             ###############################################################################################
 
             # for each epoch we iterate over all the input and targets of a specific case and send it to the backpropagation function
