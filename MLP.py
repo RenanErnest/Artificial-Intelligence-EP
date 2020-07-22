@@ -131,12 +131,12 @@ class MLP:
             testOutput = self.predict(testSet)
             erros = self.calcularErro(testOutput, testLabel)
 
-            # Erro quadratico medio         
-            mse = np.square(np.subtract(testLabel, testOutput)).mean()
-            msePerEpoch += 'Epoch: ' + str(epoch + 1) + '\nValue: ' + str(mse) + '\n'
-
             for e in erros:
                 overfitTestPerEpoch += 'Epoch: ' + str(epoch + 1) + '\nValue: ' + str(e) + '\n'
+            
+            msePerEpoch += 'Epoch: ' + str(epoch + 1) + '\nValue: ' + str(self.mse(inputs,targets)) + '\n'
+            #errorsX = testLabel - self.predict(testSet)
+            #msePerEpoch += 'Epoch: ' + str(epoch + 1) + '\nValue: ' + str(sum(errorsX)) + '\n'
             ###############################################################################################
 
             # for each epoch we iterate over all the input and targets of a specific case and send it to the backpropagation function
@@ -181,6 +181,13 @@ class MLP:
             output.append(outputValues)
         # at the end we return all the outputs of our model in a list
         return output
+    
+    def mse(self, inputs, targets):
+        # o predict primeiro
+        outputs = self.predict(inputs)
+        # Erro quadratico medio
+        mse = np.square(np.subtract(targets, outputs)).mean()
+        return mse
 
     def writetxt(self, filename, string):
         f = open(filename + '.txt', 'w')

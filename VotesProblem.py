@@ -1,6 +1,7 @@
 from MLP import MLP
 import pandas as pd
 import numpy as np
+from matplotlib import pyplot as plt
 
 # Reading data
 votos = pd.read_csv('Data/house-votes-84.txt', header = None)
@@ -26,14 +27,27 @@ trainLabel = train.drop(train.columns.difference(['is-republican']), 1)
 testInputs = test.drop(test.columns[0], axis=1)
 testLabel = test.drop(test.columns.difference(['is-republican']), 1)
 
-# Estratégia de grade (trocar nome sei la qual é)
-grade = {'hidden_neurons': [6, 8, 12, 17, 34, 50], 'learning_rate': [0.5, 0.3, 0.1], 'epochs': [300, 1000, 5000]}
+# Grid Search
+grid = {'hidden_neurons': [20, 40, 60, 80], 'learning_rate': [0,5, 0,3, 0,1], 'epochs': [300, 1000, 5000]}
+
+grid = {'hidden_neurons': [6, 8, 12, 17, 34, 50], 'learning_rate': [0.5, 0.3, 0.1], 'epochs': [1, 2, 3]}
 
 inputNumber = 16
 outputNumber = 1
 
-for hn in grade['hidden_neurons']:
-    for lr in grade['learning_rate']:
-        for ep in grade['epochs']:
+models = {'params': set(), 'mses': set()}
+for hn in grid['hidden_neurons']:
+    for lr in grid['learning_rate']:
+        for ep in grid['epochs']:
             mlp = MLP(inputNumber, hn, outputNumber)
             mlp.train(trainInputs, trainLabel, testInputs, testLabel, ep, lr)
+            models['params'].add(str((hn,lr,ep)))
+            models['mses'].add(mlp.mse(trainInputs.values, trainInputs.values))
+print(models) 
+
+plt.plot(list(models['params']), list(models['mses']))
+plt.xlabel('Combinações', fontsize=18)
+plt.ylabel('MSE', fontsize=18)
+plt.title('Grid Search', fontsize=24)
+plt.xticks(rotation=45, ha="right")
+plt.show()
