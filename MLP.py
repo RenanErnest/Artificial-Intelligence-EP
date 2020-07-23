@@ -155,7 +155,7 @@ class MLP:
                 self.backpropagation(targetValues, inputValues, learningRate)
                 # updating the learning rate according to the multiplier, if the multiplier is 1, we can assume that our learning rate is static
                 learningRate *= learningRateMultiplierPerEpoch 
-
+                
         # making error and output per epoch log
         # writetxt(problem + '_Errors_Per_Epoch', errorPerEpoch)
         # writetxt(problem + '_Outputs_Per_Epoch', outputPerEpoch)

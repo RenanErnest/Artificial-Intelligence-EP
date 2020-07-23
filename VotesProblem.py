@@ -18,6 +18,7 @@ votos = votos.dropna()
 # Houldout
 train = votos.sample(frac=0.7, random_state=np.random.randint(1000)) #random state is a seed value
 test = votos.drop(train.index)
+print(len(test))
 
 # TrainInputs and labels
 trainInputs = train.drop(train.columns[0], axis=1)
@@ -32,6 +33,7 @@ grid = {'hidden_neurons': [20, 40, 60, 80], 'learning_rate': [0,5, 0,3, 0,1], 'e
 
 grid = {'hidden_neurons': [6, 8, 12, 17, 34, 50], 'learning_rate': [0.5, 0.3, 0.1], 'epochs': [1, 2, 3]}
 
+grid = {'hidden_neurons': [20], 'learning_rate': [0.1], 'epochs': [1]}
 inputNumber = 16
 outputNumber = 1
 
@@ -42,7 +44,8 @@ for hn in grid['hidden_neurons']:
             mlp = MLP(inputNumber, hn, outputNumber)
             mlp.train(trainInputs, trainLabel, testInputs, testLabel, ep, lr)
             models['params'].add(str((hn,lr,ep)))
-            models['mses'].add(mlp.mse(trainInputs.values, trainInputs.values))
+            models['mses'].add(mlp.mse(trainInputs.values, trainLabel.values))
+
 print(models) 
 
 plt.plot(list(models['params']), list(models['mses']))
