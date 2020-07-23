@@ -2,6 +2,7 @@ from MLP import MLP
 import pandas as pd
 import numpy as np
 from matplotlib import pyplot as plt
+import matplotlib
 
 # Reading data
 votos = pd.read_csv('Data/house-votes-84.txt', header = None)
@@ -18,7 +19,8 @@ votos = votos.dropna()
 # Houldout
 train = votos.sample(frac=0.7, random_state=np.random.randint(1000)) #random state is a seed value
 test = votos.drop(train.index)
-print(len(test))
+validate = train.sample(frac=0.2, random_state=np.random.randint(1000))
+train = train.drop(validate.index)
 
 # TrainInputs and labels
 trainInputs = train.drop(train.columns[0], axis=1)
@@ -28,29 +30,60 @@ trainLabel = train.drop(train.columns.difference(['is-republican']), 1)
 testInputs = test.drop(test.columns[0], axis=1)
 testLabel = test.drop(test.columns.difference(['is-republican']), 1)
 
+# ValidateInputs and labels
+validateInputs = validate.drop(validate.columns[0], axis=1)
+validateLabel = validate.drop(validate.columns.difference(['is-republican']), 1)
+
 # Grid Search
 grid = {'hidden_neurons': [20, 40, 60, 80], 'learning_rate': [0,5, 0,3, 0,1], 'epochs': [300, 1000, 5000]}
 
-grid = {'hidden_neurons': [6, 8, 12, 17, 34, 50], 'learning_rate': [0.5, 0.3, 0.1], 'epochs': [1, 2, 3]}
+grid = {'hidden_neurons': [80], 'learning_rate': [0.5], 'epochs': [5000]} # best combo
 
-grid = {'hidden_neurons': [20], 'learning_rate': [0.1], 'epochs': [1]}
 inputNumber = 16
 outputNumber = 1
+
+# arrays de mse
+mseTrainList = []
+mseValidateList = []
+minConfig = None
 
 models = {'params': set(), 'mses': set()}
 for hn in grid['hidden_neurons']:
     for lr in grid['learning_rate']:
         for ep in grid['epochs']:
             mlp = MLP(inputNumber, hn, outputNumber)
-            mlp.train(trainInputs, trainLabel, testInputs, testLabel, ep, lr)
+            (mseTrainList, mseValidateList, minConfig) = mlp.train(trainInputs, trainLabel, validateInputs, validateLabel, ep, lr, earlyStop=True)
             models['params'].add(str((hn,lr,ep)))
             models['mses'].add(mlp.mse(trainInputs.values, trainLabel.values))
 
 print(models) 
 
+# Grid Search
 plt.plot(list(models['params']), list(models['mses']))
 plt.xlabel('Combinações', fontsize=18)
 plt.ylabel('MSE', fontsize=18)
 plt.title('Grid Search', fontsize=24)
 plt.xticks(rotation=45, ha="right")
 plt.show()
+
+# Early stop
+plt.plot(list(range(len(mseValidateList))), mseValidateList)
+plt.plot(list(range(len(mseTrainList))), mseTrainList)
+plt.xlabel('Epoch', fontsize=18)
+plt.ylabel('MSE', fontsize=18)
+plt.title('Early Stop', fontsize=24)
+plt.legend(['Validação','Treinamento'])
+plt.annotate('Mínimo',
+            xy=(minConfig['epoch'],  minConfig['mse']), xycoords='data',
+            xytext=(-50, 30), textcoords='offset points',
+            arrowprops=dict(arrowstyle="->"))
+ticks, labels = plt.xticks()
+index = np.searchsorted(ticks, minConfig['epoch'])
+ticks = np.insert(ticks,index,minConfig['epoch'])
+plt.xticks(ticks)
+ticks, labels = plt.yticks()
+index = np.searchsorted(ticks, minConfig['mse'])
+ticks = np.insert(ticks,index,minConfig['mse'])
+plt.yticks(ticks)
+plt.show()
+

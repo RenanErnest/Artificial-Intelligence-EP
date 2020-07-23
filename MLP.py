@@ -109,11 +109,38 @@ class MLP:
             for j in range(len(self.weightsInputToHidden[i])):
                 self.weightsInputToHidden[i][j] += deltasInputToHidden[i][j]
 
-    def train(self, trainSet, trainLabel, testSet, testLabel, epochs=1000, learningRate=1, learningRateMultiplierPerEpoch=1):
+    def train(self, trainSet, trainLabel, testSet, testLabel, epochs=1000, learningRate=1, learningRateMultiplierPerEpoch=1, earlyStop=False):
         '''
             trainSet: a pandas dataframe with the values for training
         '''
+        stop = False
+        self.minimum = {'inputHidden': self.weightsInputToHidden,
+                   'hiddenOutput': self.weightsHiddenToOutput,
+                   'mse': float('Inf'),
+                   'epoch': 0}
+        self.count = 0
+        
+        # the rule used is that every 20th mses after has to be greater than the minimum
+        def checkStop(mse, epoch):
+            if mse < self.minimum['mse']:
+                self.minimum = {'inputHidden': self.weightsInputToHidden,
+                           'hiddenOutput': self.weightsHiddenToOutput,
+                           'mse': mse,
+                           'epoch': epoch}
+                self.count = 0
+            else:
+                self.count += 1
+            
+            print(self.minimum, self.count)
+            
+            if self.count > 19:
+                return True
+            return False
+        
         # data treatment, creating a numpy array for only the inputs, and another for only the targets
+        mseValidateList = []
+        mseTrainList = []
+
         inputs = trainSet.values
         targets = trainLabel.values
 
@@ -124,6 +151,7 @@ class MLP:
         outputPerEpoch = ''
         overfitTestPerEpoch = ''
         msePerEpoch = ''
+        mseValidatePerEpoch = ''
 
         for epoch in range(epochs):
 
@@ -133,8 +161,19 @@ class MLP:
 
             for e in erros:
                 overfitTestPerEpoch += 'Epoch: ' + str(epoch + 1) + '\nValue: ' + str(e) + '\n'
+
+            mseTrainList.append(self.mse(inputs,targets))
+            #msePerEpoch += 'Epoch: ' + str(epoch + 1) + '\nValue: ' + str(self.mse(inputs,targets)) + '\n'
             
-            msePerEpoch += 'Epoch: ' + str(epoch + 1) + '\nValue: ' + str(self.mse(inputs,targets)) + '\n'
+            mseValidate = self.mse(testSet,testLabel)
+            stop = checkStop(mseValidate, epoch)
+            if earlyStop and not stop:
+                mseValidateList.append(mseValidate)
+
+            # if earlyStop and stop:
+            #     break
+
+            #mseValidatePerEpoch += 'Epoch: ' + str(epoch + 1) + '\nValue: ' + str(self.mse(testSet,testLabel)) + '\n'
             #errorsX = testLabel - self.predict(testSet)
             #msePerEpoch += 'Epoch: ' + str(epoch + 1) + '\nValue: ' + str(sum(errorsX)) + '\n'
             ###############################################################################################
@@ -159,13 +198,21 @@ class MLP:
         # making error and output per epoch log
         # writetxt(problem + '_Errors_Per_Epoch', errorPerEpoch)
         # writetxt(problem + '_Outputs_Per_Epoch', outputPerEpoch)
+        mseTrainList.append(self.mse(inputs,targets))
+        mseValidate = self.mse(testSet,testLabel)
+        stop = checkStop(mseValidate, epochs)
+        if earlyStop and not stop:
+            mseValidateList.append(mseValidate)
 
         self.writetxt("Overfit_Test" + '_Per_Epoch', overfitTestPerEpoch)
         self.writetxt("MSE_Overfit_Test" + '_Per_Epoch', msePerEpoch)
+        self.writetxt("Validation_Test" + '_Per_Epoch', mseValidatePerEpoch)
         
         # at the end it returns the a prediction of the inputs that were used to train the model
         # what is expected is that the predictions match with the target values of each input case
-        return self.predict(inputs)
+        if earlyStop:
+            return [mseTrainList, mseValidateList, self.minimum]
+        return [mseTrainList, mseValidateList]
 
     def calcularErro(self, outputs, expectedLabels):
         errorList = []
