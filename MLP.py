@@ -131,7 +131,7 @@ class MLP:
             else:
                 self.count += 1
             
-            print(self.minimum, self.count)
+            # print(self.minimum, self.count)
             
             if self.count > 19:
                 return True
@@ -170,8 +170,11 @@ class MLP:
             if earlyStop and not stop:
                 mseValidateList.append(mseValidate)
 
-            # if earlyStop and stop:
-            #     break
+            if earlyStop and stop:
+                break
+
+                #blz, vamos implementar as medidas de f-score etc.?
+
 
             #mseValidatePerEpoch += 'Epoch: ' + str(epoch + 1) + '\nValue: ' + str(self.mse(testSet,testLabel)) + '\n'
             #errorsX = testLabel - self.predict(testSet)
@@ -236,6 +239,28 @@ class MLP:
         mse = np.square(np.subtract(targets, outputs)).mean()
         return mse
 
+    def confusionMatrix(self, inputs, targets, threshold):
+        predicted = self.predict(inputs)
+
+        truePositive = 0
+        trueNegative = 0
+        falsePositive = 0
+        falseNegative = 0
+#acho que é maior msm kkk
+        for i, p in enumerate(predicted):
+            # print('tHRESHOLD',threshold,p,float(p),float(p) > threshold)
+            p = 1 if float(p) > threshold else 0
+            if p == int(targets[i]) == 1:
+                truePositive += 1
+            elif p == int(targets[i]) == 0:
+                trueNegative += 1 
+            elif p != int(targets[i]) and p == 0:
+                falseNegative += 1
+            elif p != int(targets[i]) and p == 1:
+                falsePositive += 1
+        
+        return {'truePositive': truePositive, 'trueNegative': trueNegative, 'falsePositive': falsePositive, 'falseNegative': falseNegative}   
+#isso
     def writetxt(self, filename, string):
         f = open(filename + '.txt', 'w')
         f.write(string)

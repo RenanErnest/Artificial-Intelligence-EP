@@ -2,7 +2,10 @@ from MLP import MLP
 import pandas as pd
 import numpy as np
 from matplotlib import pyplot as plt
-import matplotlib
+from adjustText import adjust_text
+import time
+
+start = time.time()
 
 # Reading data
 votos = pd.read_csv('Data/house-votes-84.txt', header = None)
@@ -41,11 +44,12 @@ grid = {'hidden_neurons': [80], 'learning_rate': [0.5], 'epochs': [5000]} # best
 
 inputNumber = 16
 outputNumber = 1
-
+# nada cm um trab nas ferias kkk algo de errado n esta certo
 # arrays de mse
 mseTrainList = []
 mseValidateList = []
 minConfig = None
+cmValues = []
 
 models = {'params': set(), 'mses': set()}
 for hn in grid['hidden_neurons']:
@@ -53,37 +57,82 @@ for hn in grid['hidden_neurons']:
         for ep in grid['epochs']:
             mlp = MLP(inputNumber, hn, outputNumber)
             (mseTrainList, mseValidateList, minConfig) = mlp.train(trainInputs, trainLabel, validateInputs, validateLabel, ep, lr, earlyStop=True)
-            models['params'].add(str((hn,lr,ep)))
-            models['mses'].add(mlp.mse(trainInputs.values, trainLabel.values))
+            for threshold in np.arange(0, 1.1, 0.1):
+                cm = mlp.confusionMatrix(testInputs.values,testLabel.values, threshold)
+                cmValues.append({'cm':cm, 'threshold': threshold})
+            # models['params'].add(str((hn,lr,ep)))
+            # models['mses'].add(mlp.mse(trainInputs.values, trainLabel.values))
 
-print(models) 
+# print(models) 
 
 # Grid Search
-plt.plot(list(models['params']), list(models['mses']))
-plt.xlabel('Combinações', fontsize=18)
-plt.ylabel('MSE', fontsize=18)
-plt.title('Grid Search', fontsize=24)
-plt.xticks(rotation=45, ha="right")
+# plt.plot(list(models['params']), list(models['mses']))
+# plt.xlabel('Combinações', fontsize=18)
+# plt.ylabel('MSE', fontsize=18)
+# plt.title('Grid Search', fontsize=24)
+# plt.xticks(rotation=45, ha="right")
+# plt.show()
+
+# # Early stop
+# plt.plot(list(range(len(mseValidateList))), mseValidateList)
+# plt.plot(list(range(len(mseTrainList))), mseTrainList)
+# plt.xlabel('Epoch', fontsize=18)
+# plt.ylabel('MSE', fontsize=18)
+# plt.title('Early Stop', fontsize=24)
+# plt.legend(['Validação','Treinamento'])
+# plt.annotate(str('Mínimo ' + str((minConfig['epoch'], round(minConfig['mse'],6)))),
+#             xy=(minConfig['epoch'],  minConfig['mse']), xycoords='data',
+#             xytext=(-50, 30), textcoords='offset points',
+#             arrowprops=dict(arrowstyle="->"))
+# plt.show()
+
+# F-scores
+results = []
+for cm in cmValues:
+    try:
+        cmv = cm['cm']
+        precision = cmv['truePositive']/(cmv['truePositive'] + cmv['falsePositive'])
+        recall = cmv['truePositive']/(cmv['truePositive'] + cmv['falseNegative'])
+        results.append({'matrix': cm,
+                        'precision': precision, 
+                        'recall': recall, 
+                        'fscore': 2*precision*recall/(precision + recall)
+                        })
+    except:
+        results.append({'invalid Threshold, division by zero: ',cm['threshold']})
+
+for res in results:
+    print(res)
+
+# ROC
+x = []
+y = []
+th = []
+for cm in cmValues:
+    cmv = cm['cm']
+    try:
+        xi = cmv['truePositive']/(cmv['truePositive'] + cmv['falseNegative']) # revocação
+        yi = cmv['falsePositive']/(cmv['trueNegative'] + cmv['falsePositive'])
+        x.append(xi)
+        y.append(yi)
+        th.append(cm['threshold'])
+    except:
+        pass
+
+    
+plt.plot([0, 1], [0, 1], 'k--')
+plt.scatter(y, x)
+plt.plot(y, x)
+plt.xlabel('Especificidade', fontsize=18)
+plt.ylabel('Sensibilidade', fontsize=18)
+plt.title('ROC curve', fontsize=24)
+texts = [plt.text(y, x, round(s,1)) for x,y,s in zip(x,y,th)]
+adjust_text(texts, only_move={'points':'xy', 'text':'xy'}, arrowprops=dict(arrowstyle="->", color='r', lw=0.5), autoalign='xy')
+# for i,coord in enumerate(zip(y,x)):
+#     plt.annotate(str(round(th[i],1)),
+#         xy=(coord[0],  coord[1]), xycoords='data',
+#         xytext=(15*(1+(abs(i-len(y))/10)), -30*(1+(abs(i-len(y))/10))), textcoords='offset points',
+#         arrowprops=dict(arrowstyle="->"))
 plt.show()
 
-# Early stop
-plt.plot(list(range(len(mseValidateList))), mseValidateList)
-plt.plot(list(range(len(mseTrainList))), mseTrainList)
-plt.xlabel('Epoch', fontsize=18)
-plt.ylabel('MSE', fontsize=18)
-plt.title('Early Stop', fontsize=24)
-plt.legend(['Validação','Treinamento'])
-plt.annotate('Mínimo',
-            xy=(minConfig['epoch'],  minConfig['mse']), xycoords='data',
-            xytext=(-50, 30), textcoords='offset points',
-            arrowprops=dict(arrowstyle="->"))
-ticks, labels = plt.xticks()
-index = np.searchsorted(ticks, minConfig['epoch'])
-ticks = np.insert(ticks,index,minConfig['epoch'])
-plt.xticks(ticks)
-ticks, labels = plt.yticks()
-index = np.searchsorted(ticks, minConfig['mse'])
-ticks = np.insert(ticks,index,minConfig['mse'])
-plt.yticks(ticks)
-plt.show()
-
+print(time.time()-start)
